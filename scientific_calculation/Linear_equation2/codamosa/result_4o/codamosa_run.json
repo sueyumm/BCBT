@@ -1,0 +1,11 @@
+{
+  "program": "Linear_equation2",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 1,
+  "script_result": 1,
+  "elapsed_sec": 16.593,
+  "out_dir": "/home/ubuntu/BCBT/codamosa/rerun_budget120_programs/Linear_equation2/codamosa/result_4o",
+  "generated_tests": []
+}

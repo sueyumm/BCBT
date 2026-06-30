@@ -1,0 +1,10 @@
+{
+  "program": "integrator2",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 600,
+  "return_code": 137,
+  "elapsed_sec": 585.977,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/integrator2/codamosa/result_4o",
+  "generated_tests": []
+}

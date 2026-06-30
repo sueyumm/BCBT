@@ -1,0 +1,11 @@
+{
+  "program": "AlgoExtra_rank_of_matrix_rank_of_matrix_009",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 1,
+  "script_result": 1,
+  "elapsed_sec": 47.84,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/AlgoExtra_rank_of_matrix_rank_of_matrix_009/codamosa/result_4o",
+  "generated_tests": []
+}

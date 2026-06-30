@@ -1,0 +1,11 @@
+{
+  "program": "LeastSquareFitting1",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 1,
+  "script_result": 1,
+  "elapsed_sec": 61.368,
+  "out_dir": "/home/ubuntu/BCBT/codamosa/rerun_budget120_programs/LeastSquareFitting1/codamosa/result_4o",
+  "generated_tests": []
+}

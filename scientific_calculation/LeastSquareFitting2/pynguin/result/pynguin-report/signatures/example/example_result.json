@@ -1,0 +1,1 @@
+[{"file": "example.py", "line_number": 3, "col_offset": 28, "type": [], "function": "QR_least_square_fitter", "parameter": "M"}, {"file": "example.py", "line_number": 3, "col_offset": 30, "type": [], "function": "QR_least_square_fitter", "parameter": "b"}, {"file": "example.py", "line_number": 3, "col_offset": 5, "type": [], "function": "QR_least_square_fitter"}]

@@ -1,0 +1,14 @@
+{
+  "program": "PDEBench_boundary_selector",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 139.908,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/PDEBench_boundary_selector/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

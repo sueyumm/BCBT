@@ -1,0 +1,65 @@
+# Python cache/runtime artifacts
+__pycache__/
+*.py[cod]
+
+# Coverage/CoverUp runtime artifacts
+.coverage
+.coverage.*
+coverup-log
+coverup-log*
+**/coverup-log
+**/coverup-log*
+
+# Ignore transient CoverUp result_4o trees by default
+scientific_calculation/EigenvalueSolvers/coverup/result_4o/**
+
+# Keep the validated successful run artifacts for EigenvalueSolvers
+!scientific_calculation/EigenvalueSolvers/coverup/result_4o/
+!scientific_calculation/EigenvalueSolvers/coverup/result_4o/**
+
+# Temporary paper/PDF extraction artifacts
+tmp_coverup_paper*
+
+# Local API secrets/config (untracked)
+tools/local_api_config.json
+
+# Local paper-preparation and literature-download artifacts
+.codex_docx_media_*/
+_apsec2026_info/
+_icse2027_testing_papers/
+_icse2027_testing_papers_core/
+*.docx
+
+# Large figure exports; keep compact source CSV/SVG/PDF/PNG as needed
+paper_figures/*.tiff
+
+# Temporary local rewrite/merge helpers
+_tmp_*.py
+tools/tmp_*.py
+
+# Archives should normally be attached to releases/Zenodo, not committed
+*.zip
+*.tar.gz
+
+# Local PDF/text extraction scratch space
+reports/pdf_extracts/
+
+# Per-program generated experiment outputs.
+# The public artifact should keep benchmark source files such as
+# scientific_calculation/<program>/example.py and package.txt, while raw
+# per-round logs can be archived separately in a release or Zenodo.
+scientific_calculation/**/pynguin/
+scientific_calculation/**/coverup/
+scientific_calculation/**/codamosa/
+scientific_calculation/**/*our_method*/
+scientific_calculation/**/*direct_llm*/
+scientific_calculation/**/*ablation*/
+scientific_calculation/**/*ablated*/
+scientific_calculation/**/prompts/
+scientific_calculation/**/round_*/
+scientific_calculation/**/filter_tmp/
+scientific_calculation/**/eval_tests/
+scientific_calculation/**/filtered_eval_tests/
+scientific_calculation/**/*.log
+scientific_calculation/**/.coverage*
+scientific_calculation/**/output.txt

@@ -1,0 +1,103 @@
+{
+  "global_228": {
+    "n": 228,
+    "pynguin": 84.15,
+    "coverup": 91.7,
+    "codamosa_excluding_missing": 82.7,
+    "codamosa_n": 215,
+    "our": 96.86,
+    "best_method_counts": {
+      "coverup": 82,
+      "pynguin": 127,
+      "our_method": 13,
+      "codamosa": 6
+    }
+  },
+  "effective_104": {
+    "n": 104,
+    "pynguin": 65.25,
+    "coverup": 89.47,
+    "codamosa_excluding_missing": 69.18,
+    "codamosa_n": 98,
+    "our": 93.12,
+    "best_method_counts": {
+      "coverup": 82,
+      "our_method": 13,
+      "codamosa": 6,
+      "pynguin": 3
+    }
+  },
+  "new_192": {
+    "n": 192,
+    "pynguin": 89.29,
+    "coverup": 93.44,
+    "codamosa_excluding_missing": 85.99,
+    "codamosa_n": 183,
+    "our": 97.79,
+    "best_method_counts": {
+      "pynguin": 116,
+      "coverup": 67,
+      "our_method": 5,
+      "codamosa": 4
+    }
+  },
+  "new_effective_76": {
+    "n": 76,
+    "pynguin": 72.94,
+    "coverup": 93.93,
+    "codamosa_excluding_missing": 74.79,
+    "codamosa_n": 74,
+    "our": 94.42,
+    "best_method_counts": {
+      "coverup": 67,
+      "our_method": 5,
+      "codamosa": 4
+    }
+  },
+  "original_36": {
+    "n": 36,
+    "pynguin": 56.75,
+    "coverup": 82.4,
+    "codamosa_excluding_missing": 63.92,
+    "codamosa_n": 32,
+    "our": 91.89,
+    "best_method_counts": {
+      "coverup": 15,
+      "our_method": 8,
+      "codamosa": 2,
+      "pynguin": 11
+    }
+  },
+  "original_effective_28": {
+    "n": 28,
+    "pynguin": 44.39,
+    "coverup": 77.37,
+    "codamosa_excluding_missing": 51.9,
+    "codamosa_n": 24,
+    "our": 89.58,
+    "best_method_counts": {
+      "coverup": 15,
+      "our_method": 8,
+      "codamosa": 2,
+      "pynguin": 3
+    }
+  },
+  "failure_counts": {
+    "CoverUp": 15,
+    "Our method": 21,
+    "CodaMOSA": 13
+  },
+  "our_status_counts": {
+    "improved": 83,
+    "not_entered": 124,
+    "no_improvement_kept_baseline": 21
+  },
+  "coverup_status_counts": {
+    "ok": 213,
+    "failure_or_warning": 15
+  },
+  "codamosa_status_counts": {
+    "ok": 215,
+    "missing_statistics": 13
+  }
+}

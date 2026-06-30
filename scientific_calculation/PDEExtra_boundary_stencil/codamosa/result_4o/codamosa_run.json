@@ -1,0 +1,14 @@
+{
+  "program": "PDEExtra_boundary_stencil",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 128.095,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/PDEExtra_boundary_stencil/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

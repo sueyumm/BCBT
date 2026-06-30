@@ -1,0 +1,1 @@
+[{"file": "example.py", "line_number": 3, "type": [], "col_offset": 9, "function": "bsc", "parameter": "b"}, {"file": "example.py", "line_number": 3, "type": [], "col_offset": 12, "function": "bsc", "parameter": "c"}, {"file": "example.py", "line_number": 3, "type": [], "col_offset": 5, "function": "bsc"}]

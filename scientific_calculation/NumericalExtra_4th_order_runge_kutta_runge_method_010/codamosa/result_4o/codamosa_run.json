@@ -1,0 +1,14 @@
+{
+  "program": "NumericalExtra_4th_order_runge_kutta_runge_method_010",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 72.479,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/NumericalExtra_4th_order_runge_kutta_runge_method_010/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

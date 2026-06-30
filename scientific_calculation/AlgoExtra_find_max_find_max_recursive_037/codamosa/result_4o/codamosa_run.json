@@ -1,0 +1,11 @@
+{
+  "program": "AlgoExtra_find_max_find_max_recursive_037",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 1,
+  "script_result": 1,
+  "elapsed_sec": 100.083,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/AlgoExtra_find_max_find_max_recursive_037/codamosa/result_4o",
+  "generated_tests": []
+}

@@ -1,0 +1,33 @@
+file,category,description
+final_summary.csv,main_results,Program-level branch coverage comparison across Pynguin CoverUp CodaMOSA and SciCov
+final_summary.json,main_results,JSON companion to final_summary.csv
+effective104_comparison_table.csv,main_results,Compact effective-subset comparison table used for the main result narrative
+ablation_effective104_summary.csv,ablation,Ablation-study summary on the effective program subset
+target_branch_category_coverage_table.csv,target_branch_analysis,Category-level target branch coverage table
+target_branch_level_coverage_raw.csv,target_branch_analysis,Raw target-branch-level coverage records
+category_effective104_comparison.csv,target_branch_analysis,Category-level comparison for the effective program subset
+category_effective104_program_categories.json,target_branch_analysis,Program-to-category mapping used for target branch analysis
+model_comparison_direct_vs_ours_program_level.csv,model_sensitivity,Program-level comparison between direct LLM prompting and SciCov-style prompting
+model_comparison_direct_vs_ours_target_branch_categories.csv,model_sensitivity,Target-branch-category model comparison
+direct_llm_only_model_comparison.csv,model_sensitivity,Direct LLM baseline model comparison
+direct_llm_only_model_category_coverage.csv,model_sensitivity,Direct LLM category coverage summary
+coverup_summary_all_unified.csv,baseline_results,CoverUp branch coverage summary
+coverup_summary_all_unified.json,baseline_results,JSON companion for CoverUp summary
+codamosa_coverage_summary.csv,baseline_results,CodaMOSA coverage summary
+codamosa_quality_summary.csv,baseline_results,CodaMOSA quality summary
+coverage_summary_pynguin_new_only.csv,baseline_results,Pynguin coverage summary
+coverage_summary_pynguin_new_only_branch.csv,baseline_results,Pynguin branch coverage summary
+tool_failure_summary.csv,failure_analysis,Summarized failure cases for baseline tools
+tool_failure_summary.json,failure_analysis,JSON companion to tool_failure_summary.csv
+hard_branch_analysis.json,branch_analysis,Branch difficulty analysis data
+hard_branch_analysis_new_only.json,branch_analysis,Branch difficulty analysis for newer subset
+uncovered_branches.json,branch_analysis,Raw uncovered branch records
+uncovered_branches_new_only.json,branch_analysis,Raw uncovered branch records for newer subset
+paper_figures/figure4_1_results_overview_source.csv,figure_source_data,Source data for results overview figure
+paper_figures/figure4_2_model_ablation_source.csv,figure_source_data,Source data for model/ablation figure
+scientific_calculation/<program>/codamosa/result_4o/statistics.csv,codamosa_raw_results,Per-program CodaMOSA statistics output
+scientific_calculation/<program>/codamosa/result_4o/codamosa_run.json,codamosa_raw_results,Per-program CodaMOSA run metadata
+scientific_calculation/<program>/codamosa/result_4o/codamosa_timeline.csv,codamosa_raw_results,Per-program CodaMOSA timeline output when available
+scientific_calculation/<program>/codamosa/result_4o/gpt4o_generations.py,codamosa_raw_results,CodaMOSA generated tests or LLM-generated code when available
+scientific_calculation/<program>/codamosa/result_4o/test_example.py,codamosa_raw_results,CodaMOSA final generated test file when available
+scientific_calculation/<program>/codamosa/result_4o/test_example_failing.py,codamosa_raw_results,CodaMOSA failing generated tests when available

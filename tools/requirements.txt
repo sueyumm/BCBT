@@ -1,0 +1,12 @@
+# 实验脚手架
+coverage>=7.0
+pytest>=7.0
+
+# Pynguin（版本按你环境可调；需与 Python 版本兼容）
+pynguin>=0.30.0
+
+# 被测程序常见依赖
+numpy>=1.20
+scipy>=1.7
+sympy>=1.9
+matplotlib>=3.5

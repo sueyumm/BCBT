@@ -1,0 +1,11 @@
+{
+  "program": "ODEPDEExtra_wave_energy_state",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 1,
+  "script_result": 1,
+  "elapsed_sec": 107.902,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/ODEPDEExtra_wave_energy_state/codamosa/result_4o",
+  "generated_tests": []
+}

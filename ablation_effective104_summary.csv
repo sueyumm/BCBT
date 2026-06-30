@@ -1,0 +1,7 @@
+﻿label,method_dir,model,program_count,avg_pynguin_branch,avg_final_branch_with_pynguin_fallback,avg_improvement_over_pynguin,valid_llm_programs,fallback_pynguin_programs,improved_programs,missing_state_count
+Naive Direct LLM,naive_direct_llm_gpt4o,gpt-4o,104,65.2529,65.2529,0.0,1,103,0,0
+Ablated Ours / w/o Branch Guidance,ablated_ours_gpt4o,gpt-4o,104,65.2529,84.5775,19.3246,87,17,72,0
+Ours w/o Category Prompt,ablation_no_category_gpt4o,gpt-4o,104,65.2529,87.0103,21.7574,85,19,75,0
+Ours w/o Coverage Feedback,ablation_no_feedback_gpt4o,gpt-4o,104,65.2529,83.2314,17.9786,75,29,66,0
+Ours w/o Error Feedback,ablation_no_error_feedback_gpt4o,gpt-4o,104,65.2529,85.1979,19.945,76,28,71,0
+Full Ours v2,our_method_gpt4o_v2_patience2,gpt-4o,104,65.2529,87.8334,22.5805,81,23,74,0

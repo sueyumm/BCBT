@@ -1,0 +1,14 @@
+{
+  "program": "FiPy_convection_upwind",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 6.325,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/FiPy_convection_upwind/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

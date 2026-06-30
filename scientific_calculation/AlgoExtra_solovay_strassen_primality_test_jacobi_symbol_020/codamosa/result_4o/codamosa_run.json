@@ -1,0 +1,14 @@
+{
+  "program": "AlgoExtra_solovay_strassen_primality_test_jacobi_symbol_020",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 134.031,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/AlgoExtra_solovay_strassen_primality_test_jacobi_symbol_020/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

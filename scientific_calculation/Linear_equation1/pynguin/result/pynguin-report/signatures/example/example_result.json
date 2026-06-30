@@ -1,0 +1,1 @@
+[{"file": "example.py", "line_number": 3, "col_offset": 17, "type": [], "function": "pivot_gauss", "parameter": "A"}, {"file": "example.py", "line_number": 3, "col_offset": 20, "type": [], "function": "pivot_gauss", "parameter": "b"}, {"file": "example.py", "line_number": 3, "col_offset": 5, "type": [], "function": "pivot_gauss"}]

@@ -1,0 +1,14 @@
+{
+  "program": "FiPy_level_set_distance",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 134.373,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/FiPy_level_set_distance/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

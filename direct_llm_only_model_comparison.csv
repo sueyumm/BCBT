@@ -1,0 +1,4 @@
+﻿model,program_count,raw_llm_only_average_from_runner,raw_llm_only_numeric_programs,avg_final_branch_with_pynguin_fallback,avg_improvement_over_pynguin,valid_llm_programs,fallback_pynguin_programs,improved_programs
+GPT-4o,104,89.3,97,89.74490384615385,24.49201923076923,93,11,75
+GPT-4o-mini,104,82.72,101,87.43538461538462,22.182500000000005,99,5,72
+Qwen2.5-7B,104,70.57,96,79.20240384615384,13.949519230769226,81,23,40

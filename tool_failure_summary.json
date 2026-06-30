@@ -1,0 +1,25 @@
+{
+  "CodaMOSA": {
+    "total": 13,
+    "reason_counts": {
+      "codamosa_empty_seed_bug": 10,
+      "no_statistics_no_tests": 3
+    }
+  },
+  "CoverUp": {
+    "total": 15,
+    "reason_counts": {
+      "no_tests_collected": 13,
+      "test_assertion_or_runtime_failure": 2
+    }
+  },
+  "Our method": {
+    "total": 21,
+    "reason_counts": {
+      "generated_tests_failed_then_filtered_no_improvement": 12,
+      "valid_tests_no_branch_improvement": 5,
+      "no_improvement_legacy_run": 3,
+      "generation_or_evaluation_failures": 1
+    }
+  }
+}

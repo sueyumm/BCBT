@@ -1,0 +1,14 @@
+{
+  "program": "ODEPDEExtra_adaptive_time_step",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 128.395,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/ODEPDEExtra_adaptive_time_step/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

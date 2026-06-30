@@ -1,0 +1,4 @@
+﻿model,direct_llm_only_branch,ours_v1_branch,ours_minus_direct,direct_valid_programs,ours_valid_programs,direct_fallback_programs,ours_fallback_programs
+GPT-4o,89.74490384615385,93.8546,4.1096961538461585,93,98,11,6
+GPT-4o-mini,87.43538461538462,84.80163461538463,-2.633749999999992,99,80,5,24
+Qwen2.5-7B,79.20240384615384,77.86471153846153,-1.3376923076923077,81,65,23,39

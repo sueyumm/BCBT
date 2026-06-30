@@ -1,0 +1,2 @@
+FROM codamosa-runner-deps
+COPY codamosa/pynguin/languagemodels/model.py /usr/local/lib/python3.10/site-packages/pynguin/languagemodels/model.py

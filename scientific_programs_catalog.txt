@@ -1,0 +1,56 @@
+科学计算程序分类目录（共 36 个，以 scientific_calculation_pynguin 下文件夹名为准）
+================================================================================
+说明：
+- 两个实验目录 scientific_calculation_pynguin、scientific_calculation_chatgpt 中程序子文件夹一一对应；
+- 唯一命名差异：Runge-Kutta（chatgpt）对应 Runge_Kutta（pynguin）。
+- 下表「类别」便于你筛选偏微分方程（PDE）、积分、方程组等子课题。
+
+文件夹名                      类别                  内容概要
+--------------------------------------------------------------------------------
+2DJacobiPoissonSolver         偏微分方程（椭圆/离散）  二维规则网格上 Jacobi 迭代，离散 Poisson 型五点格式
+SparseFiniteDifferenceSolver   偏微分方程（离散/稀疏）  一维 Laplacian 模板、张量积生成 2D/3D 稀疏系数阵；含右端项与边界；可用 LU 解稀疏方程
+euler_diffusion               偏微分方程（抛物/显式）  一维扩散方程显式 Euler 时间步（内点更新）
+
+CG_general                    优化 / 非线性共轭梯度   SymPy 符号目标函数 + 梯度；黄金分割线搜索步长；FR 型 CG 迭代
+EigenvalueSolvers             特征值                  幂法、反幂法（逆迭代）求主导特征值及特征向量
+GaussianElimination1         线性代数                上三角矩阵回代 Solve(U,b)
+GaussianElimination2         线性代数                顺序高斯消元 SeqGauss（无选主元）
+GaussianElimination3         线性代数                列主元高斯消元 PivotGauss
+integrator1                   数值积分 / 蒙特卡洛     梯形、离散数据梯形、Gauss-Legendre、Gauss 求积、1D/3D Monte Carlo、辅助函数等（同类代码集合）
+integrator2                   数值积分                二重积分 Monte Carlo（区域指示函数）
+integrator3                   数值积分                自适应 Simpson 递归积分
+integrator4                   数值积分                复合梯形 trapezoid2
+integrator5                   数值积分                二重积分：双层 Simpson 型复合公式（固定网格）
+integrator6                   数值积分                一维 Monte Carlo 估计曲线下面积（模块导入即含演示循环与 print）
+LeastSquareFitting1           最小二乘                Schur/Cholesky：Cholesky 解正规方程 M^T M x = M^T b
+LeastSquareFitting2           最小二乘                QR 分解最小二乘（scipy.linalg.qr）
+LeastSquareFitting3           最小二乘                SVD 伪逆最小二乘，返回条件数相关量
+Linear_equation1              线性方程组              Gauss 主元变体 + 回代 pivot_gauss
+Linear_equation2              线性方程组              Doolittle LU 分解 + 前/后向替换
+Linear_equation3              线性方程组              Cholesky 分解解对称正定方程组（含校验）
+Linear_equation4              线性方程组（迭代）       Jacobi 迭代 jakobi(A,b,迭代次数) — 解线性方程组，非 PDE 求解器
+Linear_equation5              线性方程组              Gauss 消元 + back_subsitute
+Linear_equation6              线性方程组              部分选主元 + 消元；奇异时抛错
+LUDecompositionSolver        线性代数                LU 分解、UL/置换 variant；前向/后向替换
+MatrixExponential1            矩阵指数                对角化 e^{tL} = R diag(e^{λt}) R^{-1}，附条件数
+MatrixExponential2            矩阵指数                四阶 Padé 型单步 + 倍增平方 med(L,t,k)
+MatrixExponential3            矩阵指数                exp(tL) 的 Taylor 级数截断 meT(L,t,n)
+qr_decomposition             线性代数 / 拟合          Householder QR；示例含多项式最小二乘 polyfit/lsqr
+Runge_Kutta / Runge-Kutta     常微分方程              标量 ODE 经典 RK4（myRungeKutta）
+solve_equation1               非线性方程（求根）       Newton 法求标量根 newtonsMethod
+solve_equation2               非线性方程（求根）       SymPy Newton-Raphson，含 plot 与模块级演示调用
+Trapezoidal Rule              数值积分                矩形区域上二重梯形公式 trapezoidal_double
+VectorCalculator1             向量/矩阵核            稠密矩阵乘向量 Au（朴素循环）
+VectorCalculator2             向量/矩阵核            向量差 bsc(b,c)
+VectorCalculator3             向量/矩阵核            欧氏范数 norm2
+VectorCalculator4             正交多项式 / 逼近      一维 Legendre 值递归 legendre（与积分/Galerkin 相关）
+
+--------------------------------------------------------------------------------
+按研究方向快速索引（与「积分方程」最接近的一般是数值积分类；本项目无显式 Fredholm 积分方程代码）
+- 偏微分 / 差分相关：2DJacobiPoissonSolver, euler_diffusion, SparseFiniteDifferenceSolver
+- 数值积分：integrator1–6, Trapezoidal Rule
+- 线性方程与矩阵分解：GaussianElimination*, Linear_equation*, LUDecompositionSolver, qr_decomposition, VectorCalculator1–3
+- 特征值与矩阵指数：EigenvalueSolvers, MatrixExponential*
+- ODE：Runge_Kutta / Runge-Kutta
+- 非线性求根：solve_equation1, solve_equation2
+- 最小二乘 / 优化：LeastSquareFitting*, CG_general

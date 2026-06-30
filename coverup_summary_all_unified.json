@@ -1,0 +1,10 @@
+{
+  "programs": 228,
+  "numeric_programs": 227,
+  "invalid_programs": 1,
+  "avg_excluding_invalid": 92.1,
+  "avg_invalid_as_zero": 91.7,
+  "invalid_program_names": [
+    "GaussianElimination2"
+  ]
+}

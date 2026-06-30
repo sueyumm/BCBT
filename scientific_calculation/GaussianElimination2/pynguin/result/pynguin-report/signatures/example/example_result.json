@@ -1,0 +1,1 @@
+[{"file": "example.py", "line_number": 3, "col_offset": 14, "type": [], "function": "SeqGauss", "parameter": "A"}, {"file": "example.py", "line_number": 3, "col_offset": 5, "type": [], "function": "SeqGauss"}]

@@ -1,0 +1,14 @@
+{
+  "program": "FiPy_chemotaxis_update",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 139.68,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/FiPy_chemotaxis_update/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

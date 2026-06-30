@@ -1,0 +1,10 @@
+{
+  "program": "Trapezoidal Rule",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 600,
+  "return_code": 1,
+  "elapsed_sec": 57.276,
+  "out_dir": "/home/ubuntu/BCBT/scientific_calculation/Trapezoidal Rule/codamosa/result_4o",
+  "generated_tests": []
+}

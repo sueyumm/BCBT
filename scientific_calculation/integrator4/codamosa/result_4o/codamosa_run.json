@@ -1,0 +1,14 @@
+{
+  "program": "integrator4",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 135.793,
+  "out_dir": "/home/ubuntu/BCBT/codamosa/rerun_budget120_programs/integrator4/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

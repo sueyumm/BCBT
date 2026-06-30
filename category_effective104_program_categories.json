@@ -1,0 +1,469 @@
+{
+  "2DJacobiPoissonSolver": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_binomial_distribution_binomial_distribution_028": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_bisection_bisection_023": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_casimir_effect_casimir_force_012": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "AlgoExtra_count_negative_numbers_in_sorted_matrix_find_negative_index_021": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_cramers_rule_2x2_cramers_rule_2x2_031": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_eulers_totient_totient_044": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_extended_euclidean_algorithm_extended_euclidean_algorithm_035": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "AlgoExtra_gaussian_elimination_pivoting_solve_linear_system_006": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_is_ip_v4_address_valid_is_ip_v4_address_valid_033": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_matrix_bandwidth_replacement": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "AlgoExtra_matrix_based_game_find_repeat_045": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_matrix_based_game_move_y_029": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_newton_raphson_newton_raphson_055": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_newtons_law_of_gravitation_gravitational_law_007": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_pascal_triangle_generate_pascal_triangle_optimized_057": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_power_iteration_power_iteration_015": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_simultaneous_linear_equation_solver_simplify_008": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_simultaneous_linear_equation_solver_solve_simultaneous_001": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_three_sum_three_sum_005": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_triplet_sum_triplet_sum2_050": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "AlgoExtra_weird_number_semi_perfect_025": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CG_general": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_ansible_mathstuff": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_ansible_stats": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_keras_activations": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_keras_losses": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_matplotlib_bezier": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_matplotlib_triangles": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_mimesis_random": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_pandas_interval": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_pandas_numeric_array": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaCover_scipy_sparse_shape": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "CodaCover_scipy_stats_basic": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaExtra_activation_branch": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "CodaExtra_nan_policy": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaExtra_numeric_tile": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "CodaExtra_random_choice_weight": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "EigenvalueSolvers": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPyExtra_coefficient_shape": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPyExtra_diffusion_tensor": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPyExtra_face_gradient": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPyExtra_mesh_spacing_quality": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPy_boundary_conditions": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPy_diffusion_steady_state": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "FiPy_residual_norm": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "GaussianElimination1": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "GaussianElimination2": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "GaussianElimination3": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "LUDecompositionSolver": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Linear_equation1": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Linear_equation2": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Linear_equation3": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Linear_equation4": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Linear_equation5": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Linear_equation6": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "MatrixExponential1": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "MatrixExponential2": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "MatrixExponential3": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "NumPy_arraysetops_unique": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "NumPy_histogram_edges": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "NumPy_pad_pairs": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "NumPy_version_compare": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "NumericalExtra_bisection_bisection_003": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "NumericalExtra_guass_seidel_gauss_seidel_002": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "NumericalExtra_jacobi_jacobi_005": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "ODEPDEExtra_adaptive_time_step": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "ODEPDEExtra_burgers_shock_flux": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "ODEPDEExtra_cfl_multiphysics": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "ODEPDEExtra_conservation_balance": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "ODEPDEExtra_elliptic_boundary_class": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "ODEPDEExtra_heat_boundary_update": [
+    "Complex Data Dependency"
+  ],
+  "ODEPDEExtra_poisson_residual_norm": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "ODEPDEExtra_reaction_diffusion_regime": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "ODEPDEExtra_runge_kutta_event": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "ODEPDEExtra_wave_energy_state": [
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "PDEBench_advection_step": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "PDEBench_boundary_selector": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "PDEBench_diffusion_step": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency"
+  ],
+  "PDEBench_residual_error": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "PDEExtra_advection_limiter": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "PDEExtra_boundary_stencil": [
+    "Complex Data Dependency"
+  ],
+  "SciPy_binned_statistic_edges": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SciPy_cubic_boundary": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SciPy_signal_chirp_phase": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SciPy_wilcoxon_rank": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SfePyExtra_tensor_symmetry": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SfePy_boundary_region_selector": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SfePy_laplace_dirichlet": [
+    "Complex Data Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SfePy_piezoelectric_coupling": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "SparseFiniteDifferenceSolver": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "TBCExtra_pivot_strategy": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "TBCExtra_vector_norm": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "Trapezoidal Rule": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "VectorCalculator1": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "VectorCalculator4": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "integrator1": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "integrator2": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "integrator3": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "integrator4": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "integrator5": [
+    "Complex Data Dependency",
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "integrator6": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "solve_equation1": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ],
+  "solve_equation2": [
+    "Cross-Function / Cross-Module Dependency",
+    "Loop/Iteration State Dependency"
+  ]
+}

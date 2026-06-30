@@ -1,0 +1,1 @@
+[{"file": "example.py", "line_number": 5, "col_offset": 7, "type": [], "function": "f", "parameter": "x"}, {"file": "example.py", "line_number": 5, "col_offset": 5, "type": [], "function": "f"}]

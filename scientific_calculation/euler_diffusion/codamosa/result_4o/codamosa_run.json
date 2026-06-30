@@ -1,0 +1,14 @@
+{
+  "program": "euler_diffusion",
+  "runner": "tools/run_codamosa.py",
+  "image": "codamosa-runner-chat",
+  "budget_sec": 120,
+  "return_code": 0,
+  "script_result": 0,
+  "elapsed_sec": 10.984,
+  "out_dir": "/home/ubuntu/BCBT/codamosa/rerun_budget120_programs/euler_diffusion/codamosa/result_4o",
+  "generated_tests": [
+    "test_example.py",
+    "test_example_failing.py"
+  ]
+}

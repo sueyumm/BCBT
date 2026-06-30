@@ -1,0 +1,6 @@
+FROM codamosa-runner
+
+RUN python -m pip install --no-cache-dir \
+    -i https://pypi.tuna.tsinghua.edu.cn/simple \
+    --default-timeout=300 \
+    numpy scipy sympy matplotlib pytest

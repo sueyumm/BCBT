@@ -1,0 +1,229 @@
+﻿program,dataset_group,scope,entered_our_method,pynguin_branch,coverup_branch,codamosa_branch,our_branch,best_method,best_branch,our_improvement_over_pynguin,our_improvement_over_coverup,our_improvement_over_codamosa,coverup_status,codamosa_status,our_status,failure_summary,codamosa_llm_calls,codamosa_llm_query_time,codamosa_saved_tests
+2DJacobiPoissonSolver,original,effective,True,90.48,100.00,90.91,100.00,coverup,100.00,9.52,0.00,9.09,ok,ok,improved,,50,182.52289652824402,2
+AlgoExtra_arithmetic_is_arithmetic_series_047,new,global_only,False,100.00,100.00,94.12,100.00,pynguin,100.00,0.00,0.00,5.88,ok,ok,not_entered,,7,154.026465177536,
+AlgoExtra_bailey_borwein_plouffe_bailey_borwein_plouffe_056,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_basic_maths_number_of_divisors_046,new,global_only,False,100.00,69.15,100.00,100.00,pynguin,100.00,0.00,30.85,0.00,ok,ok,not_entered,,,,
+AlgoExtra_basic_maths_prime_factors_048,new,global_only,False,100.00,69.15,100.00,100.00,pynguin,100.00,0.00,30.85,0.00,ok,ok,not_entered,,,,
+AlgoExtra_basic_maths_sum_of_divisors_026,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_binomial_coefficient_binomial_coefficient_034,new,global_only,False,100.00,100.00,86.67,100.00,pynguin,100.00,0.00,0.00,13.33,ok,ok,not_entered,,,,
+AlgoExtra_binomial_distribution_binomial_distribution_028,new,effective,True,87.50,100.00,86.67,87.50,coverup,100.00,0.00,-12.50,0.83,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,18,115.97653841972351,44
+AlgoExtra_bisection_bisection_023,new,effective,True,0.00,100.00,12.50,100.00,coverup,100.00,100.00,0.00,87.50,ok,ok,improved,,11,161.6765742301941,2
+AlgoExtra_bisection_interval_replacement,new,global_only,False,100.00,3.85,93.33,100.00,pynguin,100.00,0.00,96.15,6.67,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,11,111.08547258377075,1
+AlgoExtra_casimir_effect_casimir_force_012,new,effective,True,92.86,94.59,93.33,92.86,coverup,94.59,0.00,-1.73,-0.47,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,18,102.66599893569946,
+AlgoExtra_count_negative_numbers_in_sorted_matrix_find_negative_index_021,new,effective,True,77.78,100.00,93.02,94.44,coverup,100.00,16.66,-5.56,1.42,ok,ok,improved,,,,
+AlgoExtra_cramers_rule_2x2_cramers_rule_2x2_031,new,effective,True,90.00,100.00,86.96,90.00,coverup,100.00,0.00,-10.00,3.04,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,12,191.62646579742432,31
+AlgoExtra_entropy_calculate_prob_032,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_eulers_totient_totient_044,new,effective,True,90.00,96.15,93.33,90.00,coverup,96.15,0.00,-6.15,-3.33,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,,,
+AlgoExtra_extended_euclidean_algorithm_extended_euclidean_algorithm_035,new,effective,True,83.33,100.00,86.67,100.00,coverup,100.00,16.67,0.00,13.33,ok,ok,improved,,7,118.58717679977417,1
+AlgoExtra_factors_factors_of_a_number_049,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_find_max_find_max_recursive_037,new,global_only,False,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,not_entered,CodaMOSA:codamosa_empty_seed_bug,,,
+AlgoExtra_find_min_find_min_recursive_038,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_gamma_gamma_recursive_036,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_gaussian_elimination_pivoting_solve_linear_system_006,new,effective,True,94.44,100.00,5.26,100.00,coverup,100.00,5.56,0.00,94.74,ok,ok,improved,,13,110.33860182762146,1
+AlgoExtra_geometric_is_geometric_series_024,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_geometric_mean_compute_geometric_mean_014,new,global_only,False,100.00,96.00,93.33,100.00,pynguin,100.00,0.00,4.00,6.67,ok,ok,not_entered,,16,113.30521988868713,1
+AlgoExtra_hamming_numbers_hamming_041,new,global_only,False,100.00,100.00,78.95,100.00,pynguin,100.00,0.00,0.00,21.05,ok,ok,not_entered,,,,
+AlgoExtra_hardy_ramanujanalgo_exact_prime_factor_count_027,new,global_only,False,100.00,100.00,89.47,100.00,pynguin,100.00,0.00,0.00,10.53,ok,ok,not_entered,,,,
+AlgoExtra_harmonic_is_harmonic_series_010,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_harshad_numbers_int_to_base_039,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,85.61751890182495,23
+AlgoExtra_horizontal_projectile_motion_check_args_051,new,global_only,False,100.00,89.19,85.00,100.00,pynguin,100.00,0.00,10.81,15.00,ok,ok,not_entered,,18,108.19817852973938,
+AlgoExtra_integer_square_root_integer_square_root_018,new,global_only,False,100.00,100.00,93.33,100.00,pynguin,100.00,0.00,0.00,6.67,ok,ok,not_entered,,16,113.89089345932007,
+AlgoExtra_is_ip_v4_address_valid_is_ip_v4_address_valid_033,new,effective,True,10.00,100.00,84.62,100.00,coverup,100.00,90.00,0.00,15.38,ok,ok,improved,,15,109.6048686504364,25
+AlgoExtra_jaccard_similarity_jaccard_similarity_016,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_lu_decomposition_lower_upper_decomposition_030,new,global_only,False,100.00,100.00,9.09,100.00,pynguin,100.00,0.00,0.00,90.91,ok,ok,not_entered,,15,108.94679117202759,
+AlgoExtra_matrix_bandwidth_replacement,new,effective,True,64.29,100.00,96.00,100.00,coverup,100.00,35.71,0.00,4.00,ok,ok,improved,,18,113.97623038291931,47
+AlgoExtra_matrix_based_game_find_repeat_045,new,effective,True,63.46,99.28,86.49,76.92,coverup,99.28,13.46,-22.36,-9.57,ok,ok,improved,,12,104.51336669921875,24
+AlgoExtra_matrix_based_game_move_y_029,new,effective,True,51.92,99.28,67.57,71.15,coverup,99.28,19.23,-28.13,3.58,ok,ok,improved,,10,110.0795385837555,17
+AlgoExtra_matrix_equalization_array_equalization_040,new,global_only,False,100.00,100.00,84.62,100.00,pynguin,100.00,0.00,0.00,15.38,ok,ok,not_entered,,16,136.82239317893982,2
+AlgoExtra_matrix_multiplication_recursion_matrix_multiply_recursive_017,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_newton_raphson_newton_raphson_055,new,effective,True,50.00,18.52,45.45,100.00,our_method,100.00,50.00,81.48,54.55,ok,ok,improved,,14,113.9815685749054,3
+AlgoExtra_newtons_law_of_gravitation_gravitational_law_007,new,effective,True,93.75,95.12,57.89,93.75,coverup,95.12,0.00,-1.37,35.86,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,18,107.6316249370575,14
+AlgoExtra_pascal_triangle_generate_pascal_triangle_optimized_057,new,effective,True,93.33,95.60,88.57,93.33,coverup,95.60,0.00,-2.27,4.76,failure_or_warning,ok,no_improvement_kept_baseline,CoverUp:test_assertion_or_runtime_failure | Our method:generated_tests_failed_then_filtered_no_improvement,,,
+AlgoExtra_perfect_cube_perfect_cube_binary_search_043,new,global_only,False,100.00,100.00,92.86,100.00,pynguin,100.00,0.00,0.00,7.14,ok,ok,not_entered,,16,105.32547044754028,
+AlgoExtra_pi_generator_calculate_pi_054,new,global_only,False,100.00,97.67,91.67,100.00,pynguin,100.00,0.00,2.33,8.33,ok,ok,not_entered,,20,105.98030281066895,24
+AlgoExtra_pollard_rho_pollard_rho_011,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,63.144673109054565,
+AlgoExtra_polynomial_degree_replacement,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_power_iteration_power_iteration_015,new,effective,True,50.00,98.33,72.73,50.00,coverup,98.33,0.00,-48.33,-22.73,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,17,107.43067073822021,
+AlgoExtra_prime_gap_classifier_replacement,new,global_only,False,100.00,4.35,100.00,100.00,pynguin,100.00,0.00,95.65,0.00,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,10,74.3892080783844,14
+AlgoExtra_proth_number_proth_019,new,global_only,False,100.00,100.00,91.30,100.00,pynguin,100.00,0.00,0.00,8.70,ok,ok,not_entered,,,,
+AlgoExtra_rank_of_matrix_rank_of_matrix_009,new,global_only,False,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,not_entered,CodaMOSA:codamosa_empty_seed_bug,,,
+AlgoExtra_segmented_sieve_sieve_003,new,global_only,False,100.00,100.00,88.89,100.00,pynguin,100.00,0.00,0.00,11.11,ok,ok,not_entered,,,,
+AlgoExtra_shear_stress_shear_stress_022,new,global_only,False,100.00,100.00,92.31,100.00,pynguin,100.00,0.00,0.00,7.69,ok,ok,not_entered,,20,104.24862432479858,14
+AlgoExtra_sieve_of_eratosthenes_prime_sieve_013,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_simultaneous_linear_equation_solver_simplify_008,new,effective,True,54.00,95.45,96.61,90.00,codamosa,96.61,36.00,-5.45,-6.61,ok,ok,improved,,15,108.92415356636047,26
+AlgoExtra_simultaneous_linear_equation_solver_solve_simultaneous_001,new,effective,True,88.00,95.45,91.53,96.00,our_method,96.00,8.00,0.55,4.47,ok,ok,improved,,17,114.21225380897522,17
+AlgoExtra_solovay_strassen_primality_test_jacobi_symbol_020,new,global_only,False,100.00,100.00,96.55,100.00,pynguin,100.00,0.00,0.00,3.45,ok,ok,not_entered,,,,
+AlgoExtra_solovay_strassen_primality_test_solovay_strassen_042,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_three_sum_three_sum_005,new,effective,True,92.86,100.00,90.32,100.00,coverup,100.00,7.14,0.00,9.68,ok,ok,improved,,20,112.71606636047363,51
+AlgoExtra_triplet_sum_triplet_sum2_050,new,effective,True,78.57,85.42,95.24,92.86,codamosa,95.24,14.29,7.44,-2.38,ok,ok,improved,,16,119.5154037475586,12
+AlgoExtra_vector_projection_replacement,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+AlgoExtra_weierstrass_method_weierstrass_method_053,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,9,75.87851285934448,
+AlgoExtra_weird_number_semi_perfect_025,new,effective,True,93.75,100.00,100.00,100.00,coverup,100.00,6.25,0.00,0.00,ok,ok,improved,,,,
+CG_general,original,effective,True,13.43,14.93,16.67,100.00,our_method,100.00,86.57,85.07,83.33,ok,ok,improved,,61,418.1436011791229,3
+CodaCover_ansible_mathstuff,new,effective,True,83.33,100.00,83.87,100.00,coverup,100.00,16.67,0.00,16.13,ok,ok,improved,,25,113.26182818412781,4
+CodaCover_ansible_stats,new,effective,True,42.86,100.00,52.94,100.00,coverup,100.00,57.14,0.00,47.06,ok,ok,improved,,16,114.17713689804077,2
+CodaCover_flutes_math,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+CodaCover_keras_activations,new,effective,True,64.29,100.00,86.67,100.00,coverup,100.00,35.71,0.00,13.33,ok,ok,improved,,15,117.53970146179199,6
+CodaCover_keras_losses,new,effective,True,58.33,100.00,100.00,91.67,coverup,100.00,33.34,-8.33,-8.33,ok,ok,improved,,10,100.10363864898682,14
+CodaCover_matplotlib_bezier,new,effective,True,25.00,100.00,33.33,100.00,coverup,100.00,75.00,0.00,66.67,ok,ok,improved,,22,114.3285162448883,13
+CodaCover_matplotlib_colors,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,20,104.58806657791138,2
+CodaCover_matplotlib_scale,new,global_only,False,100.00,100.00,93.33,100.00,pynguin,100.00,0.00,0.00,6.67,ok,ok,not_entered,,19,118.83764886856079,8
+CodaCover_matplotlib_ticker,new,global_only,False,100.00,97.96,95.24,100.00,pynguin,100.00,0.00,2.04,4.76,ok,ok,not_entered,,17,126.9034206867218,17
+CodaCover_matplotlib_transform,new,global_only,False,100.00,100.00,66.67,100.00,pynguin,100.00,0.00,0.00,33.33,ok,ok,not_entered,,14,112.79244112968445,22
+CodaCover_matplotlib_triangles,new,effective,True,20.00,100.00,72.73,20.00,coverup,100.00,0.00,-80.00,-52.73,ok,ok,no_improvement_kept_baseline,Our method:valid_tests_no_branch_improvement,21,121.41794896125793,26
+CodaCover_mimesis_random,new,effective,True,95.00,100.00,95.24,100.00,coverup,100.00,5.00,0.00,4.76,ok,ok,improved,,19,117.64494848251343,1
+CodaCover_pandas_algorithms,new,global_only,False,100.00,100.00,96.00,100.00,pynguin,100.00,0.00,0.00,4.00,ok,ok,not_entered,,20,117.50015926361084,2
+CodaCover_pandas_interval,new,effective,True,85.00,100.00,71.79,100.00,coverup,100.00,15.00,0.00,28.21,ok,ok,improved,,14,106.1649227142334,2
+CodaCover_pandas_nanops,new,global_only,False,100.00,100.00,93.33,100.00,pynguin,100.00,0.00,0.00,6.67,ok,ok,not_entered,,14,116.54097056388855,3
+CodaCover_pandas_numeric_array,new,effective,True,78.57,100.00,94.74,92.86,coverup,100.00,14.29,-7.14,-1.88,ok,ok,improved,,14,113.99502229690552,1
+CodaCover_pandas_tile,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,53.85984826087952,1
+CodaCover_pypara_numbers,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+CodaCover_scipy_sparse_shape,new,effective,True,95.45,100.00,77.42,95.45,coverup,100.00,0.00,-4.55,18.03,ok,ok,no_improvement_kept_baseline,Our method:valid_tests_no_branch_improvement,18,114.65779066085815,16
+CodaCover_scipy_stats_basic,new,effective,True,94.44,100.00,95.65,94.44,coverup,100.00,0.00,-5.56,-1.21,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,16,115.46002626419067,24
+CodaExtra_activation_branch,new,effective,True,87.50,100.00,76.92,100.00,coverup,100.00,12.50,0.00,23.08,ok,ok,improved,,16,116.03003287315369,2
+CodaExtra_bezier_flatness,new,global_only,False,100.00,5.88,85.71,100.00,pynguin,100.00,0.00,94.12,14.29,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,15,139.26456212997437,1
+CodaExtra_color_scale_numeric,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,94.07232618331909,2
+CodaExtra_interval_overlap,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,59.25569796562195,17
+CodaExtra_nan_policy,new,effective,True,75.00,100.00,78.26,100.00,coverup,100.00,25.00,0.00,21.74,ok,ok,improved,,22,114.72908020019531,2
+CodaExtra_numeric_tile,new,effective,True,70.00,100.00,93.33,100.00,coverup,100.00,30.00,0.00,6.67,ok,ok,improved,,21,116.49398469924927,27
+CodaExtra_random_choice_weight,new,effective,True,90.00,4.00,100.00,90.00,codamosa,100.00,0.00,86.00,-10.00,failure_or_warning,ok,no_improvement_kept_baseline,CoverUp:no_tests_collected | Our method:generated_tests_failed_then_filtered_no_improvement,10,86.43161177635193,1
+CodaExtra_tick_locator,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+EigenvalueSolvers,original,effective,True,12.77,82.98,27.27,87.50,our_method,87.50,74.73,4.52,60.23,ok,ok,improved,,34,465.1379404067993,
+FiPyExtra_boundary_mask,new,global_only,False,100.00,100.00,94.12,100.00,pynguin,100.00,0.00,0.00,5.88,ok,ok,not_entered,,14,104.80709409713745,
+FiPyExtra_coefficient_shape,new,effective,True,87.50,100.00,88.89,87.50,coverup,100.00,0.00,-12.50,-1.39,ok,ok,no_improvement_kept_baseline,Our method:valid_tests_no_branch_improvement,21,114.36618328094482,2
+FiPyExtra_diffusion_tensor,new,effective,True,87.50,100.00,54.55,100.00,coverup,100.00,12.50,0.00,45.45,ok,ok,improved,,16,117.8868956565857,4
+FiPyExtra_face_gradient,new,effective,True,75.00,100.00,63.64,100.00,coverup,100.00,25.00,0.00,36.36,ok,ok,improved,,13,119.56984257698059,2
+FiPyExtra_mesh_spacing_quality,new,effective,True,87.50,100.00,100.00,100.00,coverup,100.00,12.50,0.00,0.00,ok,ok,improved,,10,58.94461131095886,1
+FiPyExtra_source_balance,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,20,111.50344705581665,11
+FiPyExtra_term_underrelax,new,global_only,False,100.00,100.00,71.43,100.00,pynguin,100.00,0.00,0.00,28.57,ok,ok,not_entered,,20,119.72990655899048,2
+FiPyExtra_variable_constraint,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+FiPy_boundary_conditions,new,effective,True,68.75,89.19,52.17,93.75,our_method,93.75,25.00,4.56,41.58,ok,ok,improved,,13,110.24476337432861,
+FiPy_cahn_hilliard_potential,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+FiPy_chemotaxis_update,new,global_only,False,100.00,100.00,80.00,100.00,pynguin,100.00,0.00,0.00,20.00,ok,ok,not_entered,,17,108.64551401138306,
+FiPy_convection_upwind,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+FiPy_diffusion_steady_state,new,effective,True,92.86,100.00,88.24,100.00,coverup,100.00,7.14,0.00,11.76,ok,ok,improved,,13,113.21028900146484,17
+FiPy_level_set_distance,new,global_only,False,100.00,100.00,85.71,100.00,pynguin,100.00,0.00,0.00,14.29,ok,ok,not_entered,,20,119.1255886554718,1
+FiPy_mesh_spacing,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,74.15925526618958,24
+FiPy_phase_anisotropy,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,82.29211163520813,
+FiPy_residual_norm,new,effective,True,91.67,100.00,93.33,100.00,coverup,100.00,8.33,0.00,6.67,ok,ok,improved,,17,113.014963388443,
+FiPy_source_term_balance,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+GaussianElimination1,original,effective,True,30.00,100.00,33.33,100.00,coverup,100.00,70.00,0.00,66.67,ok,ok,improved,,40,515.7635922431946,
+GaussianElimination2,original,effective,True,27.27,0.00,20.00,100.00,our_method,100.00,72.73,100.00,80.00,failure_or_warning,ok,improved,CoverUp:no_tests_collected,19,104.72122168540955,
+GaussianElimination3,original,effective,True,23.08,100.00,11.11,100.00,coverup,100.00,76.92,0.00,88.89,ok,ok,improved,,34,544.0280389785767,
+LUDecompositionSolver,original,effective,True,17.02,48.94,100.00,100.00,codamosa,100.00,82.98,51.06,0.00,ok,ok,improved,,60,330.0281255245209,2
+LeastSquareFitting1,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,70,445.54498863220215,1
+LeastSquareFitting2,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,77,396.96524834632874,1
+LeastSquareFitting3,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,60,301.27173471450806,
+Linear_equation1,original,effective,True,89.29,100.00,100.00,100.00,coverup,100.00,10.71,0.00,0.00,ok,ok,improved,,70,336.80919575691223,
+Linear_equation2,original,effective,True,100.00,95.83,100.00,100.00,pynguin,100.00,0.00,4.17,0.00,ok,ok,no_improvement_kept_baseline,Our method:no_improvement_legacy_run,50,406.58570671081543,1
+Linear_equation3,original,effective,True,15.87,96.83,86.96,95.45,coverup,96.83,79.58,-1.38,8.49,ok,ok,improved,,70,411.0582160949707,1
+Linear_equation4,original,effective,True,89.29,21.43,81.82,100.00,our_method,100.00,10.71,78.57,18.18,failure_or_warning,ok,improved,CoverUp:no_tests_collected,63,361.3237352371216,
+Linear_equation5,original,effective,True,33.33,54.55,46.15,91.67,our_method,91.67,58.34,37.12,45.52,ok,ok,improved,,60,439.32159304618835,1
+Linear_equation6,original,effective,True,18.18,94.55,15.79,94.44,coverup,94.55,76.26,-0.11,78.65,ok,ok,improved,,60,268.26220631599426,1
+MatrixExponential1,original,effective,True,42.86,100.00,50.00,100.00,coverup,100.00,57.14,0.00,50.00,ok,ok,improved,,60,243.67382049560547,
+MatrixExponential2,original,effective,True,30.77,100.00,33.33,100.00,coverup,100.00,69.23,0.00,66.67,ok,ok,improved,,60,259.160195350647,
+MatrixExponential3,original,effective,True,31.25,100.00,33.33,31.25,coverup,100.00,0.00,-68.75,-2.08,ok,ok,no_improvement_kept_baseline,Our method:no_improvement_legacy_run,60,249.15583443641663,
+NumPy_arraysetops_unique,new,effective,True,81.25,100.00,85.71,100.00,coverup,100.00,18.75,0.00,14.29,ok,ok,improved,,18,121.34293341636658,3
+NumPy_arrayterator_slice,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,20,108.06979250907898,2
+NumPy_covariance_helper,new,global_only,False,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,not_entered,CodaMOSA:codamosa_empty_seed_bug,,,
+NumPy_histogram_edges,new,effective,True,93.75,100.00,90.48,100.00,coverup,100.00,6.25,0.00,9.52,ok,ok,improved,,19,115.76965475082397,9
+NumPy_iotools_converter,new,global_only,False,100.00,46.51,96.30,100.00,pynguin,100.00,0.00,53.49,3.70,ok,ok,not_entered,,19,114.03249144554138,1
+NumPy_masked_mean_var,new,global_only,False,100.00,100.00,92.31,100.00,pynguin,100.00,0.00,0.00,7.69,ok,ok,not_entered,,19,116.26993656158447,1
+NumPy_nanfunctions_remove,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+NumPy_pad_pairs,new,effective,True,83.33,100.00,72.00,100.00,coverup,100.00,16.67,0.00,28.00,ok,ok,improved,,26,115.26443433761597,9
+NumPy_polynomial_format,new,global_only,False,100.00,100.00,95.24,100.00,pynguin,100.00,0.00,0.00,4.76,ok,ok,not_entered,,19,126.9822826385498,1
+NumPy_quantile_validate,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,49.70144963264465,1
+NumPy_twodim_diag,new,global_only,False,100.00,100.00,78.26,100.00,pynguin,100.00,0.00,0.00,21.74,ok,ok,not_entered,,,,
+NumPy_version_compare,new,effective,True,94.44,100.00,100.00,100.00,coverup,100.00,5.56,0.00,0.00,ok,ok,improved,,,,
+NumericalExtra_4th_order_runge_kutta_runge_method_010,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,51.627147912979126,17
+NumericalExtra_GECP_gaussian_elimination_complete_pivoting_001,new,global_only,False,100.00,16.07,,100.00,pynguin,100.00,0.00,83.93,,ok,missing_statistics,not_entered,CodaMOSA:no_statistics_no_tests,,,
+NumericalExtra_Gram_Schmidt_QR_gram_schmidt_factorization_006,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,20,100.96109509468079,
+NumericalExtra_bisection_bisection_003,new,effective,True,0.00,8.70,90.91,87.50,codamosa,90.91,87.50,78.80,-3.41,failure_or_warning,ok,improved,CoverUp:no_tests_collected,10,48.923731088638306,19
+NumericalExtra_guass_seidel_gauss_seidel_002,new,effective,True,50.00,100.00,100.00,100.00,coverup,100.00,50.00,0.00,0.00,ok,ok,improved,,10,100.41966724395752,10
+NumericalExtra_householder_qr_decomposition_householder_qr_decomposition_009,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,27,112.36385345458984,1
+NumericalExtra_jacobi_jacobi_005,new,effective,True,33.33,100.00,85.71,100.00,coverup,100.00,66.67,0.00,14.29,ok,ok,improved,,20,102.60280203819275,
+NumericalExtra_lagrange_interpolation_lagrange_interpolation_008,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+NumericalExtra_newton_divided_difference_divided_diff_004,new,global_only,False,100.00,100.00,86.67,100.00,pynguin,100.00,0.00,0.00,13.33,ok,ok,not_entered,,21,108.07029724121094,1
+NumericalExtra_quadrature_error_replacement,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,39.32482600212097,1
+NumericalExtra_secant_step_replacement,new,global_only,False,100.00,4.17,100.00,100.00,pynguin,100.00,0.00,95.83,0.00,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,20,84.36997723579407,17
+ODEPDEExtra_adaptive_time_step,new,effective,True,90.91,100.00,54.55,100.00,coverup,100.00,9.09,0.00,45.45,ok,ok,improved,,20,108.6932806968689,10
+ODEPDEExtra_burgers_shock_flux,new,effective,True,87.50,100.00,84.00,100.00,coverup,100.00,12.50,0.00,16.00,ok,ok,improved,,20,125.17969059944153,2
+ODEPDEExtra_cfl_multiphysics,new,effective,True,90.00,100.00,64.10,90.00,coverup,100.00,0.00,-10.00,25.90,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,17,98.62294435501099,22
+ODEPDEExtra_conservation_balance,new,effective,True,60.00,100.00,,100.00,coverup,100.00,40.00,0.00,,ok,missing_statistics,improved,CodaMOSA:codamosa_empty_seed_bug,,,
+ODEPDEExtra_elliptic_boundary_class,new,effective,True,37.50,100.00,37.04,100.00,coverup,100.00,62.50,0.00,62.96,ok,ok,improved,,13,108.08998370170593,24
+ODEPDEExtra_heat_boundary_update,new,effective,True,85.71,100.00,38.10,100.00,coverup,100.00,14.29,0.00,61.90,ok,ok,improved,,20,120.19033169746399,2
+ODEPDEExtra_poisson_residual_norm,new,effective,True,21.43,100.00,21.05,92.86,coverup,100.00,71.43,-7.14,71.81,ok,ok,improved,,20,99.15418195724487,
+ODEPDEExtra_reaction_diffusion_regime,new,effective,True,91.67,100.00,94.12,100.00,coverup,100.00,8.33,0.00,5.88,ok,ok,improved,,24,124.5355236530304,13
+ODEPDEExtra_runge_kutta_event,new,effective,True,25.00,100.00,23.08,87.50,coverup,100.00,62.50,-12.50,64.42,ok,ok,improved,,15,116.57152104377747,3
+ODEPDEExtra_wave_energy_state,new,effective,True,95.00,54.55,,100.00,our_method,100.00,5.00,45.45,,ok,missing_statistics,improved,CodaMOSA:codamosa_empty_seed_bug,,,
+PDEBench_advection_step,new,effective,True,92.86,100.00,57.14,92.86,coverup,100.00,0.00,-7.14,35.72,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,21,102.56073379516602,
+PDEBench_boundary_selector,new,effective,True,85.71,100.00,70.59,100.00,coverup,100.00,14.29,0.00,29.41,ok,ok,improved,,21,112.93133187294006,2
+PDEBench_burgers_flux,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+PDEBench_cfl_condition,new,global_only,False,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,not_entered,CodaMOSA:codamosa_empty_seed_bug,,,
+PDEBench_diffusion_step,new,effective,True,91.67,100.00,94.44,100.00,coverup,100.00,8.33,0.00,5.56,ok,ok,improved,,19,103.80484628677368,
+PDEBench_grid_initializer,new,global_only,False,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,not_entered,CodaMOSA:no_statistics_no_tests,,,
+PDEBench_reaction_diffusion_update,new,global_only,False,100.00,100.00,80.00,100.00,pynguin,100.00,0.00,0.00,20.00,ok,ok,not_entered,,13,112.3636531829834,
+PDEBench_residual_error,new,effective,True,90.00,100.00,54.55,100.00,coverup,100.00,10.00,0.00,45.45,ok,ok,improved,,15,118.68873524665833,
+PDEExtra_advection_limiter,new,effective,True,83.33,100.00,47.37,100.00,coverup,100.00,16.67,0.00,52.63,ok,ok,improved,,9,118.65530014038086,
+PDEExtra_boundary_stencil,new,effective,True,87.50,100.00,88.89,100.00,coverup,100.00,12.50,0.00,11.11,ok,ok,improved,,11,116.16811895370483,
+PDEExtra_cfl_classifier,new,global_only,False,100.00,4.17,78.95,100.00,pynguin,100.00,0.00,95.83,21.05,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,16,142.13500595092773,1
+PDEExtra_grid_refine,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,15,113.440833568573,1
+PDEExtra_poisson_relax,new,global_only,False,100.00,100.00,30.77,100.00,pynguin,100.00,0.00,0.00,69.23,ok,ok,not_entered,,16,117.0909059047699,
+PDEExtra_reaction_source,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+PDEExtra_residual_stop,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+PDEExtra_shock_sensor,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+Runge_Kutta,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,,,
+SciPy_binned_statistic_edges,new,effective,True,75.00,100.00,82.35,100.00,coverup,100.00,25.00,0.00,17.65,ok,ok,improved,,14,126.80671644210815,14
+SciPy_chandrupatla_validate,new,global_only,False,100.00,57.58,100.00,100.00,pynguin,100.00,0.00,42.42,0.00,ok,ok,not_entered,,10,98.69489216804504,1
+SciPy_continued_fraction,new,global_only,False,100.00,95.00,91.30,100.00,pynguin,100.00,0.00,5.00,8.70,ok,ok,not_entered,,14,114.72471880912781,
+SciPy_cubic_boundary,new,effective,True,65.00,100.00,76.19,100.00,coverup,100.00,35.00,0.00,23.81,ok,ok,improved,,21,106.71619772911072,13
+SciPy_finite_difference_derivative,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+SciPy_group_columns_sparse,new,global_only,False,100.00,55.26,100.00,100.00,pynguin,100.00,0.00,44.74,0.00,ok,ok,not_entered,,10,59.646734952926636,5
+SciPy_huber_loss,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+SciPy_linalg_toeplitz_validate,new,global_only,False,100.00,100.00,94.74,100.00,pynguin,100.00,0.00,0.00,5.26,ok,ok,not_entered,,24,107.03406715393066,
+SciPy_optimize_bounds,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,72.58701682090759,9
+SciPy_signal_chirp_phase,new,effective,True,71.43,100.00,64.71,100.00,coverup,100.00,28.57,0.00,35.29,ok,ok,improved,,22,114.99347257614136,4
+SciPy_sparse_norm,new,global_only,False,100.00,100.00,94.12,100.00,pynguin,100.00,0.00,0.00,5.88,ok,ok,not_entered,,11,116.00797271728516,1
+SciPy_wilcoxon_rank,new,effective,True,85.71,100.00,86.67,85.71,coverup,100.00,0.00,-14.29,-0.96,ok,ok,no_improvement_kept_baseline,Our method:valid_tests_no_branch_improvement,13,124.50498700141907,19
+SfePyExtra_contact_penalty,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+SfePyExtra_dof_map,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,50.63684582710266,31
+SfePyExtra_element_quality,new,global_only,False,100.00,90.00,100.00,100.00,pynguin,100.00,0.00,10.00,0.00,ok,ok,not_entered,,10,57.4841685295105,23
+SfePyExtra_material_update,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+SfePyExtra_newton_status,new,global_only,False,100.00,100.00,82.35,100.00,pynguin,100.00,0.00,0.00,17.65,ok,ok,not_entered,,18,120.5486512184143,2
+SfePyExtra_quadrature_order,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+SfePyExtra_region_selector,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,20,91.34321522712708,1
+SfePyExtra_tensor_symmetry,new,effective,True,83.33,100.00,88.89,83.33,coverup,100.00,0.00,-16.67,-5.56,ok,ok,no_improvement_kept_baseline,Our method:generated_tests_failed_then_filtered_no_improvement,23,117.61410212516785,14
+SfePy_axisymmetric_stress,new,global_only,False,100.00,100.00,76.47,100.00,pynguin,100.00,0.00,0.00,23.53,ok,ok,not_entered,,16,140.3034975528717,1
+SfePy_biot_coupling,new,global_only,False,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,not_entered,CodaMOSA:codamosa_empty_seed_bug,,,
+SfePy_boundary_region_selector,new,effective,True,85.71,100.00,52.94,100.00,coverup,100.00,14.29,0.00,47.06,ok,ok,improved,,19,109.95473074913025,
+SfePy_dg_advection_flux,new,global_only,False,100.00,100.00,95.24,100.00,pynguin,100.00,0.00,0.00,4.76,ok,ok,not_entered,,17,113.61320853233337,1
+SfePy_elastic_strain_energy,new,global_only,False,100.00,100.00,60.00,100.00,pynguin,100.00,0.00,0.00,40.00,ok,ok,not_entered,,19,107.55109596252441,
+SfePy_laplace_dirichlet,new,effective,True,81.25,100.00,69.57,100.00,coverup,100.00,18.75,0.00,30.43,ok,ok,improved,,17,109.32418370246887,6
+SfePy_material_coefficient,new,global_only,False,100.00,100.00,66.67,100.00,pynguin,100.00,0.00,0.00,33.33,ok,ok,not_entered,,14,119.7676088809967,1
+SfePy_mesh_refinement_indicator,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+SfePy_piezoelectric_coupling,new,effective,True,83.33,100.00,66.67,91.67,coverup,100.00,8.34,-8.33,25.00,ok,ok,improved,,23,109.70345115661621,4
+SfePy_residual_convergence,new,global_only,False,100.00,100.00,89.66,100.00,pynguin,100.00,0.00,0.00,10.34,ok,ok,not_entered,,15,102.07765030860901,2
+SparseFiniteDifferenceSolver,original,effective,True,59.73,78.73,97.40,81.08,codamosa,97.40,21.35,2.35,-16.32,ok,ok,improved,,,,
+TBCExtra_cholesky_check,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,67.57484269142151,16
+TBCExtra_integral_rule,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,65.48682260513306,1
+TBCExtra_lu_diagonal,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+TBCExtra_matrix_condition,new,global_only,False,100.00,100.00,88.89,100.00,pynguin,100.00,0.00,0.00,11.11,ok,ok,not_entered,,21,116.91586327552795,2
+TBCExtra_pivot_strategy,new,effective,True,12.50,9.09,27.27,87.50,our_method,87.50,75.00,78.41,60.23,failure_or_warning,ok,improved,CoverUp:no_tests_collected,18,111.46245431900024,
+TBCExtra_root_bracket,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+TBCExtra_step_controller,new,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,76.56973934173584,12
+TBCExtra_vector_norm,new,effective,True,92.86,100.00,80.95,92.86,coverup,100.00,0.00,-7.14,11.91,ok,ok,no_improvement_kept_baseline,Our method:valid_tests_no_branch_improvement,15,112.41465425491333,3
+Trapezoidal Rule,original,effective,True,19.44,100.00,,100.00,coverup,100.00,80.56,0.00,,ok,missing_statistics,improved,CodaMOSA:codamosa_empty_seed_bug,,,
+VectorCalculator1,original,effective,True,91.67,100.00,80.00,100.00,coverup,100.00,8.33,0.00,20.00,ok,ok,improved,,70,302.42815685272217,
+VectorCalculator2,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+VectorCalculator3,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,,,
+VectorCalculator4,original,effective,True,55.00,100.00,100.00,100.00,coverup,100.00,45.00,0.00,0.00,ok,ok,improved,,10,39.435070514678955,2
+euler_diffusion,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,ok,ok,not_entered,,10,149.41015601158142,
+integrator1,original,effective,True,71.34,71.34,59.09,93.75,our_method,93.75,22.41,22.41,34.66,failure_or_warning,ok,improved,CoverUp:test_assertion_or_runtime_failure,10,143.82678866386414,13
+integrator2,original,effective,True,65.00,100.00,,100.00,coverup,100.00,35.00,0.00,,ok,missing_statistics,improved,CodaMOSA:no_statistics_no_tests,,,
+integrator3,original,effective,True,21.74,91.30,,50.00,coverup,91.30,28.26,-41.30,,ok,missing_statistics,improved,CodaMOSA:codamosa_empty_seed_bug,,,
+integrator4,original,effective,True,40.00,100.00,33.33,100.00,coverup,100.00,60.00,0.00,66.67,ok,ok,improved,,70,341.0445122718811,1
+integrator5,original,effective,True,100.00,100.00,,100.00,pynguin,100.00,0.00,0.00,,ok,missing_statistics,no_improvement_kept_baseline,Our method:no_improvement_legacy_run | CodaMOSA:codamosa_empty_seed_bug,,,
+integrator6,original,effective,True,13.04,13.04,8.00,13.04,pynguin,13.04,0.00,0.00,5.04,ok,ok,no_improvement_kept_baseline,Our method:generation_or_evaluation_failures,94,391.3033220767975,11
+qr_decomposition,original,global_only,False,100.00,100.00,100.00,100.00,pynguin,100.00,0.00,0.00,0.00,failure_or_warning,ok,not_entered,CoverUp:no_tests_collected,,,
+solve_equation1,original,effective,True,21.05,89.47,11.11,100.00,our_method,100.00,78.95,10.53,88.89,ok,ok,improved,,50,268.43423891067505,
+solve_equation2,original,effective,True,20.00,12.50,10.00,70.00,our_method,70.00,50.00,57.50,60.00,failure_or_warning,ok,improved,CoverUp:no_tests_collected,58,435.3730068206787,1

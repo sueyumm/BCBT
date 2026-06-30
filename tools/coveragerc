@@ -1,0 +1,16 @@
+[run]
+branch = True
+parallel = false
+omit =
+    */test_*.py
+    */test_llm.py
+    */conftest.py
+
+[report]
+precision = 2
+show_missing = True
+skip_covered = false
+
+# 在程序目录下执行时，只关心当前包内的 example（basename 匹配）
+[paths]
+source = .

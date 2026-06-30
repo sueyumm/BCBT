@@ -1,0 +1,10 @@
+﻿category,model,target_branches,covered_branches,coverage_rate
+Complex Data Dependency,GPT-4o,225,161,71.55555555555554
+Complex Data Dependency,GPT-4o-mini,225,156,69.33333333333334
+Complex Data Dependency,Qwen2.5-7B,225,102,45.33333333333333
+Cross-Function / Cross-Module Dependency,GPT-4o,289,210,72.66435986159169
+Cross-Function / Cross-Module Dependency,GPT-4o-mini,289,198,68.5121107266436
+Cross-Function / Cross-Module Dependency,Qwen2.5-7B,289,133,46.02076124567474
+Loop/Iteration State Dependency,GPT-4o,260,185,71.15384615384616
+Loop/Iteration State Dependency,GPT-4o-mini,260,179,68.84615384615384
+Loop/Iteration State Dependency,Qwen2.5-7B,260,120,46.15384615384615

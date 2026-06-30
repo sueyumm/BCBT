@@ -1,0 +1,3480 @@
+{
+  "metric": "branch coverage",
+  "source_suite": "pynguin",
+  "program_count": 108,
+  "total_uncovered_branches": 295,
+  "programs": [
+    {
+      "program": "2DJacobiPoissonSolver",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\2DJacobiPoissonSolver\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\2DJacobiPoissonSolver\\pynguin\\result",
+      "branches": [
+        {
+          "line": 6,
+          "target": 8,
+          "direction": "loop_exit",
+          "condition": "i in range(Nx)",
+          "function": "jacobi",
+          "class": "",
+          "source_snippet": "3: def jacobi(u, f, dx, Nx, Ny, itmax):\n4:     x = np.zeros(Nx * Ny)\n5:     for j in range(Ny):\n6:         for i in range(Nx):\n7:             x[i + j * Nx] = u[i + j * Nx]\n8:     for it in range(itmax):\n9:         for j in range(1, Ny - 1):"
+        },
+        {
+          "line": 9,
+          "target": 16,
+          "direction": "loop_exit",
+          "condition": "j in range(1, Ny - 1)",
+          "function": "jacobi",
+          "class": "",
+          "source_snippet": "6:         for i in range(Nx):\n7:             x[i + j * Nx] = u[i + j * Nx]\n8:     for it in range(itmax):\n9:         for j in range(1, Ny - 1):\n10:             for i in range(1, Nx - 1):\n11:                 x[i + j * Nx] = 0.25 * (x[(i - 1) + j * Nx]\n12:                                         + x[(i + 1) + j * Nx]"
+        },
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "loop_enter",
+          "condition": "i in range(1, Nx - 1)",
+          "function": "jacobi",
+          "class": "",
+          "source_snippet": "7:             x[i + j * Nx] = u[i + j * Nx]\n8:     for it in range(itmax):\n9:         for j in range(1, Ny - 1):\n10:             for i in range(1, Nx - 1):\n11:                 x[i + j * Nx] = 0.25 * (x[(i - 1) + j * Nx]\n12:                                         + x[(i + 1) + j * Nx]\n13:                                         + x[i + (j - 1) * Nx]"
+        },
+        {
+          "line": 10,
+          "target": 16,
+          "direction": "loop_exit",
+          "condition": "i in range(1, Nx - 1)",
+          "function": "jacobi",
+          "class": "",
+          "source_snippet": "7:             x[i + j * Nx] = u[i + j * Nx]\n8:     for it in range(itmax):\n9:         for j in range(1, Ny - 1):\n10:             for i in range(1, Nx - 1):\n11:                 x[i + j * Nx] = 0.25 * (x[(i - 1) + j * Nx]\n12:                                         + x[(i + 1) + j * Nx]\n13:                                         + x[i + (j - 1) * Nx]"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CG_general",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CG_general\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CG_general\\pynguin\\result",
+      "branches": [
+        {
+          "line": 22,
+          "target": 23,
+          "direction": "loop_enter",
+          "condition": "b - a > 1e-07",
+          "function": "GoldenSection",
+          "class": "",
+          "source_snippet": "19:     phi1 = PhiValue(f, args, x, s, alpha1)  # 14\n20:     alpha2 = a + tau * (b - a)  # 15\n21:     phi2 = PhiValue(f, args, x, s, alpha2)  # 16\n22:     while (b - a) > 1e-7:  # 17\n23:         if phi1 > phi2:  # 18\n24:             a = alpha1  # 19\n25:             alpha1 = alpha2  # 20"
+        },
+        {
+          "line": 22,
+          "target": 35,
+          "direction": "loop_exit",
+          "condition": "b - a > 1e-07",
+          "function": "GoldenSection",
+          "class": "",
+          "source_snippet": "19:     phi1 = PhiValue(f, args, x, s, alpha1)  # 14\n20:     alpha2 = a + tau * (b - a)  # 15\n21:     phi2 = PhiValue(f, args, x, s, alpha2)  # 16\n22:     while (b - a) > 1e-7:  # 17\n23:         if phi1 > phi2:  # 18\n24:             a = alpha1  # 19\n25:             alpha1 = alpha2  # 20"
+        },
+        {
+          "line": 53,
+          "target": 54,
+          "direction": "loop_enter",
+          "condition": "gk > 1e-07 and k < 1000",
+          "function": "CGLineSearch",
+          "class": "",
+          "source_snippet": "50:     print('gradient f = ', df)  # 43\n51:     print('g =\\n', g)  # 44\n52:     print('s =\\n', s)  # 45\n53:     while gk > 1e-7 and k < 1000:  # 46\n54:         alpha = GoldenSection(f, args, x, s, 2 * alpha)  # 黄金分割法求一维极小化问题，求出步长#47\n55:         x = x + alpha * s  # 更新x#48\n56:         subs_list = [(args[i], x[i, 0]) for i in range(n)]  # 49"
+        },
+        {
+          "line": 53,
+          "target": 69,
+          "direction": "loop_exit",
+          "condition": "gk > 1e-07 and k < 1000",
+          "function": "CGLineSearch",
+          "class": "",
+          "source_snippet": "50:     print('gradient f = ', df)  # 43\n51:     print('g =\\n', g)  # 44\n52:     print('s =\\n', s)  # 45\n53:     while gk > 1e-7 and k < 1000:  # 46\n54:         alpha = GoldenSection(f, args, x, s, 2 * alpha)  # 黄金分割法求一维极小化问题，求出步长#47\n55:         x = x + alpha * s  # 更新x#48\n56:         subs_list = [(args[i], x[i, 0]) for i in range(n)]  # 49"
+        },
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "if_true",
+          "condition": "phi1 > phi2",
+          "function": "GoldenSection",
+          "class": "",
+          "source_snippet": "20:     alpha2 = a + tau * (b - a)  # 15\n21:     phi2 = PhiValue(f, args, x, s, alpha2)  # 16\n22:     while (b - a) > 1e-7:  # 17\n23:         if phi1 > phi2:  # 18\n24:             a = alpha1  # 19\n25:             alpha1 = alpha2  # 20\n26:             phi1 = phi2  # 21"
+        },
+        {
+          "line": 23,
+          "target": 30,
+          "direction": "if_false",
+          "condition": "phi1 > phi2",
+          "function": "GoldenSection",
+          "class": "",
+          "source_snippet": "20:     alpha2 = a + tau * (b - a)  # 15\n21:     phi2 = PhiValue(f, args, x, s, alpha2)  # 16\n22:     while (b - a) > 1e-7:  # 17\n23:         if phi1 > phi2:  # 18\n24:             a = alpha1  # 19\n25:             alpha1 = alpha2  # 20\n26:             phi1 = phi2  # 21"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_ansible_mathstuff",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_ansible_mathstuff\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_ansible_mathstuff\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 17,
+          "target": 18,
+          "direction": "if_true",
+          "condition": "not raw",
+          "function": "human_to_bytes",
+          "class": "",
+          "source_snippet": "14: def human_to_bytes(text):\n15:     units = {\"b\": 1, \"kb\": 1024, \"mb\": 1024 ** 2, \"gb\": 1024 ** 3, \"tb\": 1024 ** 4}\n16:     raw = str(text).strip().lower().replace(\" \", \"\")\n17:     if not raw:\n18:         raise ValueError(\"empty size\")\n19:     number = \"\"\n20:     suffix = \"\""
+        },
+        {
+          "line": 40,
+          "target": 42,
+          "direction": "if_false",
+          "condition": "a > b",
+          "function": "set_relationship",
+          "class": "",
+          "source_snippet": "37:         return \"equal\"\n38:     if a < b:\n39:         return \"proper-subset\"\n40:     if a > b:\n41:         return \"proper-superset\"\n42:     if a & b:\n43:         return \"overlap\""
+        },
+        {
+          "line": 42,
+          "target": 43,
+          "direction": "if_true",
+          "condition": "a & b",
+          "function": "set_relationship",
+          "class": "",
+          "source_snippet": "39:         return \"proper-subset\"\n40:     if a > b:\n41:         return \"proper-superset\"\n42:     if a & b:\n43:         return \"overlap\"\n44:     return \"disjoint\""
+        },
+        {
+          "line": 42,
+          "target": 44,
+          "direction": "if_false",
+          "condition": "a & b",
+          "function": "set_relationship",
+          "class": "",
+          "source_snippet": "39:         return \"proper-subset\"\n40:     if a > b:\n41:         return \"proper-superset\"\n42:     if a & b:\n43:         return \"overlap\"\n44:     return \"disjoint\""
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_ansible_stats",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_ansible_stats\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_ansible_stats\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 13,
+          "target": 14,
+          "direction": "if_true",
+          "condition": "outcome == 'ok'",
+          "function": "increment",
+          "class": "AggregateStats",
+          "source_snippet": "10:     def increment(self, host, outcome, count=1):\n11:         if count < 0:\n12:             raise ValueError(\"count must be non-negative\")\n13:         if outcome == \"ok\":\n14:             self.processed[host] += count\n15:         elif outcome == \"failed\":\n16:             self.failures[host] += count"
+        },
+        {
+          "line": 27,
+          "target": 29,
+          "direction": "if_false",
+          "condition": "total == 0",
+          "function": "summarize",
+          "class": "AggregateStats",
+          "source_snippet": "24:         failed = self.failures[host]\n25:         skipped = self.skipped[host]\n26:         total = ok + failed + skipped\n27:         if total == 0:\n28:             return {\"status\": \"empty\", \"success_rate\": 0.0}\n29:         if failed > 0:\n30:             status = \"failed\""
+        },
+        {
+          "line": 29,
+          "target": 30,
+          "direction": "if_true",
+          "condition": "failed > 0",
+          "function": "summarize",
+          "class": "AggregateStats",
+          "source_snippet": "26:         total = ok + failed + skipped\n27:         if total == 0:\n28:             return {\"status\": \"empty\", \"success_rate\": 0.0}\n29:         if failed > 0:\n30:             status = \"failed\"\n31:         elif skipped == total:\n32:             status = \"skipped\""
+        },
+        {
+          "line": 29,
+          "target": 31,
+          "direction": "if_false",
+          "condition": "failed > 0",
+          "function": "summarize",
+          "class": "AggregateStats",
+          "source_snippet": "26:         total = ok + failed + skipped\n27:         if total == 0:\n28:             return {\"status\": \"empty\", \"success_rate\": 0.0}\n29:         if failed > 0:\n30:             status = \"failed\"\n31:         elif skipped == total:\n32:             status = \"skipped\""
+        },
+        {
+          "line": 15,
+          "target": 16,
+          "direction": "if_true",
+          "condition": "outcome == 'failed'",
+          "function": "increment",
+          "class": "AggregateStats",
+          "source_snippet": "12:             raise ValueError(\"count must be non-negative\")\n13:         if outcome == \"ok\":\n14:             self.processed[host] += count\n15:         elif outcome == \"failed\":\n16:             self.failures[host] += count\n17:         elif outcome == \"skipped\":\n18:             self.skipped[host] += count"
+        },
+        {
+          "line": 31,
+          "target": 32,
+          "direction": "if_true",
+          "condition": "skipped == total",
+          "function": "summarize",
+          "class": "AggregateStats",
+          "source_snippet": "28:             return {\"status\": \"empty\", \"success_rate\": 0.0}\n29:         if failed > 0:\n30:             status = \"failed\"\n31:         elif skipped == total:\n32:             status = \"skipped\"\n33:         else:\n34:             status = \"ok\""
+        },
+        {
+          "line": 31,
+          "target": 34,
+          "direction": "if_false",
+          "condition": "skipped == total",
+          "function": "summarize",
+          "class": "AggregateStats",
+          "source_snippet": "28:             return {\"status\": \"empty\", \"success_rate\": 0.0}\n29:         if failed > 0:\n30:             status = \"failed\"\n31:         elif skipped == total:\n32:             status = \"skipped\"\n33:         else:\n34:             status = \"ok\""
+        },
+        {
+          "line": 17,
+          "target": 18,
+          "direction": "if_true",
+          "condition": "outcome == 'skipped'",
+          "function": "increment",
+          "class": "AggregateStats",
+          "source_snippet": "14:             self.processed[host] += count\n15:         elif outcome == \"failed\":\n16:             self.failures[host] += count\n17:         elif outcome == \"skipped\":\n18:             self.skipped[host] += count\n19:         else:\n20:             raise ValueError(\"unknown outcome\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_flutes_math",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_flutes_math\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_flutes_math\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_keras_activations",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_keras_activations\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_keras_activations\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 8,
+          "target": 9,
+          "direction": "if_true",
+          "condition": "kind == 'leaky_relu'",
+          "function": "activation",
+          "class": "",
+          "source_snippet": "5:     x = np.asarray(values, dtype=float)\n6:     if kind == \"relu\":\n7:         return np.maximum(x, 0.0)\n8:     if kind == \"leaky_relu\":\n9:         if alpha < 0:\n10:             raise ValueError(\"alpha must be non-negative\")\n11:         return np.where(x >= 0, x, alpha * x)"
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "kind == 'sigmoid'",
+          "function": "activation",
+          "class": "",
+          "source_snippet": "9:         if alpha < 0:\n10:             raise ValueError(\"alpha must be non-negative\")\n11:         return np.where(x >= 0, x, alpha * x)\n12:     if kind == \"sigmoid\":\n13:         return 1.0 / (1.0 + np.exp(-x))\n14:     if kind == \"tanh\":\n15:         return np.tanh(x)"
+        },
+        {
+          "line": 14,
+          "target": 15,
+          "direction": "if_true",
+          "condition": "kind == 'tanh'",
+          "function": "activation",
+          "class": "",
+          "source_snippet": "11:         return np.where(x >= 0, x, alpha * x)\n12:     if kind == \"sigmoid\":\n13:         return 1.0 / (1.0 + np.exp(-x))\n14:     if kind == \"tanh\":\n15:         return np.tanh(x)\n16:     raise ValueError(\"unknown activation\")\n17: "
+        },
+        {
+          "line": 9,
+          "target": 10,
+          "direction": "if_true",
+          "condition": "alpha < 0",
+          "function": "activation",
+          "class": "",
+          "source_snippet": "6:     if kind == \"relu\":\n7:         return np.maximum(x, 0.0)\n8:     if kind == \"leaky_relu\":\n9:         if alpha < 0:\n10:             raise ValueError(\"alpha must be non-negative\")\n11:         return np.where(x >= 0, x, alpha * x)\n12:     if kind == \"sigmoid\":"
+        },
+        {
+          "line": 9,
+          "target": 11,
+          "direction": "if_false",
+          "condition": "alpha < 0",
+          "function": "activation",
+          "class": "",
+          "source_snippet": "6:     if kind == \"relu\":\n7:         return np.maximum(x, 0.0)\n8:     if kind == \"leaky_relu\":\n9:         if alpha < 0:\n10:             raise ValueError(\"alpha must be non-negative\")\n11:         return np.where(x >= 0, x, alpha * x)\n12:     if kind == \"sigmoid\":"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_keras_losses",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_keras_losses\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_keras_losses\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "loss == 'mae'",
+          "function": "regression_loss",
+          "class": "",
+          "source_snippet": "9:     error = pred - true\n10:     if loss == \"mse\":\n11:         return float(np.mean(error ** 2))\n12:     if loss == \"mae\":\n13:         return float(np.mean(np.abs(error)))\n14:     if loss == \"huber\":\n15:         if delta <= 0:"
+        },
+        {
+          "line": 14,
+          "target": 15,
+          "direction": "if_true",
+          "condition": "loss == 'huber'",
+          "function": "regression_loss",
+          "class": "",
+          "source_snippet": "11:         return float(np.mean(error ** 2))\n12:     if loss == \"mae\":\n13:         return float(np.mean(np.abs(error)))\n14:     if loss == \"huber\":\n15:         if delta <= 0:\n16:             raise ValueError(\"delta must be positive\")\n17:         abs_error = np.abs(error)"
+        },
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "if_true",
+          "condition": "tolerance < 0",
+          "function": "loss_quality",
+          "class": "",
+          "source_snippet": "22: \n23: \n24: def loss_quality(value, tolerance):\n25:     if tolerance < 0:\n26:         raise ValueError(\"tolerance must be non-negative\")\n27:     return \"acceptable\" if value <= tolerance else \"large\""
+        },
+        {
+          "line": 15,
+          "target": 16,
+          "direction": "if_true",
+          "condition": "delta <= 0",
+          "function": "regression_loss",
+          "class": "",
+          "source_snippet": "12:     if loss == \"mae\":\n13:         return float(np.mean(np.abs(error)))\n14:     if loss == \"huber\":\n15:         if delta <= 0:\n16:             raise ValueError(\"delta must be positive\")\n17:         abs_error = np.abs(error)\n18:         quad = np.minimum(abs_error, delta)"
+        },
+        {
+          "line": 15,
+          "target": 17,
+          "direction": "if_false",
+          "condition": "delta <= 0",
+          "function": "regression_loss",
+          "class": "",
+          "source_snippet": "12:     if loss == \"mae\":\n13:         return float(np.mean(np.abs(error)))\n14:     if loss == \"huber\":\n15:         if delta <= 0:\n16:             raise ValueError(\"delta must be positive\")\n17:         abs_error = np.abs(error)\n18:         quad = np.minimum(abs_error, delta)"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_matplotlib_bezier",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_bezier\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_bezier\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 6,
+          "target": 8,
+          "direction": "if_false",
+          "condition": "pts.shape != (3, 2)",
+          "function": "quadratic_bezier",
+          "class": "",
+          "source_snippet": "3: \n4: def quadratic_bezier(points, t):\n5:     pts = np.asarray(points, dtype=float)\n6:     if pts.shape != (3, 2):\n7:         raise ValueError(\"quadratic bezier requires three 2D control points\")\n8:     if np.any((np.asarray(t) < 0) | (np.asarray(t) > 1)):\n9:         raise ValueError(\"parameter t must be in [0, 1]\")"
+        },
+        {
+          "line": 8,
+          "target": 9,
+          "direction": "if_true",
+          "condition": "np.any((np.asarray(t) < 0) | (np.asarray(t) > 1))",
+          "function": "quadratic_bezier",
+          "class": "",
+          "source_snippet": "5:     pts = np.asarray(points, dtype=float)\n6:     if pts.shape != (3, 2):\n7:         raise ValueError(\"quadratic bezier requires three 2D control points\")\n8:     if np.any((np.asarray(t) < 0) | (np.asarray(t) > 1)):\n9:         raise ValueError(\"parameter t must be in [0, 1]\")\n10:     t = np.asarray(t, dtype=float)[..., None]\n11:     return (1 - t) ** 2 * pts[0] + 2 * (1 - t) * t * pts[1] + t ** 2 * pts[2]"
+        },
+        {
+          "line": 8,
+          "target": 10,
+          "direction": "if_false",
+          "condition": "np.any((np.asarray(t) < 0) | (np.asarray(t) > 1))",
+          "function": "quadratic_bezier",
+          "class": "",
+          "source_snippet": "5:     pts = np.asarray(points, dtype=float)\n6:     if pts.shape != (3, 2):\n7:         raise ValueError(\"quadratic bezier requires three 2D control points\")\n8:     if np.any((np.asarray(t) < 0) | (np.asarray(t) > 1)):\n9:         raise ValueError(\"parameter t must be in [0, 1]\")\n10:     t = np.asarray(t, dtype=float)[..., None]\n11:     return (1 - t) ** 2 * pts[0] + 2 * (1 - t) * t * pts[1] + t ** 2 * pts[2]"
+        },
+        {
+          "line": 16,
+          "target": 18,
+          "direction": "if_false",
+          "condition": "pts.shape != (3, 2)",
+          "function": "curve_flatness",
+          "class": "",
+          "source_snippet": "13: \n14: def curve_flatness(points):\n15:     pts = np.asarray(points, dtype=float)\n16:     if pts.shape != (3, 2):\n17:         raise ValueError(\"quadratic bezier requires three 2D control points\")\n18:     chord = pts[2] - pts[0]\n19:     if np.allclose(chord, 0.0):"
+        },
+        {
+          "line": 19,
+          "target": 20,
+          "direction": "if_true",
+          "condition": "np.allclose(chord, 0.0)",
+          "function": "curve_flatness",
+          "class": "",
+          "source_snippet": "16:     if pts.shape != (3, 2):\n17:         raise ValueError(\"quadratic bezier requires three 2D control points\")\n18:     chord = pts[2] - pts[0]\n19:     if np.allclose(chord, 0.0):\n20:         return float(np.linalg.norm(pts[1] - pts[0]))\n21:     area2 = abs(np.cross(chord, pts[1] - pts[0]))\n22:     return float(area2 / np.linalg.norm(chord))"
+        },
+        {
+          "line": 19,
+          "target": 21,
+          "direction": "if_false",
+          "condition": "np.allclose(chord, 0.0)",
+          "function": "curve_flatness",
+          "class": "",
+          "source_snippet": "16:     if pts.shape != (3, 2):\n17:         raise ValueError(\"quadratic bezier requires three 2D control points\")\n18:     chord = pts[2] - pts[0]\n19:     if np.allclose(chord, 0.0):\n20:         return float(np.linalg.norm(pts[1] - pts[0]))\n21:     area2 = abs(np.cross(chord, pts[1] - pts[0]))\n22:     return float(area2 / np.linalg.norm(chord))"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_matplotlib_colors",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_colors\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_colors\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_matplotlib_scale",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_scale\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_scale\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_matplotlib_ticker",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_ticker\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_ticker\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_matplotlib_transform",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_transform\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_transform\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_matplotlib_triangles",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_triangles\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_matplotlib_triangles\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 6,
+          "target": 8,
+          "direction": "if_false",
+          "condition": "pts.shape != (3, 2)",
+          "function": "triangle_area",
+          "class": "",
+          "source_snippet": "3: \n4: def triangle_area(vertices):\n5:     pts = np.asarray(vertices, dtype=float)\n6:     if pts.shape != (3, 2):\n7:         raise ValueError(\"triangle requires three 2D vertices\")\n8:     area = 0.5 * np.cross(pts[1] - pts[0], pts[2] - pts[0])\n9:     return float(abs(area))"
+        },
+        {
+          "line": 14,
+          "target": 16,
+          "direction": "if_false",
+          "condition": "pts.shape != (3, 2)",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "11: \n12: def triangle_quality(vertices):\n13:     pts = np.asarray(vertices, dtype=float)\n14:     if pts.shape != (3, 2):\n15:         raise ValueError(\"triangle requires three 2D vertices\")\n16:     edges = np.array([\n17:         np.linalg.norm(pts[1] - pts[0]),"
+        },
+        {
+          "line": 21,
+          "target": 22,
+          "direction": "if_true",
+          "condition": "np.any(edges == 0)",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "18:         np.linalg.norm(pts[2] - pts[1]),\n19:         np.linalg.norm(pts[0] - pts[2]),\n20:     ])\n21:     if np.any(edges == 0):\n22:         return \"degenerate\"\n23:     area = triangle_area(pts)\n24:     quality = 4.0 * np.sqrt(3.0) * area / np.sum(edges ** 2)"
+        },
+        {
+          "line": 21,
+          "target": 23,
+          "direction": "if_false",
+          "condition": "np.any(edges == 0)",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "18:         np.linalg.norm(pts[2] - pts[1]),\n19:         np.linalg.norm(pts[0] - pts[2]),\n20:     ])\n21:     if np.any(edges == 0):\n22:         return \"degenerate\"\n23:     area = triangle_area(pts)\n24:     quality = 4.0 * np.sqrt(3.0) * area / np.sum(edges ** 2)"
+        },
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "if_true",
+          "condition": "quality > 0.75",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "22:         return \"degenerate\"\n23:     area = triangle_area(pts)\n24:     quality = 4.0 * np.sqrt(3.0) * area / np.sum(edges ** 2)\n25:     if quality > 0.75:\n26:         return \"good\"\n27:     if quality > 0.25:\n28:         return \"usable\""
+        },
+        {
+          "line": 25,
+          "target": 27,
+          "direction": "if_false",
+          "condition": "quality > 0.75",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "22:         return \"degenerate\"\n23:     area = triangle_area(pts)\n24:     quality = 4.0 * np.sqrt(3.0) * area / np.sum(edges ** 2)\n25:     if quality > 0.75:\n26:         return \"good\"\n27:     if quality > 0.25:\n28:         return \"usable\""
+        },
+        {
+          "line": 27,
+          "target": 28,
+          "direction": "if_true",
+          "condition": "quality > 0.25",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "24:     quality = 4.0 * np.sqrt(3.0) * area / np.sum(edges ** 2)\n25:     if quality > 0.75:\n26:         return \"good\"\n27:     if quality > 0.25:\n28:         return \"usable\"\n29:     return \"poor\""
+        },
+        {
+          "line": 27,
+          "target": 29,
+          "direction": "if_false",
+          "condition": "quality > 0.25",
+          "function": "triangle_quality",
+          "class": "",
+          "source_snippet": "24:     quality = 4.0 * np.sqrt(3.0) * area / np.sum(edges ** 2)\n25:     if quality > 0.75:\n26:         return \"good\"\n27:     if quality > 0.25:\n28:         return \"usable\"\n29:     return \"poor\""
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_mimesis_random",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_mimesis_random\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_mimesis_random\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "weight < 0",
+          "function": "weighted_choice_index",
+          "class": "",
+          "source_snippet": "9:     threshold = value * total\n10:     cumulative = 0.0\n11:     for index, weight in enumerate(weights):\n12:         if weight < 0:\n13:             raise ValueError(\"weights must be non-negative\")\n14:         cumulative += weight\n15:         if threshold < cumulative:"
+        },
+        {
+          "line": 15,
+          "target": 17,
+          "direction": "if_false",
+          "condition": "threshold < cumulative",
+          "function": "weighted_choice_index",
+          "class": "",
+          "source_snippet": "12:         if weight < 0:\n13:             raise ValueError(\"weights must be non-negative\")\n14:         cumulative += weight\n15:         if threshold < cumulative:\n16:             return index\n17:     return len(weights) - 1\n18: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_pandas_algorithms",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_algorithms\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_algorithms\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 34,
+          "target": 36,
+          "direction": "if_false",
+          "condition": "mask.sum() > 1",
+          "function": "rank_method",
+          "class": "",
+          "source_snippet": "31:         raise ValueError(\"unknown rank method\")\n32:     for value in np.unique(arr):\n33:         mask = arr == value\n34:         if mask.sum() > 1:\n35:             ranks[mask] = ranks[mask].mean()\n36:     return ranks"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_pandas_interval",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_interval\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_interval\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 6,
+          "target": 7,
+          "direction": "if_true",
+          "condition": "closed == 'left'",
+          "function": "interval_contains",
+          "class": "",
+          "source_snippet": "3:         raise ValueError(\"left endpoint cannot exceed right endpoint\")\n4:     if closed == \"right\":\n5:         return left < value <= right\n6:     if closed == \"left\":\n7:         return left <= value < right\n8:     if closed == \"both\":\n9:         return left <= value <= right"
+        },
+        {
+          "line": 8,
+          "target": 9,
+          "direction": "if_true",
+          "condition": "closed == 'both'",
+          "function": "interval_contains",
+          "class": "",
+          "source_snippet": "5:         return left < value <= right\n6:     if closed == \"left\":\n7:         return left <= value < right\n8:     if closed == \"both\":\n9:         return left <= value <= right\n10:     if closed == \"neither\":\n11:         return left < value < right"
+        },
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "if_true",
+          "condition": "closed == 'neither'",
+          "function": "interval_contains",
+          "class": "",
+          "source_snippet": "7:         return left <= value < right\n8:     if closed == \"both\":\n9:         return left <= value <= right\n10:     if closed == \"neither\":\n11:         return left < value < right\n12:     raise ValueError(\"unknown closure\")\n13: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_pandas_nanops",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_nanops\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_nanops\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_pandas_numeric_array",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_numeric_array\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_numeric_array\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "if_true",
+          "condition": "errors == 'raise'",
+          "function": "coerce_numeric",
+          "class": "",
+          "source_snippet": "7:         try:\n8:             result.append(float(value))\n9:         except (TypeError, ValueError):\n10:             if errors == \"raise\":\n11:                 raise\n12:             if errors == \"coerce\":\n13:                 result.append(np.nan)"
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "errors == 'coerce'",
+          "function": "coerce_numeric",
+          "class": "",
+          "source_snippet": "9:         except (TypeError, ValueError):\n10:             if errors == \"raise\":\n11:                 raise\n12:             if errors == \"coerce\":\n13:                 result.append(np.nan)\n14:             elif errors == \"ignore\":\n15:                 result.append(value)"
+        },
+        {
+          "line": 14,
+          "target": 15,
+          "direction": "if_true",
+          "condition": "errors == 'ignore'",
+          "function": "coerce_numeric",
+          "class": "",
+          "source_snippet": "11:                 raise\n12:             if errors == \"coerce\":\n13:                 result.append(np.nan)\n14:             elif errors == \"ignore\":\n15:                 result.append(value)\n16:             else:\n17:                 raise ValueError(\"unknown error mode\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_pandas_tile",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_tile\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pandas_tile\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_pypara_numbers",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pypara_numbers\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_pypara_numbers\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_scipy_sparse_shape",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_scipy_sparse_shape\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_scipy_sparse_shape\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 16,
+          "target": 17,
+          "direction": "if_true",
+          "condition": "density < 0.5",
+          "function": "validate_sparse_shape",
+          "class": "",
+          "source_snippet": "13:     density = nnz / (rows * cols)\n14:     if density < 0.1:\n15:         return \"sparse\"\n16:     if density < 0.5:\n17:         return \"medium\"\n18:     return \"dense\"\n19: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "CodaCover_scipy_stats_basic",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_scipy_stats_basic\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\CodaCover_scipy_stats_basic\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "if_true",
+          "condition": "cut",
+          "function": "trimmed_mean",
+          "class": "",
+          "source_snippet": "8:     if not data:\n9:         raise ValueError(\"values cannot be empty\")\n10:     cut = int(len(data) * proportion)\n11:     if cut:\n12:         data = data[cut:-cut]\n13:     return sum(data) / len(data)\n14: "
+        },
+        {
+          "line": 22,
+          "target": 28,
+          "direction": "loop_exit",
+          "condition": "j in range(i + 1, len(x))",
+          "function": "kendall_pair_count",
+          "class": "",
+          "source_snippet": "19:     concordant = 0\n20:     discordant = 0\n21:     for i in range(len(x)):\n22:         for j in range(i + 1, len(x)):\n23:             sign = (x[i] - x[j]) * (y[i] - y[j])\n24:             if sign > 0:\n25:                 concordant += 1"
+        },
+        {
+          "line": 26,
+          "target": 28,
+          "direction": "if_false",
+          "condition": "sign < 0",
+          "function": "kendall_pair_count",
+          "class": "",
+          "source_snippet": "23:             sign = (x[i] - x[j]) * (y[i] - y[j])\n24:             if sign > 0:\n25:                 concordant += 1\n26:             elif sign < 0:\n27:                 discordant += 1\n28:     total = concordant + discordant\n29:     if total == 0:"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "EigenvalueSolvers",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\EigenvalueSolvers\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\EigenvalueSolvers\\pynguin\\result",
+      "branches": [
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "loop_enter",
+          "condition": "_ in range(max_iterations)",
+          "function": "inverse_power_method",
+          "class": "",
+          "source_snippet": "8:     p = __find_p(x)  # 7\n9:     error = 1  # 8\n10:     x = x / x[p]  # 9\n11:     for _ in range(max_iterations):  # 10\n12:         if error < tolerance:  # 11\n13:             break  # 12\n14:         y = np.linalg.solve(A - q * I, x)  # 13"
+        },
+        {
+          "line": 11,
+          "target": 20,
+          "direction": "loop_exit",
+          "condition": "_ in range(max_iterations)",
+          "function": "inverse_power_method",
+          "class": "",
+          "source_snippet": "8:     p = __find_p(x)  # 7\n9:     error = 1  # 8\n10:     x = x / x[p]  # 9\n11:     for _ in range(max_iterations):  # 10\n12:         if error < tolerance:  # 11\n13:             break  # 12\n14:         y = np.linalg.solve(A - q * I, x)  # 13"
+        },
+        {
+          "line": 43,
+          "target": 44,
+          "direction": "loop_enter",
+          "condition": "_ in range(max_iterations)",
+          "function": "power_method",
+          "class": "",
+          "source_snippet": "40: \n41:     x = x / x[p]  #33\n42: \n43:     for _ in range(max_iterations):  # 34\n44:         if error < tolerance:  # 35\n45:             break  # 36\n46:         error, p, μ, x = __iterate(A, x, p)  # 37"
+        },
+        {
+          "line": 43,
+          "target": 48,
+          "direction": "loop_exit",
+          "condition": "_ in range(max_iterations)",
+          "function": "power_method",
+          "class": "",
+          "source_snippet": "40: \n41:     x = x / x[p]  #33\n42: \n43:     for _ in range(max_iterations):  # 34\n44:         if error < tolerance:  # 35\n45:             break  # 36\n46:         error, p, μ, x = __iterate(A, x, p)  # 37"
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "error < tolerance",
+          "function": "inverse_power_method",
+          "class": "",
+          "source_snippet": "9:     error = 1  # 8\n10:     x = x / x[p]  # 9\n11:     for _ in range(max_iterations):  # 10\n12:         if error < tolerance:  # 11\n13:             break  # 12\n14:         y = np.linalg.solve(A - q * I, x)  # 13\n15:         μ = y[p]  # 14"
+        },
+        {
+          "line": 12,
+          "target": 14,
+          "direction": "if_false",
+          "condition": "error < tolerance",
+          "function": "inverse_power_method",
+          "class": "",
+          "source_snippet": "9:     error = 1  # 8\n10:     x = x / x[p]  # 9\n11:     for _ in range(max_iterations):  # 10\n12:         if error < tolerance:  # 11\n13:             break  # 12\n14:         y = np.linalg.solve(A - q * I, x)  # 13\n15:         μ = y[p]  # 14"
+        },
+        {
+          "line": 44,
+          "target": 45,
+          "direction": "if_true",
+          "condition": "error < tolerance",
+          "function": "power_method",
+          "class": "",
+          "source_snippet": "41:     x = x / x[p]  #33\n42: \n43:     for _ in range(max_iterations):  # 34\n44:         if error < tolerance:  # 35\n45:             break  # 36\n46:         error, p, μ, x = __iterate(A, x, p)  # 37\n47: "
+        },
+        {
+          "line": 44,
+          "target": 46,
+          "direction": "if_false",
+          "condition": "error < tolerance",
+          "function": "power_method",
+          "class": "",
+          "source_snippet": "41:     x = x / x[p]  #33\n42: \n43:     for _ in range(max_iterations):  # 34\n44:         if error < tolerance:  # 35\n45:             break  # 36\n46:         error, p, μ, x = __iterate(A, x, p)  # 37\n47: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "euler_diffusion",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\euler_diffusion\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\euler_diffusion\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_boundary_conditions",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_boundary_conditions\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_boundary_conditions\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 13,
+          "target": 15,
+          "direction": "if_false",
+          "condition": "right is not None",
+          "function": "apply_boundary_1d",
+          "class": "",
+          "source_snippet": "10:     if mode == \"dirichlet\":\n11:         if left is not None:\n12:             values[0] = left\n13:         if right is not None:\n14:             values[-1] = right\n15:     elif mode == \"neumann\":\n16:         if len(values) > 1 and left is not None:"
+        },
+        {
+          "line": 15,
+          "target": 16,
+          "direction": "if_true",
+          "condition": "mode == 'neumann'",
+          "function": "apply_boundary_1d",
+          "class": "",
+          "source_snippet": "12:             values[0] = left\n13:         if right is not None:\n14:             values[-1] = right\n15:     elif mode == \"neumann\":\n16:         if len(values) > 1 and left is not None:\n17:             values[0] = values[1] - left\n18:         if len(values) > 1 and right is not None:"
+        },
+        {
+          "line": 16,
+          "target": 17,
+          "direction": "if_true",
+          "condition": "len(values) > 1 and left is not None",
+          "function": "apply_boundary_1d",
+          "class": "",
+          "source_snippet": "13:         if right is not None:\n14:             values[-1] = right\n15:     elif mode == \"neumann\":\n16:         if len(values) > 1 and left is not None:\n17:             values[0] = values[1] - left\n18:         if len(values) > 1 and right is not None:\n19:             values[-1] = values[-2] + right"
+        },
+        {
+          "line": 16,
+          "target": 18,
+          "direction": "if_false",
+          "condition": "len(values) > 1 and left is not None",
+          "function": "apply_boundary_1d",
+          "class": "",
+          "source_snippet": "13:         if right is not None:\n14:             values[-1] = right\n15:     elif mode == \"neumann\":\n16:         if len(values) > 1 and left is not None:\n17:             values[0] = values[1] - left\n18:         if len(values) > 1 and right is not None:\n19:             values[-1] = values[-2] + right"
+        },
+        {
+          "line": 18,
+          "target": 19,
+          "direction": "if_true",
+          "condition": "len(values) > 1 and right is not None",
+          "function": "apply_boundary_1d",
+          "class": "",
+          "source_snippet": "15:     elif mode == \"neumann\":\n16:         if len(values) > 1 and left is not None:\n17:             values[0] = values[1] - left\n18:         if len(values) > 1 and right is not None:\n19:             values[-1] = values[-2] + right\n20:     else:\n21:         raise ValueError(\"unsupported boundary mode\")"
+        },
+        {
+          "line": 18,
+          "target": 21,
+          "direction": "if_false",
+          "condition": "len(values) > 1 and right is not None",
+          "function": "apply_boundary_1d",
+          "class": "",
+          "source_snippet": "15:     elif mode == \"neumann\":\n16:         if len(values) > 1 and left is not None:\n17:             values[0] = values[1] - left\n18:         if len(values) > 1 and right is not None:\n19:             values[-1] = values[-2] + right\n20:     else:\n21:         raise ValueError(\"unsupported boundary mode\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_cahn_hilliard_potential",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_cahn_hilliard_potential\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_cahn_hilliard_potential\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_chemotaxis_update",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_chemotaxis_update\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_chemotaxis_update\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_convection_upwind",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_convection_upwind\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_convection_upwind\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_diffusion_steady_state",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_diffusion_steady_state\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_diffusion_steady_state\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "if_true",
+          "condition": "side == 'right'",
+          "function": "boundary_flux",
+          "class": "",
+          "source_snippet": "22:         raise ValueError(\"dx must be positive\")\n23:     if side == \"left\":\n24:         return -(profile[1] - profile[0]) / dx\n25:     if side == \"right\":\n26:         return -(profile[-1] - profile[-2]) / dx\n27:     raise ValueError(\"unknown boundary side\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_level_set_distance",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_level_set_distance\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_level_set_distance\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_mesh_spacing",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_mesh_spacing\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_mesh_spacing\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_phase_anisotropy",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_phase_anisotropy\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_phase_anisotropy\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_residual_norm",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_residual_norm\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_residual_norm\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "norm_type == 'l1'",
+          "function": "residual_norm",
+          "class": "",
+          "source_snippet": "9:         return float(np.sqrt(np.sum(residual * residual)))\n10:     if norm_type == \"linf\":\n11:         return float(np.max(np.abs(residual)))\n12:     if norm_type == \"l1\":\n13:         return float(np.sum(np.abs(residual)))\n14:     raise ValueError(\"unknown norm type\")\n15: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "FiPy_source_term_balance",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_source_term_balance\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\FiPy_source_term_balance\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "GaussianElimination1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\GaussianElimination1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\GaussianElimination1\\pynguin\\result",
+      "branches": [
+        {
+          "line": 7,
+          "target": 8,
+          "direction": "loop_enter",
+          "condition": "i in range(n - 2, -1, -1)",
+          "function": "Solve",
+          "class": "",
+          "source_snippet": "4:     n = len(b)#3\n5:     x = np.zeros((n,1))#4\n6:     x[-1] = b[-1]/U[-1,-1]#5\n7:     for i in range(n-2,-1,-1):#6\n8:         x[i] = (b[i]-np.dot(U[i,i+1:],x[i+1:]))/U[i,i]#7\n9:     return x#8"
+        },
+        {
+          "line": 7,
+          "target": 9,
+          "direction": "loop_exit",
+          "condition": "i in range(n - 2, -1, -1)",
+          "function": "Solve",
+          "class": "",
+          "source_snippet": "4:     n = len(b)#3\n5:     x = np.zeros((n,1))#4\n6:     x[-1] = b[-1]/U[-1,-1]#5\n7:     for i in range(n-2,-1,-1):#6\n8:         x[i] = (b[i]-np.dot(U[i,i+1:],x[i+1:]))/U[i,i]#7\n9:     return x#8"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "GaussianElimination2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\GaussianElimination2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\GaussianElimination2\\pynguin\\result",
+      "branches": [
+        {
+          "line": 5,
+          "target": 6,
+          "direction": "loop_enter",
+          "condition": "i in range(n - 1)",
+          "function": "SeqGauss",
+          "class": "",
+          "source_snippet": "2: \n3: def SeqGauss(A):#9\n4:     n = A.shape[0]#10\n5:     for i in range(n-1):#11\n6:         for j in range(i+1,n):#12\n7:             A[j,i:] = A[j,i:]-(A[j,i]/A[i,i])*A[i,i:]#13\n8:     return A#14"
+        },
+        {
+          "line": 5,
+          "target": 8,
+          "direction": "loop_exit",
+          "condition": "i in range(n - 1)",
+          "function": "SeqGauss",
+          "class": "",
+          "source_snippet": "2: \n3: def SeqGauss(A):#9\n4:     n = A.shape[0]#10\n5:     for i in range(n-1):#11\n6:         for j in range(i+1,n):#12\n7:             A[j,i:] = A[j,i:]-(A[j,i]/A[i,i])*A[i,i:]#13\n8:     return A#14"
+        },
+        {
+          "line": 6,
+          "target": 7,
+          "direction": "loop_enter",
+          "condition": "j in range(i + 1, n)",
+          "function": "SeqGauss",
+          "class": "",
+          "source_snippet": "3: def SeqGauss(A):#9\n4:     n = A.shape[0]#10\n5:     for i in range(n-1):#11\n6:         for j in range(i+1,n):#12\n7:             A[j,i:] = A[j,i:]-(A[j,i]/A[i,i])*A[i,i:]#13\n8:     return A#14"
+        },
+        {
+          "line": 6,
+          "target": 8,
+          "direction": "loop_exit",
+          "condition": "j in range(i + 1, n)",
+          "function": "SeqGauss",
+          "class": "",
+          "source_snippet": "3: def SeqGauss(A):#9\n4:     n = A.shape[0]#10\n5:     for i in range(n-1):#11\n6:         for j in range(i+1,n):#12\n7:             A[j,i:] = A[j,i:]-(A[j,i]/A[i,i])*A[i,i:]#13\n8:     return A#14"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "GaussianElimination3",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\GaussianElimination3\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\GaussianElimination3\\pynguin\\result",
+      "branches": [
+        {
+          "line": 5,
+          "target": 6,
+          "direction": "loop_enter",
+          "condition": "i in range(n - 1)",
+          "function": "PivotGauss",
+          "class": "",
+          "source_snippet": "2: \n3: def PivotGauss(A):#15\n4:     n = A.shape[0]#16\n5:     for i in range(n-1):#17\n6:         k = [j for j in range(i,n) if A[j,i]==np.max(A[i:,i])][0]#18\n7:         A[[i,k],:]=A[[k,i],:]#19\n8:         for j in range(i+1,n):#20"
+        },
+        {
+          "line": 5,
+          "target": 10,
+          "direction": "loop_exit",
+          "condition": "i in range(n - 1)",
+          "function": "PivotGauss",
+          "class": "",
+          "source_snippet": "2: \n3: def PivotGauss(A):#15\n4:     n = A.shape[0]#16\n5:     for i in range(n-1):#17\n6:         k = [j for j in range(i,n) if A[j,i]==np.max(A[i:,i])][0]#18\n7:         A[[i,k],:]=A[[k,i],:]#19\n8:         for j in range(i+1,n):#20"
+        },
+        {
+          "line": 8,
+          "target": 9,
+          "direction": "loop_enter",
+          "condition": "j in range(i + 1, n)",
+          "function": "PivotGauss",
+          "class": "",
+          "source_snippet": "5:     for i in range(n-1):#17\n6:         k = [j for j in range(i,n) if A[j,i]==np.max(A[i:,i])][0]#18\n7:         A[[i,k],:]=A[[k,i],:]#19\n8:         for j in range(i+1,n):#20\n9:             A[j,i:] = A[j,i:]-(A[j,i]/A[i,i])*A[i,i:]#21\n10:     return A#22"
+        },
+        {
+          "line": 8,
+          "target": 10,
+          "direction": "loop_exit",
+          "condition": "j in range(i + 1, n)",
+          "function": "PivotGauss",
+          "class": "",
+          "source_snippet": "5:     for i in range(n-1):#17\n6:         k = [j for j in range(i,n) if A[j,i]==np.max(A[i:,i])][0]#18\n7:         A[[i,k],:]=A[[k,i],:]#19\n8:         for j in range(i+1,n):#20\n9:             A[j,i:] = A[j,i:]-(A[j,i]/A[i,i])*A[i,i:]#21\n10:     return A#22"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "integrator1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator1\\pynguin\\result",
+      "branches": [
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "loop_enter",
+          "condition": "j in range(1, N - 1)",
+          "function": "trap",
+          "class": "",
+          "source_snippet": "7:     h = (b-a) / (N-1)  # 5\n8:     S = 0.5*(func(a) + func(b))  # 6\n9:     x = a + h  # 7\n10:     for j in range(1,N-1):  # 8\n11:         S = S + func(x)  # 9\n12:         x = x + h  # 10\n13:     S = S*h  # 11"
+        },
+        {
+          "line": 10,
+          "target": 13,
+          "direction": "loop_exit",
+          "condition": "j in range(1, N - 1)",
+          "function": "trap",
+          "class": "",
+          "source_snippet": "7:     h = (b-a) / (N-1)  # 5\n8:     S = 0.5*(func(a) + func(b))  # 6\n9:     x = a + h  # 7\n10:     for j in range(1,N-1):  # 8\n11:         S = S + func(x)  # 9\n12:         x = x + h  # 10\n13:     S = S*h  # 11"
+        },
+        {
+          "line": 49,
+          "target": 50,
+          "direction": "loop_enter",
+          "condition": "i in range(N)",
+          "function": "legendre",
+          "class": "",
+          "source_snippet": "46:     tmp = np.zeros(N)  # 37\n47:     P_1 = legendre(a, b, x, y, n-1)  # 38\n48:     P_2 = legendre(a, b, x, y, n-2)  # 39\n49:     for i in range(N):  # 40\n50:         tmp[i] = (2.*n-1)*x[i]*P_1[i] - (n-1)*P_2[i]  # 41\n51:         tmp[i] = tmp[i] / n  # 42\n52:     return tmp  # 43"
+        },
+        {
+          "line": 49,
+          "target": 52,
+          "direction": "loop_exit",
+          "condition": "i in range(N)",
+          "function": "legendre",
+          "class": "",
+          "source_snippet": "46:     tmp = np.zeros(N)  # 37\n47:     P_1 = legendre(a, b, x, y, n-1)  # 38\n48:     P_2 = legendre(a, b, x, y, n-2)  # 39\n49:     for i in range(N):  # 40\n50:         tmp[i] = (2.*n-1)*x[i]*P_1[i] - (n-1)*P_2[i]  # 41\n51:         tmp[i] = tmp[i] / n  # 42\n52:     return tmp  # 43"
+        },
+        {
+          "line": 114,
+          "target": 115,
+          "direction": "loop_enter",
+          "condition": "i in range(N)",
+          "function": "monte_carlo_3d",
+          "class": "",
+          "source_snippet": "111:     Lx = b[0]-a[0]  # 97\n112:     Ly = b[1]-a[1]  # 98\n113:     Lz = b[2]-a[2]  # 99\n114:     for i in range(N):  # 100\n115:         x = a[0] + random.random()*Lx  # 101\n116:         y = a[1] + random.random()*Ly  # 102\n117:         z = a[2] + random.random()*Lz  # 103"
+        },
+        {
+          "line": 114,
+          "target": 121,
+          "direction": "loop_exit",
+          "condition": "i in range(N)",
+          "function": "monte_carlo_3d",
+          "class": "",
+          "source_snippet": "111:     Lx = b[0]-a[0]  # 97\n112:     Ly = b[1]-a[1]  # 98\n113:     Lz = b[2]-a[2]  # 99\n114:     for i in range(N):  # 100\n115:         x = a[0] + random.random()*Lx  # 101\n116:         y = a[1] + random.random()*Ly  # 102\n117:         z = a[2] + random.random()*Lz  # 103"
+        },
+        {
+          "line": 153,
+          "target": 154,
+          "direction": "if_true",
+          "condition": "tmp == 0",
+          "function": "exponential",
+          "class": "",
+          "source_snippet": "150: \n151: def exponential(beta):  # 130\n152:     tmp = random.random()  # 131\n153:     if tmp == 0:  # 132\n154:         tmp = random.random()  # 133\n155:     else:  # 134\n156:         return -np.log(tmp)/beta  # 135"
+        },
+        {
+          "line": 118,
+          "target": 119,
+          "direction": "if_true",
+          "condition": "inregion(x, y, z)",
+          "function": "monte_carlo_3d",
+          "class": "",
+          "source_snippet": "115:         x = a[0] + random.random()*Lx  # 101\n116:         y = a[1] + random.random()*Ly  # 102\n117:         z = a[2] + random.random()*Lz  # 103\n118:         if inregion(x, y, z):  # 104\n119:             f = f + func(x, y, z)  # 105\n120:             f2 = f2 + func(x, y, z)*func(x, y, z)  # 106\n121:     f = f / N  # 107"
+        },
+        {
+          "line": 118,
+          "target": 121,
+          "direction": "if_false",
+          "condition": "inregion(x, y, z)",
+          "function": "monte_carlo_3d",
+          "class": "",
+          "source_snippet": "115:         x = a[0] + random.random()*Lx  # 101\n116:         y = a[1] + random.random()*Ly  # 102\n117:         z = a[2] + random.random()*Lz  # 103\n118:         if inregion(x, y, z):  # 104\n119:             f = f + func(x, y, z)  # 105\n120:             f2 = f2 + func(x, y, z)*func(x, y, z)  # 106\n121:     f = f / N  # 107"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "integrator2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator2\\pynguin\\result",
+      "branches": [
+        {
+          "line": 9,
+          "target": 13,
+          "direction": "loop_exit",
+          "condition": "j in range(len(y))",
+          "function": "MonteCarlo_double",
+          "class": "",
+          "source_snippet": "6:     f_mean = 0#17\n7:     num_inside = 0\n8:     for i in range(len(x)):#19\n9:         for j in range(len(y)):#20\n10:             if g(x[i], y[j]) >= 0:#21\n11:                 num_inside += 1#22\n12:                 f_mean += f(x[i], y[j])#23"
+        },
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "if_true",
+          "condition": "g(x[i], y[j]) >= 0",
+          "function": "MonteCarlo_double",
+          "class": "",
+          "source_snippet": "7:     num_inside = 0\n8:     for i in range(len(x)):#19\n9:         for j in range(len(y)):#20\n10:             if g(x[i], y[j]) >= 0:#21\n11:                 num_inside += 1#22\n12:                 f_mean += f(x[i], y[j])#23\n13:     f_mean = f_mean/float(num_inside)#24"
+        },
+        {
+          "line": 10,
+          "target": 13,
+          "direction": "if_false",
+          "condition": "g(x[i], y[j]) >= 0",
+          "function": "MonteCarlo_double",
+          "class": "",
+          "source_snippet": "7:     num_inside = 0\n8:     for i in range(len(x)):#19\n9:         for j in range(len(y)):#20\n10:             if g(x[i], y[j]) >= 0:#21\n11:                 num_inside += 1#22\n12:                 f_mean += f(x[i], y[j])#23\n13:     f_mean = f_mean/float(num_inside)#24"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "integrator3",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator3\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator3\\pynguin\\result",
+      "branches": [
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "if_true",
+          "condition": "abs(s0 - s1) >= tol_factor * tol",
+          "function": "adaptive_simpson",
+          "class": "",
+          "source_snippet": "22:     s0 = h * ( f0 + 4.0 * f2 + f4 ) / 3.0\n23:     s1 = h * ( f0 + 4.0 * f1 + 2.0 * f2 + 4.0 * f3 + f4 ) / 6.0\n24: \n25:     if abs( s0 - s1 ) >= tol_factor * tol:\n26:         s = adaptive_simpson( f, x0, x2, 0.5 * tol ) + \\\n27:             adaptive_simpson( f, x2, x4, 0.5 * tol )\n28:     else:"
+        },
+        {
+          "line": 25,
+          "target": 29,
+          "direction": "if_false",
+          "condition": "abs(s0 - s1) >= tol_factor * tol",
+          "function": "adaptive_simpson",
+          "class": "",
+          "source_snippet": "22:     s0 = h * ( f0 + 4.0 * f2 + f4 ) / 3.0\n23:     s1 = h * ( f0 + 4.0 * f1 + 2.0 * f2 + 4.0 * f3 + f4 ) / 6.0\n24: \n25:     if abs( s0 - s1 ) >= tol_factor * tol:\n26:         s = adaptive_simpson( f, x0, x2, 0.5 * tol ) + \\\n27:             adaptive_simpson( f, x2, x4, 0.5 * tol )\n28:     else:"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "integrator4",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator4\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator4\\pynguin\\result",
+      "branches": [
+        {
+          "line": 7,
+          "target": 8,
+          "direction": "loop_enter",
+          "condition": "i in range(1, n)",
+          "function": "trapezoid2",
+          "class": "",
+          "source_snippet": "4: def trapezoid2(f, a, b, n):\n5:         calcular =(0.5)*( f(a) + f(b) )\n6:         h = (b-a)/n\n7:         for i in range(1, n):\n8:             calcular += f(a + i*h)\n9:         return h*calcular\n10: "
+        },
+        {
+          "line": 7,
+          "target": 9,
+          "direction": "loop_exit",
+          "condition": "i in range(1, n)",
+          "function": "trapezoid2",
+          "class": "",
+          "source_snippet": "4: def trapezoid2(f, a, b, n):\n5:         calcular =(0.5)*( f(a) + f(b) )\n6:         h = (b-a)/n\n7:         for i in range(1, n):\n8:             calcular += f(a + i*h)\n9:         return h*calcular\n10: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "integrator5",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator5\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator5\\pynguin\\result",
+      "branches": [
+        {
+          "line": 20,
+          "target": 24,
+          "direction": "loop_exit",
+          "condition": "j in range(0, ny)",
+          "function": "doubleIntegral",
+          "class": "",
+          "source_snippet": "17:     ny = round((uy - ly) / k + 1) \n18: \n19:     for i in range(0, nx):  \n20:         for j in range(0, ny):  \n21:             z[i][j] = givenFunction(lx + i * h,  \n22:                                     ly + j * k)  \n23: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "integrator6",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator6\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\integrator6\\pynguin\\result",
+      "branches": [
+        {
+          "line": 8,
+          "target": 10,
+          "direction": "if_true",
+          "condition": "__name__ == '__main__'",
+          "function": "",
+          "class": "",
+          "source_snippet": "5: def f(x):\n6:     return math.sin(x)\n7: \n8: if __name__ == \"__main__\":\n9:     # define any xmin-xmax interval here! (xmin < xmax)\n10:     xmin = 0.0\n11:     xmax = 2.0 * math.pi"
+        },
+        {
+          "line": 17,
+          "target": 18,
+          "direction": "loop_enter",
+          "condition": "i in range(numSteps)",
+          "function": "",
+          "class": "",
+          "source_snippet": "14:     numSteps = 1000000  # bigger the better but slower!\n15:     ymin = f(xmin)\n16:     ymax = ymin\n17:     for i in range(numSteps):\n18:         x = xmin + (xmax - xmin) * float(i) / numSteps\n19:         y = f(x)\n20:         if y < ymin:"
+        },
+        {
+          "line": 17,
+          "target": 26,
+          "direction": "loop_exit",
+          "condition": "i in range(numSteps)",
+          "function": "",
+          "class": "",
+          "source_snippet": "14:     numSteps = 1000000  # bigger the better but slower!\n15:     ymin = f(xmin)\n16:     ymax = ymin\n17:     for i in range(numSteps):\n18:         x = xmin + (xmax - xmin) * float(i) / numSteps\n19:         y = f(x)\n20:         if y < ymin:"
+        },
+        {
+          "line": 29,
+          "target": 30,
+          "direction": "loop_enter",
+          "condition": "j in range(numPoints)",
+          "function": "",
+          "class": "",
+          "source_snippet": "26:     rectArea = (xmax - xmin) * (ymax - ymin)\n27:     numPoints = 1000000  # bigger the better but slower!\n28:     ctr = 0\n29:     for j in range(numPoints):\n30:         x = xmin + (xmax - xmin) * random.random()\n31:         y = ymin + (ymax - ymin) * random.random()\n32:         if math.fabs(y) <= math.fabs(f(x)):"
+        },
+        {
+          "line": 29,
+          "target": 38,
+          "direction": "loop_exit",
+          "condition": "j in range(numPoints)",
+          "function": "",
+          "class": "",
+          "source_snippet": "26:     rectArea = (xmax - xmin) * (ymax - ymin)\n27:     numPoints = 1000000  # bigger the better but slower!\n28:     ctr = 0\n29:     for j in range(numPoints):\n30:         x = xmin + (xmax - xmin) * random.random()\n31:         y = ymin + (ymax - ymin) * random.random()\n32:         if math.fabs(y) <= math.fabs(f(x)):"
+        },
+        {
+          "line": 20,
+          "target": 21,
+          "direction": "if_true",
+          "condition": "y < ymin",
+          "function": "",
+          "class": "",
+          "source_snippet": "17:     for i in range(numSteps):\n18:         x = xmin + (xmax - xmin) * float(i) / numSteps\n19:         y = f(x)\n20:         if y < ymin:\n21:             ymin = y\n22:         if y > ymax:\n23:             ymax = y"
+        },
+        {
+          "line": 20,
+          "target": 22,
+          "direction": "if_false",
+          "condition": "y < ymin",
+          "function": "",
+          "class": "",
+          "source_snippet": "17:     for i in range(numSteps):\n18:         x = xmin + (xmax - xmin) * float(i) / numSteps\n19:         y = f(x)\n20:         if y < ymin:\n21:             ymin = y\n22:         if y > ymax:\n23:             ymax = y"
+        },
+        {
+          "line": 22,
+          "target": 23,
+          "direction": "if_true",
+          "condition": "y > ymax",
+          "function": "",
+          "class": "",
+          "source_snippet": "19:         y = f(x)\n20:         if y < ymin:\n21:             ymin = y\n22:         if y > ymax:\n23:             ymax = y\n24: \n25:     # Monte Carlo"
+        },
+        {
+          "line": 22,
+          "target": 26,
+          "direction": "if_false",
+          "condition": "y > ymax",
+          "function": "",
+          "class": "",
+          "source_snippet": "19:         y = f(x)\n20:         if y < ymin:\n21:             ymin = y\n22:         if y > ymax:\n23:             ymax = y\n24: \n25:     # Monte Carlo"
+        },
+        {
+          "line": 32,
+          "target": 33,
+          "direction": "if_true",
+          "condition": "math.fabs(y) <= math.fabs(f(x))",
+          "function": "",
+          "class": "",
+          "source_snippet": "29:     for j in range(numPoints):\n30:         x = xmin + (xmax - xmin) * random.random()\n31:         y = ymin + (ymax - ymin) * random.random()\n32:         if math.fabs(y) <= math.fabs(f(x)):\n33:             if f(x) > 0 and y > 0 and y <= f(x):\n34:                 ctr += 1  # area over x-axis is positive\n35:             if f(x) < 0 and y < 0 and y >= f(x):"
+        },
+        {
+          "line": 32,
+          "target": 38,
+          "direction": "if_false",
+          "condition": "math.fabs(y) <= math.fabs(f(x))",
+          "function": "",
+          "class": "",
+          "source_snippet": "29:     for j in range(numPoints):\n30:         x = xmin + (xmax - xmin) * random.random()\n31:         y = ymin + (ymax - ymin) * random.random()\n32:         if math.fabs(y) <= math.fabs(f(x)):\n33:             if f(x) > 0 and y > 0 and y <= f(x):\n34:                 ctr += 1  # area over x-axis is positive\n35:             if f(x) < 0 and y < 0 and y >= f(x):"
+        },
+        {
+          "line": 33,
+          "target": 34,
+          "direction": "if_true",
+          "condition": "f(x) > 0 and y > 0 and (y <= f(x))",
+          "function": "",
+          "class": "",
+          "source_snippet": "30:         x = xmin + (xmax - xmin) * random.random()\n31:         y = ymin + (ymax - ymin) * random.random()\n32:         if math.fabs(y) <= math.fabs(f(x)):\n33:             if f(x) > 0 and y > 0 and y <= f(x):\n34:                 ctr += 1  # area over x-axis is positive\n35:             if f(x) < 0 and y < 0 and y >= f(x):\n36:                 ctr -= 1  # area under x-axis is negative"
+        },
+        {
+          "line": 33,
+          "target": 35,
+          "direction": "if_false",
+          "condition": "f(x) > 0 and y > 0 and (y <= f(x))",
+          "function": "",
+          "class": "",
+          "source_snippet": "30:         x = xmin + (xmax - xmin) * random.random()\n31:         y = ymin + (ymax - ymin) * random.random()\n32:         if math.fabs(y) <= math.fabs(f(x)):\n33:             if f(x) > 0 and y > 0 and y <= f(x):\n34:                 ctr += 1  # area over x-axis is positive\n35:             if f(x) < 0 and y < 0 and y >= f(x):\n36:                 ctr -= 1  # area under x-axis is negative"
+        },
+        {
+          "line": 35,
+          "target": 36,
+          "direction": "if_true",
+          "condition": "f(x) < 0 and y < 0 and (y >= f(x))",
+          "function": "",
+          "class": "",
+          "source_snippet": "32:         if math.fabs(y) <= math.fabs(f(x)):\n33:             if f(x) > 0 and y > 0 and y <= f(x):\n34:                 ctr += 1  # area over x-axis is positive\n35:             if f(x) < 0 and y < 0 and y >= f(x):\n36:                 ctr -= 1  # area under x-axis is negative\n37: \n38:     fnArea = rectArea * float(ctr) / numPoints"
+        },
+        {
+          "line": 35,
+          "target": 38,
+          "direction": "if_false",
+          "condition": "f(x) < 0 and y < 0 and (y >= f(x))",
+          "function": "",
+          "class": "",
+          "source_snippet": "32:         if math.fabs(y) <= math.fabs(f(x)):\n33:             if f(x) > 0 and y > 0 and y <= f(x):\n34:                 ctr += 1  # area over x-axis is positive\n35:             if f(x) < 0 and y < 0 and y >= f(x):\n36:                 ctr -= 1  # area under x-axis is negative\n37: \n38:     fnArea = rectArea * float(ctr) / numPoints"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "LeastSquareFitting1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LeastSquareFitting1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LeastSquareFitting1\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "LeastSquareFitting2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LeastSquareFitting2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LeastSquareFitting2\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "LeastSquareFitting3",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LeastSquareFitting3\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LeastSquareFitting3\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "Linear_equation1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation1\\pynguin\\result",
+      "branches": [
+        {
+          "line": 7,
+          "target": 15,
+          "direction": "loop_exit",
+          "condition": "j in range(i + 1, n)",
+          "function": "pivot_gauss",
+          "class": "",
+          "source_snippet": "4:     A, b = copy(A), copy(b)  # 8\n5:     n = len(A)  # 9\n6:     for i in range(0, n - 1):  # 10\n7:         for j in range(i + 1, n):  # 11\n8:             if A[j, i] > A[i, i]:  # 12\n9:                 A[[i, j], :] = A[[j, i], :]  # 13\n10:                 b[[i, j]] = b[[j, i]]  # 14"
+        },
+        {
+          "line": 8,
+          "target": 9,
+          "direction": "if_true",
+          "condition": "A[j, i] > A[i, i]",
+          "function": "pivot_gauss",
+          "class": "",
+          "source_snippet": "5:     n = len(A)  # 9\n6:     for i in range(0, n - 1):  # 10\n7:         for j in range(i + 1, n):  # 11\n8:             if A[j, i] > A[i, i]:  # 12\n9:                 A[[i, j], :] = A[[j, i], :]  # 13\n10:                 b[[i, j]] = b[[j, i]]  # 14\n11:             if A[j, i] != 0.0:  # 15"
+        },
+        {
+          "line": 11,
+          "target": 15,
+          "direction": "if_false",
+          "condition": "A[j, i] != 0.0",
+          "function": "pivot_gauss",
+          "class": "",
+          "source_snippet": "8:             if A[j, i] > A[i, i]:  # 12\n9:                 A[[i, j], :] = A[[j, i], :]  # 13\n10:                 b[[i, j]] = b[[j, i]]  # 14\n11:             if A[j, i] != 0.0:  # 15\n12:                 m = A[j, i] / A[i, i]  # 16\n13:                 A[j, i:n] = A[j, i:n] - m * A[i, i:n]  # 17\n14:                 b[j] = b[j] - m * b[i]  # 18"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "Linear_equation2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation2\\pynguin\\result",
+      "branches": [
+        {
+          "line": 14,
+          "target": 20,
+          "direction": "loop_exit",
+          "condition": "i in range(k + 1, n)",
+          "function": "lu_decomposition_doolittle",
+          "class": "",
+          "source_snippet": "11:             for t in range(0, k):  # 32\n12:                 s += L[k, t] * U[t, j]  # 33\n13:             U[k, j] = A[k, j] - s  # 34\n14:         for i in range(k + 1, n):  # 35\n15:             s = 0  # 36\n16:             for t in range(0, k):  # 37\n17:                 s += L[i, t] * U[t, k]  # 38"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "Linear_equation3",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation3\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation3\\pynguin\\result",
+      "branches": [
+        {
+          "line": 6,
+          "target": 7,
+          "direction": "if_true",
+          "condition": "not (A.T == A).all()",
+          "function": "check_symmetric_and_positive_definite_matrix",
+          "class": "",
+          "source_snippet": "3: from numpy import array, random, inf, nan  # 4\n4: \n5: def check_symmetric_and_positive_definite_matrix(A):  # 1\n6:     if not (A.T == A).all():  # 2\n7:         print('A must be symmetric and positive definite matrix')  # 3\n8:         return False  # 4\n9: "
+        },
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "if_true",
+          "condition": "any(values < 0)",
+          "function": "check_symmetric_and_positive_definite_matrix",
+          "class": "",
+          "source_snippet": "8:         return False  # 4\n9: \n10:     values = linalg.eigvals(A)  # 5\n11:     if any(values < 0):  # 6\n12:         print('A must be symmetric and positive definite matrix')  # 7\n13:         return False # 8\n14: "
+        },
+        {
+          "line": 11,
+          "target": 15,
+          "direction": "if_false",
+          "condition": "any(values < 0)",
+          "function": "check_symmetric_and_positive_definite_matrix",
+          "class": "",
+          "source_snippet": "8:         return False  # 4\n9: \n10:     values = linalg.eigvals(A)  # 5\n11:     if any(values < 0):  # 6\n12:         print('A must be symmetric and positive definite matrix')  # 7\n13:         return False # 8\n14: "
+        },
+        {
+          "line": 21,
+          "target": 22,
+          "direction": "if_true",
+          "condition": "not check_symmetric_and_positive_definite_matrix(A)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "18: def lu_decomposition_cholesky(A, b):  # 10\n19:     A, b = copy(A), copy(b)  # 11\n20: \n21:     if not check_symmetric_and_positive_definite_matrix(A):  # 12\n22:         return nan  # 13\n23: \n24:     n = len(A)  # 14"
+        },
+        {
+          "line": 21,
+          "target": 24,
+          "direction": "if_false",
+          "condition": "not check_symmetric_and_positive_definite_matrix(A)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "18: def lu_decomposition_cholesky(A, b):  # 10\n19:     A, b = copy(A), copy(b)  # 11\n20: \n21:     if not check_symmetric_and_positive_definite_matrix(A):  # 12\n22:         return nan  # 13\n23: \n24:     n = len(A)  # 14"
+        },
+        {
+          "line": 27,
+          "target": 28,
+          "direction": "loop_enter",
+          "condition": "j in range(n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "24:     n = len(A)  # 14\n25:     L = eye(n)  # 15\n26: \n27:     for j in range(n):  # 16\n28:         s = 0  # 17\n29:         for k in range(j):  # 18\n30:             s += L[j, k] ** 2  # 19"
+        },
+        {
+          "line": 27,
+          "target": 39,
+          "direction": "loop_exit",
+          "condition": "j in range(n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "24:     n = len(A)  # 14\n25:     L = eye(n)  # 15\n26: \n27:     for j in range(n):  # 16\n28:         s = 0  # 17\n29:         for k in range(j):  # 18\n30:             s += L[j, k] ** 2  # 19"
+        },
+        {
+          "line": 41,
+          "target": 42,
+          "direction": "loop_enter",
+          "condition": "i in range(n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "38: \n39:     y = zeros(n)  # 26\n40: \n41:     for i in range(n):  # 27\n42:         s = 0  # 28\n43:         for j in range(0, i):  # 29\n44:             s += L[i, j] * y[j]  # 30"
+        },
+        {
+          "line": 41,
+          "target": 47,
+          "direction": "loop_exit",
+          "condition": "i in range(n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "38: \n39:     y = zeros(n)  # 26\n40: \n41:     for i in range(n):  # 27\n42:         s = 0  # 28\n43:         for j in range(0, i):  # 29\n44:             s += L[i, j] * y[j]  # 30"
+        },
+        {
+          "line": 48,
+          "target": 49,
+          "direction": "loop_enter",
+          "condition": "i in reversed(range(n))",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "45:         y[i] = (b[i] - s) / L[i, i]  # 31\n46: \n47:     x = zeros(n)  # 32\n48:     for i in reversed(range(n)):  # 33\n49:         s = 0  # 34\n50:         for j in range(i + 1, n):  # 35\n51:             s += L[j, i] * x[j]  # 36"
+        },
+        {
+          "line": 48,
+          "target": 54,
+          "direction": "loop_exit",
+          "condition": "i in reversed(range(n))",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "45:         y[i] = (b[i] - s) / L[i, i]  # 31\n46: \n47:     x = zeros(n)  # 32\n48:     for i in reversed(range(n)):  # 33\n49:         s = 0  # 34\n50:         for j in range(i + 1, n):  # 35\n51:             s += L[j, i] * x[j]  # 36"
+        },
+        {
+          "line": 29,
+          "target": 30,
+          "direction": "loop_enter",
+          "condition": "k in range(j)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "26: \n27:     for j in range(n):  # 16\n28:         s = 0  # 17\n29:         for k in range(j):  # 18\n30:             s += L[j, k] ** 2  # 19\n31:         L[j, j] = sqrt(A[j, j] - s)  # 20\n32: "
+        },
+        {
+          "line": 29,
+          "target": 31,
+          "direction": "loop_exit",
+          "condition": "k in range(j)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "26: \n27:     for j in range(n):  # 16\n28:         s = 0  # 17\n29:         for k in range(j):  # 18\n30:             s += L[j, k] ** 2  # 19\n31:         L[j, j] = sqrt(A[j, j] - s)  # 20\n32: "
+        },
+        {
+          "line": 33,
+          "target": 34,
+          "direction": "loop_enter",
+          "condition": "i in range(j + 1, n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "30:             s += L[j, k] ** 2  # 19\n31:         L[j, j] = sqrt(A[j, j] - s)  # 20\n32: \n33:         for i in range(j + 1, n):  # 21\n34:             s = 0  # 22\n35:             for k in range(j):  # 23\n36:                 s += L[i, k] * L[j, k]  # 24"
+        },
+        {
+          "line": 33,
+          "target": 39,
+          "direction": "loop_exit",
+          "condition": "i in range(j + 1, n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "30:             s += L[j, k] ** 2  # 19\n31:         L[j, j] = sqrt(A[j, j] - s)  # 20\n32: \n33:         for i in range(j + 1, n):  # 21\n34:             s = 0  # 22\n35:             for k in range(j):  # 23\n36:                 s += L[i, k] * L[j, k]  # 24"
+        },
+        {
+          "line": 43,
+          "target": 44,
+          "direction": "loop_enter",
+          "condition": "j in range(0, i)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "40: \n41:     for i in range(n):  # 27\n42:         s = 0  # 28\n43:         for j in range(0, i):  # 29\n44:             s += L[i, j] * y[j]  # 30\n45:         y[i] = (b[i] - s) / L[i, i]  # 31\n46: "
+        },
+        {
+          "line": 43,
+          "target": 45,
+          "direction": "loop_exit",
+          "condition": "j in range(0, i)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "40: \n41:     for i in range(n):  # 27\n42:         s = 0  # 28\n43:         for j in range(0, i):  # 29\n44:             s += L[i, j] * y[j]  # 30\n45:         y[i] = (b[i] - s) / L[i, i]  # 31\n46: "
+        },
+        {
+          "line": 50,
+          "target": 51,
+          "direction": "loop_enter",
+          "condition": "j in range(i + 1, n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "47:     x = zeros(n)  # 32\n48:     for i in reversed(range(n)):  # 33\n49:         s = 0  # 34\n50:         for j in range(i + 1, n):  # 35\n51:             s += L[j, i] * x[j]  # 36\n52:         x[i] = (y[i] - s) / L[i, i]  # 37\n53: "
+        },
+        {
+          "line": 50,
+          "target": 52,
+          "direction": "loop_exit",
+          "condition": "j in range(i + 1, n)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "47:     x = zeros(n)  # 32\n48:     for i in reversed(range(n)):  # 33\n49:         s = 0  # 34\n50:         for j in range(i + 1, n):  # 35\n51:             s += L[j, i] * x[j]  # 36\n52:         x[i] = (y[i] - s) / L[i, i]  # 37\n53: "
+        },
+        {
+          "line": 35,
+          "target": 36,
+          "direction": "loop_enter",
+          "condition": "k in range(j)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "32: \n33:         for i in range(j + 1, n):  # 21\n34:             s = 0  # 22\n35:             for k in range(j):  # 23\n36:                 s += L[i, k] * L[j, k]  # 24\n37:             L[i, j] = (A[i, j] - s) / L[j, j]  # 25\n38: "
+        },
+        {
+          "line": 35,
+          "target": 37,
+          "direction": "loop_exit",
+          "condition": "k in range(j)",
+          "function": "lu_decomposition_cholesky",
+          "class": "",
+          "source_snippet": "32: \n33:         for i in range(j + 1, n):  # 21\n34:             s = 0  # 22\n35:             for k in range(j):  # 23\n36:                 s += L[i, k] * L[j, k]  # 24\n37:             L[i, j] = (A[i, j] - s) / L[j, j]  # 25\n38: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "Linear_equation4",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation4\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation4\\pynguin\\result",
+      "branches": [
+        {
+          "line": 16,
+          "target": 19,
+          "direction": "if_false",
+          "condition": "j == k or A[k, k] == 0",
+          "function": "jakobi",
+          "class": "",
+          "source_snippet": "13:     for i in range(numberOfIteration):\n14:         for k in range(dimension):\n15:             for j in range(dimension):\n16:                 if j == k or A[k, k] == 0 :\n17:                     continue\n18:                 else:\n19:                     sum += (A[k, j] * p[j])"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "Linear_equation5",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation5\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation5\\pynguin\\result",
+      "branches": [
+        {
+          "line": 19,
+          "target": 20,
+          "direction": "loop_enter",
+          "condition": "j in range(n - 1, -1, -1)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "16: def back_subsitute(U, bb):\n17:     n = U.shape[1]\n18:     x = np.zeros(n)\n19:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n20:         if U[j, j] == 0:\n21:             continue\n22:         x[j] = bb[j] / U[j, j]"
+        },
+        {
+          "line": 19,
+          "target": 26,
+          "direction": "loop_exit",
+          "condition": "j in range(n - 1, -1, -1)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "16: def back_subsitute(U, bb):\n17:     n = U.shape[1]\n18:     x = np.zeros(n)\n19:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n20:         if U[j, j] == 0:\n21:             continue\n22:         x[j] = bb[j] / U[j, j]"
+        },
+        {
+          "line": 7,
+          "target": 9,
+          "direction": "if_false",
+          "condition": "A[row][row] == 0",
+          "function": "gauss",
+          "class": "",
+          "source_snippet": "4:     for row in range(0, n - 1):\n5:         factor = np.identity(n)\n6: \n7:         if A[row][row] == 0:\n8:             break\n9:         for i in range(row + 1, n):\n10:             factor[i][row] = -1 * A[i, row] / A[row, row]"
+        },
+        {
+          "line": 9,
+          "target": 10,
+          "direction": "loop_enter",
+          "condition": "i in range(row + 1, n)",
+          "function": "gauss",
+          "class": "",
+          "source_snippet": "6: \n7:         if A[row][row] == 0:\n8:             break\n9:         for i in range(row + 1, n):\n10:             factor[i][row] = -1 * A[i, row] / A[row, row]\n11:         A = np.dot(factor, A)\n12:         b = np.dot(factor, b)"
+        },
+        {
+          "line": 9,
+          "target": 11,
+          "direction": "loop_exit",
+          "condition": "i in range(row + 1, n)",
+          "function": "gauss",
+          "class": "",
+          "source_snippet": "6: \n7:         if A[row][row] == 0:\n8:             break\n9:         for i in range(row + 1, n):\n10:             factor[i][row] = -1 * A[i, row] / A[row, row]\n11:         A = np.dot(factor, A)\n12:         b = np.dot(factor, b)"
+        },
+        {
+          "line": 20,
+          "target": 21,
+          "direction": "if_true",
+          "condition": "U[j, j] == 0",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "17:     n = U.shape[1]\n18:     x = np.zeros(n)\n19:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n20:         if U[j, j] == 0:\n21:             continue\n22:         x[j] = bb[j] / U[j, j]\n23:         for i in range(0, j):"
+        },
+        {
+          "line": 20,
+          "target": 22,
+          "direction": "if_false",
+          "condition": "U[j, j] == 0",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "17:     n = U.shape[1]\n18:     x = np.zeros(n)\n19:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n20:         if U[j, j] == 0:\n21:             continue\n22:         x[j] = bb[j] / U[j, j]\n23:         for i in range(0, j):"
+        },
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "loop_enter",
+          "condition": "i in range(0, j)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "20:         if U[j, j] == 0:\n21:             continue\n22:         x[j] = bb[j] / U[j, j]\n23:         for i in range(0, j):\n24:             bb[i] -= U[i, j] * x[j]\n25: \n26:     return x"
+        },
+        {
+          "line": 23,
+          "target": 26,
+          "direction": "loop_exit",
+          "condition": "i in range(0, j)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "20:         if U[j, j] == 0:\n21:             continue\n22:         x[j] = bb[j] / U[j, j]\n23:         for i in range(0, j):\n24:             bb[i] -= U[i, j] * x[j]\n25: \n26:     return x"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "Linear_equation6",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation6\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Linear_equation6\\pynguin\\result",
+      "branches": [
+        {
+          "line": 36,
+          "target": 37,
+          "direction": "loop_enter",
+          "condition": "j in range(n - 1, -1, -1)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "33: def back_subsitute(U, bb):\n34:     n = U.shape[1]\n35:     x = np.zeros(n)\n36:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n37:         if U[j, j] == 0:\n38:             raise RuntimeError(\"singular matrix\")\n39: "
+        },
+        {
+          "line": 36,
+          "target": 44,
+          "direction": "loop_exit",
+          "condition": "j in range(n - 1, -1, -1)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "33: def back_subsitute(U, bb):\n34:     n = U.shape[1]\n35:     x = np.zeros(n)\n36:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n37:         if U[j, j] == 0:\n38:             raise RuntimeError(\"singular matrix\")\n39: "
+        },
+        {
+          "line": 9,
+          "target": 10,
+          "direction": "loop_enter",
+          "condition": "i in range(k, n)",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "6:         np.fill_diagonal(mat, 1)\n7:         maximum = a[k, k]\n8:         p = k\n9:         for i in range(k, n):\n10:             if a[i, k] > maximum:\n11:                 maximum = a[i, k]\n12:                 p = i"
+        },
+        {
+          "line": 9,
+          "target": 13,
+          "direction": "loop_exit",
+          "condition": "i in range(k, n)",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "6:         np.fill_diagonal(mat, 1)\n7:         maximum = a[k, k]\n8:         p = k\n9:         for i in range(k, n):\n10:             if a[i, k] > maximum:\n11:                 maximum = a[i, k]\n12:                 p = i"
+        },
+        {
+          "line": 13,
+          "target": 14,
+          "direction": "if_true",
+          "condition": "p != k",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "10:             if a[i, k] > maximum:\n11:                 maximum = a[i, k]\n12:                 p = i\n13:         if p != k:\n14:             temp = np.array(a[k, :])\n15:             temp2 = np.array(a[p, :])\n16:             a[k] = temp2"
+        },
+        {
+          "line": 13,
+          "target": 23,
+          "direction": "if_false",
+          "condition": "p != k",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "10:             if a[i, k] > maximum:\n11:                 maximum = a[i, k]\n12:                 p = i\n13:         if p != k:\n14:             temp = np.array(a[k, :])\n15:             temp2 = np.array(a[p, :])\n16:             a[k] = temp2"
+        },
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "if_true",
+          "condition": "a[k, k] == 0",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "20:             b[k] = tt2\n21:             b[p] = tt\n22: \n23:         if a[k, k] == 0:\n24:             raise RuntimeError(\"singular matrix\")\n25:         for i in range(k + 1, n):\n26:             mat[i, k] = -1 * a[i, k] * 1.0 / a[k, k]"
+        },
+        {
+          "line": 23,
+          "target": 25,
+          "direction": "if_false",
+          "condition": "a[k, k] == 0",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "20:             b[k] = tt2\n21:             b[p] = tt\n22: \n23:         if a[k, k] == 0:\n24:             raise RuntimeError(\"singular matrix\")\n25:         for i in range(k + 1, n):\n26:             mat[i, k] = -1 * a[i, k] * 1.0 / a[k, k]"
+        },
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "loop_enter",
+          "condition": "i in range(k + 1, n)",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "22: \n23:         if a[k, k] == 0:\n24:             raise RuntimeError(\"singular matrix\")\n25:         for i in range(k + 1, n):\n26:             mat[i, k] = -1 * a[i, k] * 1.0 / a[k, k]\n27:         a = np.dot(mat, a)\n28:         b = np.dot(mat, b)"
+        },
+        {
+          "line": 25,
+          "target": 27,
+          "direction": "loop_exit",
+          "condition": "i in range(k + 1, n)",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "22: \n23:         if a[k, k] == 0:\n24:             raise RuntimeError(\"singular matrix\")\n25:         for i in range(k + 1, n):\n26:             mat[i, k] = -1 * a[i, k] * 1.0 / a[k, k]\n27:         a = np.dot(mat, a)\n28:         b = np.dot(mat, b)"
+        },
+        {
+          "line": 37,
+          "target": 38,
+          "direction": "if_true",
+          "condition": "U[j, j] == 0",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "34:     n = U.shape[1]\n35:     x = np.zeros(n)\n36:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n37:         if U[j, j] == 0:\n38:             raise RuntimeError(\"singular matrix\")\n39: \n40:         x[j] = bb[j] / U[j, j]"
+        },
+        {
+          "line": 37,
+          "target": 40,
+          "direction": "if_false",
+          "condition": "U[j, j] == 0",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "34:     n = U.shape[1]\n35:     x = np.zeros(n)\n36:     for j in range(n - 1, -1, -1):  # loop backwards over columns\n37:         if U[j, j] == 0:\n38:             raise RuntimeError(\"singular matrix\")\n39: \n40:         x[j] = bb[j] / U[j, j]"
+        },
+        {
+          "line": 41,
+          "target": 42,
+          "direction": "loop_enter",
+          "condition": "i in range(0, j)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "38:             raise RuntimeError(\"singular matrix\")\n39: \n40:         x[j] = bb[j] / U[j, j]\n41:         for i in range(0, j):\n42:             bb[i] -= U[i, j] * x[j]\n43: \n44:     return x"
+        },
+        {
+          "line": 41,
+          "target": 44,
+          "direction": "loop_exit",
+          "condition": "i in range(0, j)",
+          "function": "back_subsitute",
+          "class": "",
+          "source_snippet": "38:             raise RuntimeError(\"singular matrix\")\n39: \n40:         x[j] = bb[j] / U[j, j]\n41:         for i in range(0, j):\n42:             bb[i] -= U[i, j] * x[j]\n43: \n44:     return x"
+        },
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "if_true",
+          "condition": "a[i, k] > maximum",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "7:         maximum = a[k, k]\n8:         p = k\n9:         for i in range(k, n):\n10:             if a[i, k] > maximum:\n11:                 maximum = a[i, k]\n12:                 p = i\n13:         if p != k:"
+        },
+        {
+          "line": 10,
+          "target": 13,
+          "direction": "if_false",
+          "condition": "a[i, k] > maximum",
+          "function": "partial_pivot",
+          "class": "",
+          "source_snippet": "7:         maximum = a[k, k]\n8:         p = k\n9:         for i in range(k, n):\n10:             if a[i, k] > maximum:\n11:                 maximum = a[i, k]\n12:                 p = i\n13:         if p != k:"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "LUDecompositionSolver",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LUDecompositionSolver\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\LUDecompositionSolver\\pynguin\\result",
+      "branches": [
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "loop_enter",
+          "condition": "k in range(dimension - 1)",
+          "function": "LUFactorization",
+          "class": "",
+          "source_snippet": "8:     U = B.copy()\n9:     L = np.identity(dimension)\n10: \n11:     for k in range(dimension - 1):\n12:         for i in range(k + 1, dimension):\n13:             ratio = U[i, k] / U[k, k]\n14:             for j in range(dimension):"
+        },
+        {
+          "line": 11,
+          "target": 17,
+          "direction": "loop_exit",
+          "condition": "k in range(dimension - 1)",
+          "function": "LUFactorization",
+          "class": "",
+          "source_snippet": "8:     U = B.copy()\n9:     L = np.identity(dimension)\n10: \n11:     for k in range(dimension - 1):\n12:         for i in range(k + 1, dimension):\n13:             ratio = U[i, k] / U[k, k]\n14:             for j in range(dimension):"
+        },
+        {
+          "line": 31,
+          "target": 32,
+          "direction": "loop_enter",
+          "condition": "i in reversed(range(len(b)))",
+          "function": "forward_sub",
+          "class": "",
+          "source_snippet": "28: def forward_sub(U, b):\n29:     dimension = len(b)\n30:     y = np.zeros_like(b).reshape(dimension, 1)\n31:     for i in reversed(range(len(b))):\n32:         s = np.matmul(U[i], y[:dimension])\n33:         y[i] = b[i] - s[0]\n34:     return y"
+        },
+        {
+          "line": 31,
+          "target": 34,
+          "direction": "loop_exit",
+          "condition": "i in reversed(range(len(b)))",
+          "function": "forward_sub",
+          "class": "",
+          "source_snippet": "28: def forward_sub(U, b):\n29:     dimension = len(b)\n30:     y = np.zeros_like(b).reshape(dimension, 1)\n31:     for i in reversed(range(len(b))):\n32:         s = np.matmul(U[i], y[:dimension])\n33:         y[i] = b[i] - s[0]\n34:     return y"
+        },
+        {
+          "line": 39,
+          "target": 40,
+          "direction": "loop_enter",
+          "condition": "i in range(len(y))",
+          "function": "backward_sub",
+          "class": "",
+          "source_snippet": "36: def backward_sub(L, y):\n37:     dimension = len(y)\n38:     x = np.zeros_like(y)\n39:     for i in range(len(y)):\n40:         s = np.matmul(L[i], x[:dimension])\n41:         x[i] = (y[i] - s[0]) / L[i, i]\n42:     return x.flatten()  # just for make x array to one dimesional"
+        },
+        {
+          "line": 39,
+          "target": 42,
+          "direction": "loop_exit",
+          "condition": "i in range(len(y))",
+          "function": "backward_sub",
+          "class": "",
+          "source_snippet": "36: def backward_sub(L, y):\n37:     dimension = len(y)\n38:     x = np.zeros_like(y)\n39:     for i in range(len(y)):\n40:         s = np.matmul(L[i], x[:dimension])\n41:         x[i] = (y[i] - s[0]) / L[i, i]\n42:     return x.flatten()  # just for make x array to one dimesional"
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "loop_enter",
+          "condition": "i in range(k + 1, dimension)",
+          "function": "LUFactorization",
+          "class": "",
+          "source_snippet": "9:     L = np.identity(dimension)\n10: \n11:     for k in range(dimension - 1):\n12:         for i in range(k + 1, dimension):\n13:             ratio = U[i, k] / U[k, k]\n14:             for j in range(dimension):\n15:                 U[i, j] = U[i, j] - ratio*U[k, j]"
+        },
+        {
+          "line": 12,
+          "target": 17,
+          "direction": "loop_exit",
+          "condition": "i in range(k + 1, dimension)",
+          "function": "LUFactorization",
+          "class": "",
+          "source_snippet": "9:     L = np.identity(dimension)\n10: \n11:     for k in range(dimension - 1):\n12:         for i in range(k + 1, dimension):\n13:             ratio = U[i, k] / U[k, k]\n14:             for j in range(dimension):\n15:                 U[i, j] = U[i, j] - ratio*U[k, j]"
+        },
+        {
+          "line": 14,
+          "target": 15,
+          "direction": "loop_enter",
+          "condition": "j in range(dimension)",
+          "function": "LUFactorization",
+          "class": "",
+          "source_snippet": "11:     for k in range(dimension - 1):\n12:         for i in range(k + 1, dimension):\n13:             ratio = U[i, k] / U[k, k]\n14:             for j in range(dimension):\n15:                 U[i, j] = U[i, j] - ratio*U[k, j]\n16:             L[i, k] = ratio\n17:     return L, U"
+        },
+        {
+          "line": 14,
+          "target": 16,
+          "direction": "loop_exit",
+          "condition": "j in range(dimension)",
+          "function": "LUFactorization",
+          "class": "",
+          "source_snippet": "11:     for k in range(dimension - 1):\n12:         for i in range(k + 1, dimension):\n13:             ratio = U[i, k] / U[k, k]\n14:             for j in range(dimension):\n15:                 U[i, j] = U[i, j] - ratio*U[k, j]\n16:             L[i, k] = ratio\n17:     return L, U"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "MatrixExponential1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\MatrixExponential1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\MatrixExponential1\\pynguin\\result",
+      "branches": [
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "loop_enter",
+          "condition": "j in range(d)",
+          "function": "mee",
+          "class": "",
+          "source_snippet": "8:     [d, d] = L.shape#6\n9:     lam, R = la.eig(L)#7\n10:     d_elamt = np.zeros([d, d])#8\n11:     for j in range(d):#9\n12:         d_elamt[j, j] = np.exp(lam[j] * t)#10\n13:     conN = conditionNumber(R)#11\n14:     return (R @ d_elamt @ la.inv(R), conN)#12"
+        },
+        {
+          "line": 11,
+          "target": 13,
+          "direction": "loop_exit",
+          "condition": "j in range(d)",
+          "function": "mee",
+          "class": "",
+          "source_snippet": "8:     [d, d] = L.shape#6\n9:     lam, R = la.eig(L)#7\n10:     d_elamt = np.zeros([d, d])#8\n11:     for j in range(d):#9\n12:         d_elamt[j, j] = np.exp(lam[j] * t)#10\n13:     conN = conditionNumber(R)#11\n14:     return (R @ d_elamt @ la.inv(R), conN)#12"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "MatrixExponential2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\MatrixExponential2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\MatrixExponential2\\pynguin\\result",
+      "branches": [
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "loop_enter",
+          "condition": "j in range(k)",
+          "function": "med",
+          "class": "",
+          "source_snippet": "7:     dt = t / n#16\n8:     I = np.identity(d)#17\n9:     S = I + dt * L @ (I + (1 / 2) * dt * L @ (I + (1 / 3) * dt * L @ (I + (1 / 4) * dt * L)))#18\n10:     for j in range(k):#19\n11:         S = S @ S#20\n12:     return (S)#21"
+        },
+        {
+          "line": 10,
+          "target": 12,
+          "direction": "loop_exit",
+          "condition": "j in range(k)",
+          "function": "med",
+          "class": "",
+          "source_snippet": "7:     dt = t / n#16\n8:     I = np.identity(d)#17\n9:     S = I + dt * L @ (I + (1 / 2) * dt * L @ (I + (1 / 3) * dt * L @ (I + (1 / 4) * dt * L)))#18\n10:     for j in range(k):#19\n11:         S = S @ S#20\n12:     return (S)#21"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "MatrixExponential3",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\MatrixExponential3\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\MatrixExponential3\\pynguin\\result",
+      "branches": [
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "loop_enter",
+          "condition": "k in range(1, n)",
+          "function": "meT",
+          "class": "",
+          "source_snippet": "7:     tLk = np.identity(d)#25\n8:     kf = 1#26\n9:     S = np.identity(d)#27\n10:     for k in range(1, n):#28\n11:         kf = k * kf#29\n12:         tLk = t * ((tLk) @ L)#30\n13:         S += (1 / kf) * tLk#31"
+        },
+        {
+          "line": 10,
+          "target": 15,
+          "direction": "loop_exit",
+          "condition": "k in range(1, n)",
+          "function": "meT",
+          "class": "",
+          "source_snippet": "7:     tLk = np.identity(d)#25\n8:     kf = 1#26\n9:     S = np.identity(d)#27\n10:     for k in range(1, n):#28\n11:         kf = k * kf#29\n12:         tLk = t * ((tLk) @ L)#30\n13:         S += (1 / kf) * tLk#31"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_arraysetops_unique",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_arraysetops_unique\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_arraysetops_unique\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 28,
+          "target": 29,
+          "direction": "if_true",
+          "condition": "op == 'union'",
+          "function": "set_operation",
+          "class": "",
+          "source_snippet": "25:     a, b = set(left), set(right)\n26:     if op == \"intersect\":\n27:         return sorted(a & b)\n28:     if op == \"union\":\n29:         return sorted(a | b)\n30:     if op == \"difference\":\n31:         return sorted(a - b)"
+        },
+        {
+          "line": 30,
+          "target": 31,
+          "direction": "if_true",
+          "condition": "op == 'difference'",
+          "function": "set_operation",
+          "class": "",
+          "source_snippet": "27:         return sorted(a & b)\n28:     if op == \"union\":\n29:         return sorted(a | b)\n30:     if op == \"difference\":\n31:         return sorted(a - b)\n32:     raise ValueError(\"unknown operation\")"
+        },
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "if_true",
+          "condition": "drop_nan and isinstance(value, float) and np.isnan(value)",
+          "function": "unique_1d",
+          "class": "",
+          "source_snippet": "8:     seen = []\n9:     counts = []\n10:     for value in arr:\n11:         if drop_nan and isinstance(value, float) and np.isnan(value):\n12:             continue\n13:         if value in seen:\n14:             counts[seen.index(value)] += 1"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_arrayterator_slice",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_arrayterator_slice\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_arrayterator_slice\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_covariance_helper",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_covariance_helper\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_covariance_helper\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_histogram_edges",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_histogram_edges\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_histogram_edges\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 28,
+          "target": 29,
+          "direction": "if_true",
+          "condition": "rule == 'sturges'",
+          "function": "bin_count_rule",
+          "class": "",
+          "source_snippet": "25:         return 1\n26:     if rule == \"sqrt\":\n27:         return int(np.ceil(np.sqrt(n)))\n28:     if rule == \"sturges\":\n29:         return int(np.ceil(np.log2(n) + 1))\n30:     raise ValueError(\"unknown bin rule\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_iotools_converter",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_iotools_converter\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_iotools_converter\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_masked_mean_var",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_masked_mean_var\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_masked_mean_var\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_nanfunctions_remove",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_nanfunctions_remove\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_nanfunctions_remove\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_pad_pairs",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_pad_pairs\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_pad_pairs\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 24,
+          "target": 25,
+          "direction": "if_true",
+          "condition": "mode in {'constant', 'edge'}",
+          "function": "padding_mode",
+          "class": "",
+          "source_snippet": "21: \n22: \n23: def padding_mode(mode):\n24:     if mode in {\"constant\", \"edge\"}:\n25:         return \"simple\"\n26:     if mode in {\"reflect\", \"symmetric\", \"wrap\"}:\n27:         return \"data-dependent\""
+        },
+        {
+          "line": 26,
+          "target": 27,
+          "direction": "if_true",
+          "condition": "mode in {'reflect', 'symmetric', 'wrap'}",
+          "function": "padding_mode",
+          "class": "",
+          "source_snippet": "23: def padding_mode(mode):\n24:     if mode in {\"constant\", \"edge\"}:\n25:         return \"simple\"\n26:     if mode in {\"reflect\", \"symmetric\", \"wrap\"}:\n27:         return \"data-dependent\"\n28:     raise ValueError(\"unsupported padding mode\")"
+        },
+        {
+          "line": 17,
+          "target": 18,
+          "direction": "if_true",
+          "condition": "np.any(arr < 0)",
+          "function": "as_pad_pairs",
+          "class": "",
+          "source_snippet": "14:             raise ValueError(\"pad width must be non-negative\")\n15:         return [tuple(map(int, arr)) for _ in range(ndim)]\n16:     if arr.shape == (ndim, 2):\n17:         if np.any(arr < 0):\n18:             raise ValueError(\"pad width must be non-negative\")\n19:         return [tuple(map(int, row)) for row in arr]\n20:     raise ValueError(\"invalid pad width shape\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_polynomial_format",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_polynomial_format\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_polynomial_format\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 21,
+          "target": 23,
+          "direction": "if_false",
+          "condition": "term",
+          "function": "polynomial_string",
+          "class": "",
+          "source_snippet": "18:     for index, coefficient in enumerate(coefficients):\n19:         power = degree - index\n20:         term = format_term(coefficient, power, variable)\n21:         if term:\n22:             terms.append(term)\n23:     if not terms:\n24:         return \"0\""
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_quantile_validate",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_quantile_validate\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_quantile_validate\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_twodim_diag",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_twodim_diag\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_twodim_diag\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 9,
+          "target": 14,
+          "direction": "loop_exit",
+          "condition": "j in range(n)",
+          "function": "tri_indices_count",
+          "class": "",
+          "source_snippet": "6:         raise ValueError(\"n must be non-negative\")\n7:     count = 0\n8:     for i in range(n):\n9:         for j in range(n):\n10:             if upper and j - i >= k:\n11:                 count += 1\n12:             elif not upper and i - j >= -k:"
+        },
+        {
+          "line": 24,
+          "target": 26,
+          "direction": "if_false",
+          "condition": "0 <= j < cols",
+          "function": "diagonal_fill",
+          "class": "",
+          "source_snippet": "21:     arr = np.zeros(shape, dtype=float)\n22:     for i in range(rows):\n23:         j = i + offset\n24:         if 0 <= j < cols:\n25:             arr[i, j] = value\n26:     return arr"
+        },
+        {
+          "line": 12,
+          "target": 14,
+          "direction": "if_false",
+          "condition": "not upper and i - j >= -k",
+          "function": "tri_indices_count",
+          "class": "",
+          "source_snippet": "9:         for j in range(n):\n10:             if upper and j - i >= k:\n11:                 count += 1\n12:             elif not upper and i - j >= -k:\n13:                 count += 1\n14:     return count\n15: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "NumPy_version_compare",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_version_compare\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\NumPy_version_compare\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 10,
+          "target": 12,
+          "direction": "if_false",
+          "condition": "part",
+          "function": "parse_version",
+          "class": "",
+          "source_snippet": "7:     for part in parts:\n8:         if part.isdigit():\n9:             parsed.append(int(part))\n10:         elif part:\n11:             parsed.append(part)\n12:     return parsed\n13: "
+        },
+        {
+          "line": 22,
+          "target": 24,
+          "direction": "if_false",
+          "condition": "x > y",
+          "function": "compare_version",
+          "class": "",
+          "source_snippet": "19:         if type(x) is type(y):\n20:             if x < y:\n21:                 return -1\n22:             if x > y:\n23:                 return 1\n24:         elif isinstance(x, int):\n25:             return 1"
+        },
+        {
+          "line": 24,
+          "target": 25,
+          "direction": "if_true",
+          "condition": "isinstance(x, int)",
+          "function": "compare_version",
+          "class": "",
+          "source_snippet": "21:                 return -1\n22:             if x > y:\n23:                 return 1\n24:         elif isinstance(x, int):\n25:             return 1\n26:         else:\n27:             return -1"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_advection_step",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_advection_step\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_advection_step\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 16,
+          "target": 20,
+          "direction": "if_false",
+          "condition": "velocity >= 0",
+          "function": "upwind_advection_step",
+          "class": "",
+          "source_snippet": "13:     if cfl > 1.0:\n14:         raise ValueError(\"CFL condition violated\")\n15:     out = u.copy()\n16:     if velocity >= 0:\n17:         left = np.roll(u, 1) if periodic else np.r_[u[0], u[:-1]]\n18:         out -= cfl * (u - left)\n19:     else:"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_boundary_selector",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_boundary_selector\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_boundary_selector\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "if_true",
+          "condition": "mask.ndim != 2",
+          "function": "count_boundary_cells",
+          "class": "",
+          "source_snippet": "20: \n21: \n22: def count_boundary_cells(mask):\n23:     if mask.ndim != 2:\n24:         raise ValueError(\"mask must be two-dimensional\")\n25:     if mask.size == 0:\n26:         return 0"
+        },
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "if_true",
+          "condition": "mask.size == 0",
+          "function": "count_boundary_cells",
+          "class": "",
+          "source_snippet": "22: def count_boundary_cells(mask):\n23:     if mask.ndim != 2:\n24:         raise ValueError(\"mask must be two-dimensional\")\n25:     if mask.size == 0:\n26:         return 0\n27:     boundary = np.zeros_like(mask, dtype=bool)\n28:     boundary[0, :] = mask[0, :]"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_burgers_flux",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_burgers_flux\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_burgers_flux\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_cfl_condition",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_cfl_condition\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_cfl_condition\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_diffusion_step",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_diffusion_step\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_diffusion_step\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 17,
+          "target": 18,
+          "direction": "if_true",
+          "condition": "boundary == 'dirichlet'",
+          "function": "explicit_diffusion_step",
+          "class": "",
+          "source_snippet": "14:         return u.copy()\n15:     out = u.copy()\n16:     out[1:-1] = u[1:-1] + alpha * (u[:-2] - 2 * u[1:-1] + u[2:])\n17:     if boundary == \"dirichlet\":\n18:         out[0] = 0.0\n19:         out[-1] = 0.0\n20:     elif boundary == \"neumann\":"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_grid_initializer",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_grid_initializer\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_grid_initializer\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_reaction_diffusion_update",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_reaction_diffusion_update\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_reaction_diffusion_update\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "PDEBench_residual_error",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_residual_error\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\PDEBench_residual_error\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 14,
+          "target": 16,
+          "direction": "if_false",
+          "condition": "min(u.shape) < 3",
+          "function": "poisson_residual",
+          "class": "",
+          "source_snippet": "11:     if dx <= 0:\n12:         raise ValueError(\"dx must be positive\")\n13:     residual = np.zeros_like(u)\n14:     if min(u.shape) < 3:\n15:         return rhs - residual\n16:     laplace = (\n17:         u[:-2, 1:-1]"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "qr_decomposition",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\qr_decomposition\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\qr_decomposition\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "Runge_Kutta",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Runge_Kutta\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Runge_Kutta\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_binned_statistic_edges",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_binned_statistic_edges\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_binned_statistic_edges\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 14,
+          "target": 15,
+          "direction": "if_true",
+          "condition": "lo > hi",
+          "function": "bin_edges",
+          "class": "",
+          "source_snippet": "11:         lo, hi = float(np.min(x)), float(np.max(x))\n12:     else:\n13:         lo, hi = value_range\n14:     if lo > hi:\n15:         raise ValueError(\"invalid range\")\n16:     if lo == hi:\n17:         lo -= 0.5"
+        },
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "if_true",
+          "condition": "statistic in {'mean', 'median', 'sum'}",
+          "function": "statistic_kind",
+          "class": "",
+          "source_snippet": "20: \n21: \n22: def statistic_kind(statistic):\n23:     if statistic in {\"mean\", \"median\", \"sum\"}:\n24:         return \"aggregate\"\n25:     if statistic in {\"count\", \"std\", \"min\", \"max\"}:\n26:         return \"summary\""
+        },
+        {
+          "line": 25,
+          "target": 26,
+          "direction": "if_true",
+          "condition": "statistic in {'count', 'std', 'min', 'max'}",
+          "function": "statistic_kind",
+          "class": "",
+          "source_snippet": "22: def statistic_kind(statistic):\n23:     if statistic in {\"mean\", \"median\", \"sum\"}:\n24:         return \"aggregate\"\n25:     if statistic in {\"count\", \"std\", \"min\", \"max\"}:\n26:         return \"summary\"\n27:     if callable(statistic):\n28:         return \"callable\""
+        },
+        {
+          "line": 27,
+          "target": 28,
+          "direction": "if_true",
+          "condition": "callable(statistic)",
+          "function": "statistic_kind",
+          "class": "",
+          "source_snippet": "24:         return \"aggregate\"\n25:     if statistic in {\"count\", \"std\", \"min\", \"max\"}:\n26:         return \"summary\"\n27:     if callable(statistic):\n28:         return \"callable\"\n29:     raise ValueError(\"unknown statistic\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_chandrupatla_validate",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_chandrupatla_validate\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_chandrupatla_validate\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_continued_fraction",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_continued_fraction\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_continued_fraction\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_cubic_boundary",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_cubic_boundary\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_cubic_boundary\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 4,
+          "target": 5,
+          "direction": "if_true",
+          "condition": "bc_type == 'not-a-knot'",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "1: def validate_boundary_condition(bc_type, y_shape):\n2:     if len(y_shape) == 0:\n3:         raise ValueError(\"y_shape cannot be empty\")\n4:     if bc_type == \"not-a-knot\":\n5:         if y_shape[0] < 4:\n6:             return \"fallback-parabolic\"\n7:         return \"not-a-knot\""
+        },
+        {
+          "line": 8,
+          "target": 9,
+          "direction": "if_true",
+          "condition": "bc_type == 'periodic'",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "5:         if y_shape[0] < 4:\n6:             return \"fallback-parabolic\"\n7:         return \"not-a-knot\"\n8:     if bc_type == \"periodic\":\n9:         if y_shape[0] < 2:\n10:             raise ValueError(\"periodic data requires at least two points\")\n11:         return \"periodic\""
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "bc_type in {'clamped', 'natural'}",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "9:         if y_shape[0] < 2:\n10:             raise ValueError(\"periodic data requires at least two points\")\n11:         return \"periodic\"\n12:     if bc_type in {\"clamped\", \"natural\"}:\n13:         return bc_type\n14:     raise ValueError(\"unknown boundary condition\")\n15: "
+        },
+        {
+          "line": 5,
+          "target": 6,
+          "direction": "if_true",
+          "condition": "y_shape[0] < 4",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "2:     if len(y_shape) == 0:\n3:         raise ValueError(\"y_shape cannot be empty\")\n4:     if bc_type == \"not-a-knot\":\n5:         if y_shape[0] < 4:\n6:             return \"fallback-parabolic\"\n7:         return \"not-a-knot\"\n8:     if bc_type == \"periodic\":"
+        },
+        {
+          "line": 5,
+          "target": 7,
+          "direction": "if_false",
+          "condition": "y_shape[0] < 4",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "2:     if len(y_shape) == 0:\n3:         raise ValueError(\"y_shape cannot be empty\")\n4:     if bc_type == \"not-a-knot\":\n5:         if y_shape[0] < 4:\n6:             return \"fallback-parabolic\"\n7:         return \"not-a-knot\"\n8:     if bc_type == \"periodic\":"
+        },
+        {
+          "line": 9,
+          "target": 10,
+          "direction": "if_true",
+          "condition": "y_shape[0] < 2",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "6:             return \"fallback-parabolic\"\n7:         return \"not-a-knot\"\n8:     if bc_type == \"periodic\":\n9:         if y_shape[0] < 2:\n10:             raise ValueError(\"periodic data requires at least two points\")\n11:         return \"periodic\"\n12:     if bc_type in {\"clamped\", \"natural\"}:"
+        },
+        {
+          "line": 9,
+          "target": 11,
+          "direction": "if_false",
+          "condition": "y_shape[0] < 2",
+          "function": "validate_boundary_condition",
+          "class": "",
+          "source_snippet": "6:             return \"fallback-parabolic\"\n7:         return \"not-a-knot\"\n8:     if bc_type == \"periodic\":\n9:         if y_shape[0] < 2:\n10:             raise ValueError(\"periodic data requires at least two points\")\n11:         return \"periodic\"\n12:     if bc_type in {\"clamped\", \"natural\"}:"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_finite_difference_derivative",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_finite_difference_derivative\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_finite_difference_derivative\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_group_columns_sparse",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_group_columns_sparse\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_group_columns_sparse\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 10,
+          "target": 12,
+          "direction": "if_false",
+          "condition": "not placed",
+          "function": "greedy_column_groups",
+          "class": "",
+          "source_snippet": "7:                 group.append(column)\n8:                 placed = True\n9:                 break\n10:         if not placed:\n11:             groups.append([column])\n12:     return groups\n13: "
+        },
+        {
+          "line": 6,
+          "target": 10,
+          "direction": "if_false",
+          "condition": "all((column not in conflicts[other] and other not in neighbors for other in group))",
+          "function": "greedy_column_groups",
+          "class": "",
+          "source_snippet": "3:     for column, neighbors in enumerate(conflicts):\n4:         placed = False\n5:         for group in groups:\n6:             if all(column not in conflicts[other] and other not in neighbors for other in group):\n7:                 group.append(column)\n8:                 placed = True\n9:                 break"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_huber_loss",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_huber_loss\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_huber_loss\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_linalg_toeplitz_validate",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_linalg_toeplitz_validate\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_linalg_toeplitz_validate\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_optimize_bounds",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_optimize_bounds\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_optimize_bounds\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_signal_chirp_phase",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_signal_chirp_phase\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_signal_chirp_phase\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "if_true",
+          "condition": "method == 'quadratic'",
+          "function": "chirp_phase",
+          "class": "",
+          "source_snippet": "7:     if method == \"linear\":\n8:         beta = (f1 - f0) / t1\n9:         return 2 * math.pi * (f0 * t + 0.5 * beta * t ** 2)\n10:     if method == \"quadratic\":\n11:         beta = (f1 - f0) / (t1 ** 2)\n12:         return 2 * math.pi * (f0 * t + beta * t ** 3 / 3.0)\n13:     if method == \"logarithmic\":"
+        },
+        {
+          "line": 13,
+          "target": 14,
+          "direction": "if_true",
+          "condition": "method == 'logarithmic'",
+          "function": "chirp_phase",
+          "class": "",
+          "source_snippet": "10:     if method == \"quadratic\":\n11:         beta = (f1 - f0) / (t1 ** 2)\n12:         return 2 * math.pi * (f0 * t + beta * t ** 3 / 3.0)\n13:     if method == \"logarithmic\":\n14:         if f0 <= 0 or f1 <= 0:\n15:             raise ValueError(\"logarithmic chirp frequencies must be positive\")\n16:         beta = math.log(f1 / f0) / t1"
+        },
+        {
+          "line": 14,
+          "target": 15,
+          "direction": "if_true",
+          "condition": "f0 <= 0 or f1 <= 0",
+          "function": "chirp_phase",
+          "class": "",
+          "source_snippet": "11:         beta = (f1 - f0) / (t1 ** 2)\n12:         return 2 * math.pi * (f0 * t + beta * t ** 3 / 3.0)\n13:     if method == \"logarithmic\":\n14:         if f0 <= 0 or f1 <= 0:\n15:             raise ValueError(\"logarithmic chirp frequencies must be positive\")\n16:         beta = math.log(f1 / f0) / t1\n17:         return 2 * math.pi * f0 * (math.exp(beta * t) - 1.0) / beta"
+        },
+        {
+          "line": 14,
+          "target": 16,
+          "direction": "if_false",
+          "condition": "f0 <= 0 or f1 <= 0",
+          "function": "chirp_phase",
+          "class": "",
+          "source_snippet": "11:         beta = (f1 - f0) / (t1 ** 2)\n12:         return 2 * math.pi * (f0 * t + beta * t ** 3 / 3.0)\n13:     if method == \"logarithmic\":\n14:         if f0 <= 0 or f1 <= 0:\n15:             raise ValueError(\"logarithmic chirp frequencies must be positive\")\n16:         beta = math.log(f1 / f0) / t1\n17:         return 2 * math.pi * f0 * (math.exp(beta * t) - 1.0) / beta"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_sparse_norm",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_sparse_norm\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_sparse_norm\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SciPy_wilcoxon_rank",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_wilcoxon_rank\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SciPy_wilcoxon_rank\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 22,
+          "target": 23,
+          "direction": "if_true",
+          "condition": "alternative == 'less'",
+          "function": "alternative_tail",
+          "class": "",
+          "source_snippet": "19: def alternative_tail(statistic, midpoint, alternative=\"two-sided\"):\n20:     if alternative == \"greater\":\n21:         return statistic > midpoint\n22:     if alternative == \"less\":\n23:         return statistic < midpoint\n24:     if alternative == \"two-sided\":\n25:         return abs(statistic - midpoint)"
+        },
+        {
+          "line": 8,
+          "target": 10,
+          "direction": "if_false",
+          "condition": "zero_method != 'pratt'",
+          "function": "signed_rank_statistic",
+          "class": "",
+          "source_snippet": "5:     diff = np.asarray(differences, dtype=float)\n6:     if zero_method == \"wilcox\":\n7:         diff = diff[diff != 0]\n8:     elif zero_method != \"pratt\":\n9:         raise ValueError(\"unknown zero method\")\n10:     if diff.size == 0:\n11:         return 0.0"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_axisymmetric_stress",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_axisymmetric_stress\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_axisymmetric_stress\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_biot_coupling",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_biot_coupling\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_biot_coupling\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_boundary_region_selector",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_boundary_region_selector\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_boundary_region_selector\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 10,
+          "target": 11,
+          "direction": "if_true",
+          "condition": "tolerance < 0",
+          "function": "select_boundary_nodes",
+          "class": "",
+          "source_snippet": "7:         raise ValueError(\"points must be a two-dimensional coordinate array\")\n8:     if axis < 0 or axis >= pts.shape[1]:\n9:         raise ValueError(\"axis is outside point dimension\")\n10:     if tolerance < 0:\n11:         raise ValueError(\"tolerance must be non-negative\")\n12:     return np.abs(pts[:, axis] - value) <= tolerance\n13: "
+        },
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "if_true",
+          "condition": "abs(y - ylim[1]) <= tolerance",
+          "function": "classify_boundary",
+          "class": "",
+          "source_snippet": "20:         return \"right\"\n21:     if abs(y - ylim[0]) <= tolerance:\n22:         return \"bottom\"\n23:     if abs(y - ylim[1]) <= tolerance:\n24:         return \"top\"\n25:     return \"interior\""
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_dg_advection_flux",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_dg_advection_flux\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_dg_advection_flux\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_elastic_strain_energy",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_elastic_strain_energy\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_elastic_strain_energy\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_laplace_dirichlet",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_laplace_dirichlet\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_laplace_dirichlet\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 26,
+          "target": 27,
+          "direction": "if_true",
+          "condition": "side == 'right'",
+          "function": "impose_dirichlet",
+          "class": "",
+          "source_snippet": "23:         raise ValueError(\"u must be two-dimensional\")\n24:     if side == \"left\":\n25:         arr[:, 0] = value\n26:     elif side == \"right\":\n27:         arr[:, -1] = value\n28:     elif side == \"bottom\":\n29:         arr[0, :] = value"
+        },
+        {
+          "line": 28,
+          "target": 29,
+          "direction": "if_true",
+          "condition": "side == 'bottom'",
+          "function": "impose_dirichlet",
+          "class": "",
+          "source_snippet": "25:         arr[:, 0] = value\n26:     elif side == \"right\":\n27:         arr[:, -1] = value\n28:     elif side == \"bottom\":\n29:         arr[0, :] = value\n30:     elif side == \"top\":\n31:         arr[-1, :] = value"
+        },
+        {
+          "line": 30,
+          "target": 31,
+          "direction": "if_true",
+          "condition": "side == 'top'",
+          "function": "impose_dirichlet",
+          "class": "",
+          "source_snippet": "27:         arr[:, -1] = value\n28:     elif side == \"bottom\":\n29:         arr[0, :] = value\n30:     elif side == \"top\":\n31:         arr[-1, :] = value\n32:     else:\n33:         raise ValueError(\"unknown side\")"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_material_coefficient",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_material_coefficient\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_material_coefficient\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_mesh_refinement_indicator",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_mesh_refinement_indicator\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_mesh_refinement_indicator\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_piezoelectric_coupling",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_piezoelectric_coupling\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_piezoelectric_coupling\\pynguin\\result_4o",
+      "branches": [
+        {
+          "line": 11,
+          "target": 12,
+          "direction": "if_true",
+          "condition": "d.shape[-1] != eps.shape[-1]",
+          "function": "piezoelectric_charge",
+          "class": "",
+          "source_snippet": "8:     k = np.asarray(permittivity, dtype=float)\n9:     if d.ndim != 2:\n10:         raise ValueError(\"piezoelectric coefficients must be a matrix\")\n11:     if d.shape[-1] != eps.shape[-1]:\n12:         raise ValueError(\"strain dimension does not match piezoelectric matrix\")\n13:     if k.shape[0] != k.shape[1] or k.shape[0] != field.shape[-1]:\n14:         raise ValueError(\"permittivity must match electric field dimension\")"
+        },
+        {
+          "line": 13,
+          "target": 15,
+          "direction": "if_false",
+          "condition": "k.shape[0] != k.shape[1] or k.shape[0] != field.shape[-1]",
+          "function": "piezoelectric_charge",
+          "class": "",
+          "source_snippet": "10:         raise ValueError(\"piezoelectric coefficients must be a matrix\")\n11:     if d.shape[-1] != eps.shape[-1]:\n12:         raise ValueError(\"strain dimension does not match piezoelectric matrix\")\n13:     if k.shape[0] != k.shape[1] or k.shape[0] != field.shape[-1]:\n14:         raise ValueError(\"permittivity must match electric field dimension\")\n15:     mechanical = d @ eps\n16:     dielectric = k @ field"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SfePy_residual_convergence",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_residual_convergence\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SfePy_residual_convergence\\pynguin\\result_4o",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "solve_equation1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\solve_equation1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\solve_equation1\\pynguin\\result",
+      "branches": [
+        {
+          "line": 7,
+          "target": 8,
+          "direction": "if_true",
+          "condition": "abs(v) < epsilon",
+          "function": "newtonsMethod",
+          "class": "",
+          "source_snippet": "4:     xNew = 0\n5:     xOld = guess\n6:     v = function(xOld)\n7:     if abs(v) < epsilon:\n8:         return (guess, v, 0)\n9:     for k in range(1, maxIterations+1):\n10:         xNew = xOld - (v / derivative(xOld))"
+        },
+        {
+          "line": 7,
+          "target": 9,
+          "direction": "if_false",
+          "condition": "abs(v) < epsilon",
+          "function": "newtonsMethod",
+          "class": "",
+          "source_snippet": "4:     xNew = 0\n5:     xOld = guess\n6:     v = function(xOld)\n7:     if abs(v) < epsilon:\n8:         return (guess, v, 0)\n9:     for k in range(1, maxIterations+1):\n10:         xNew = xOld - (v / derivative(xOld))"
+        },
+        {
+          "line": 9,
+          "target": 10,
+          "direction": "loop_enter",
+          "condition": "k in range(1, maxIterations + 1)",
+          "function": "newtonsMethod",
+          "class": "",
+          "source_snippet": "6:     v = function(xOld)\n7:     if abs(v) < epsilon:\n8:         return (guess, v, 0)\n9:     for k in range(1, maxIterations+1):\n10:         xNew = xOld - (v / derivative(xOld))\n11:         v = function(xNew)\n12:         if abs(xNew - xOld) < delta or abs(v) < epsilon:"
+        },
+        {
+          "line": 9,
+          "target": 16,
+          "direction": "loop_exit",
+          "condition": "k in range(1, maxIterations + 1)",
+          "function": "newtonsMethod",
+          "class": "",
+          "source_snippet": "6:     v = function(xOld)\n7:     if abs(v) < epsilon:\n8:         return (guess, v, 0)\n9:     for k in range(1, maxIterations+1):\n10:         xNew = xOld - (v / derivative(xOld))\n11:         v = function(xNew)\n12:         if abs(xNew - xOld) < delta or abs(v) < epsilon:"
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "if_true",
+          "condition": "abs(xNew - xOld) < delta or abs(v) < epsilon",
+          "function": "newtonsMethod",
+          "class": "",
+          "source_snippet": "9:     for k in range(1, maxIterations+1):\n10:         xNew = xOld - (v / derivative(xOld))\n11:         v = function(xNew)\n12:         if abs(xNew - xOld) < delta or abs(v) < epsilon:\n13:             return (xNew, v, k)\n14:         xOld = xNew\n15:     # This code should be unreachable:"
+        },
+        {
+          "line": 12,
+          "target": 14,
+          "direction": "if_false",
+          "condition": "abs(xNew - xOld) < delta or abs(v) < epsilon",
+          "function": "newtonsMethod",
+          "class": "",
+          "source_snippet": "9:     for k in range(1, maxIterations+1):\n10:         xNew = xOld - (v / derivative(xOld))\n11:         v = function(xNew)\n12:         if abs(xNew - xOld) < delta or abs(v) < epsilon:\n13:             return (xNew, v, k)\n14:         xOld = xNew\n15:     # This code should be unreachable:"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "solve_equation2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\solve_equation2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\solve_equation2\\pynguin\\result",
+      "branches": [
+        {
+          "line": 43,
+          "target": 44,
+          "direction": "if_true",
+          "condition": "__name__ == '__main__'",
+          "function": "",
+          "class": "",
+          "source_snippet": "40:         plt.show()\n41: \n42: \n43: if __name__ == \"__main__\":\n44:     x = Symbol(\"x\")\n45:     f1 = x**3 - x - 1  # first function\n46:     f2 = x**2 - (5**0.5) * x  # second function"
+        },
+        {
+          "line": 16,
+          "target": 19,
+          "direction": "loop_enter",
+          "condition": "n in range(numIter + 1)",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "13:     \n14: \n15:     #print('xn iter ',1, \" \", x0)\n16:     for n in range(numIter+1):\n17:         \n18:         \n19:         f_xn = f.subs(x,x0)                  "
+        },
+        {
+          "line": 16,
+          "target": 33,
+          "direction": "loop_exit",
+          "condition": "n in range(numIter + 1)",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "13:     \n14: \n15:     #print('xn iter ',1, \" \", x0)\n16:     for n in range(numIter+1):\n17:         \n18:         \n19:         f_xn = f.subs(x,x0)                  "
+        },
+        {
+          "line": 34,
+          "target": 35,
+          "direction": "if_true",
+          "condition": "plot",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "31: \n32: \n33:     print(\"The final value of root in \", numIter, \" iterations is \", x0)\n34:     if plot:\n35:         import matplotlib.pyplot as plt\n36: \n37:         plt.plot(xValues, yValues)"
+        },
+        {
+          "line": 34,
+          "target": 43,
+          "direction": "if_false",
+          "condition": "plot",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "31: \n32: \n33:     print(\"The final value of root in \", numIter, \" iterations is \", x0)\n34:     if plot:\n35:         import matplotlib.pyplot as plt\n36: \n37:         plt.plot(xValues, yValues)"
+        },
+        {
+          "line": 22,
+          "target": 23,
+          "direction": "if_true",
+          "condition": "Df_xn == 0",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "19:         f_xn = f.subs(x,x0)                  \n20:         Df_xn = Df.subs(x,x0)\n21: \n22:         if Df_xn == 0:\n23:             print(\"No solution found.\")\n24:             return None\n25:         x0 = (float)(x0 - f_xn/Df_xn)"
+        },
+        {
+          "line": 22,
+          "target": 25,
+          "direction": "if_false",
+          "condition": "Df_xn == 0",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "19:         f_xn = f.subs(x,x0)                  \n20:         Df_xn = Df.subs(x,x0)\n21: \n22:         if Df_xn == 0:\n23:             print(\"No solution found.\")\n24:             return None\n25:         x0 = (float)(x0 - f_xn/Df_xn)"
+        },
+        {
+          "line": 28,
+          "target": 29,
+          "direction": "if_true",
+          "condition": "n > 4",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "25:         x0 = (float)(x0 - f_xn/Df_xn)\n26:         \n27:         \n28:         if(n>4): # this line is just for ploting\n29:             xValues.append(n)\n30:             yValues.append(x0)\n31: "
+        },
+        {
+          "line": 28,
+          "target": 33,
+          "direction": "if_false",
+          "condition": "n > 4",
+          "function": "newtonRaphson",
+          "class": "",
+          "source_snippet": "25:         x0 = (float)(x0 - f_xn/Df_xn)\n26:         \n27:         \n28:         if(n>4): # this line is just for ploting\n29:             xValues.append(n)\n30:             yValues.append(x0)\n31: "
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "SparseFiniteDifferenceSolver",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SparseFiniteDifferenceSolver\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\SparseFiniteDifferenceSolver\\pynguin\\result",
+      "branches": [
+        {
+          "line": 58,
+          "target": 59,
+          "direction": "loop_enter",
+          "condition": "i in range((n + 1) * (n + 1))",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "55: def use2(h):  # 48\n56:     n = int(1. / h)  # 49\n57:     A = csr_matrix(((n + 1) * (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)))  # 50\n58:     for i in range((n + 1) * (n + 1)):  # 51\n59:         A[i, i] = 1  # 52\n60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54"
+        },
+        {
+          "line": 58,
+          "target": 60,
+          "direction": "loop_exit",
+          "condition": "i in range((n + 1) * (n + 1))",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "55: def use2(h):  # 48\n56:     n = int(1. / h)  # 49\n57:     A = csr_matrix(((n + 1) * (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)))  # 50\n58:     for i in range((n + 1) * (n + 1)):  # 51\n59:         A[i, i] = 1  # 52\n60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54"
+        },
+        {
+          "line": 60,
+          "target": 61,
+          "direction": "loop_enter",
+          "condition": "i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1))",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "57:     A = csr_matrix(((n + 1) * (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)))  # 50\n58:     for i in range((n + 1) * (n + 1)):  # 51\n59:         A[i, i] = 1  # 52\n60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54\n62:     for i in range(1, n):  # 55\n63:         for x in range(n + 1):  # 56"
+        },
+        {
+          "line": 60,
+          "target": 62,
+          "direction": "loop_exit",
+          "condition": "i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1))",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "57:     A = csr_matrix(((n + 1) * (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)))  # 50\n58:     for i in range((n + 1) * (n + 1)):  # 51\n59:         A[i, i] = 1  # 52\n60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54\n62:     for i in range(1, n):  # 55\n63:         for x in range(n + 1):  # 56"
+        },
+        {
+          "line": 62,
+          "target": 63,
+          "direction": "loop_enter",
+          "condition": "i in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "59:         A[i, i] = 1  # 52\n60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54\n62:     for i in range(1, n):  # 55\n63:         for x in range(n + 1):  # 56\n64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58"
+        },
+        {
+          "line": 62,
+          "target": 66,
+          "direction": "loop_exit",
+          "condition": "i in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "59:         A[i, i] = 1  # 52\n60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54\n62:     for i in range(1, n):  # 55\n63:         for x in range(n + 1):  # 56\n64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58"
+        },
+        {
+          "line": 66,
+          "target": 67,
+          "direction": "loop_enter",
+          "condition": "i in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "63:         for x in range(n + 1):  # 56\n64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58\n66:     for i in range(1, n):  # 59\n67:         for t in range(1, n):  # 60\n68:             A[i * (n + 1) * (n + 1) + t * (n + 1), i * (n + 1) * (n + 1) + t * (n + 1)] = 1  # 61\n69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62"
+        },
+        {
+          "line": 66,
+          "target": 70,
+          "direction": "loop_exit",
+          "condition": "i in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "63:         for x in range(n + 1):  # 56\n64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58\n66:     for i in range(1, n):  # 59\n67:         for t in range(1, n):  # 60\n68:             A[i * (n + 1) * (n + 1) + t * (n + 1), i * (n + 1) * (n + 1) + t * (n + 1)] = 1  # 61\n69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62"
+        },
+        {
+          "line": 71,
+          "target": 72,
+          "direction": "loop_enter",
+          "condition": "z in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "68:             A[i * (n + 1) * (n + 1) + t * (n + 1), i * (n + 1) * (n + 1) + t * (n + 1)] = 1  # 61\n69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62\n70:     B = fillin3Dk(h)  # 63\n71:     for z in range(1, n):  # 64\n72:         for y in range(1, n):  # 65\n73:             for x in range(1, n):  # 66\n74:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x] = B.tocsr()[0, 0]  # 67"
+        },
+        {
+          "line": 71,
+          "target": 82,
+          "direction": "loop_exit",
+          "condition": "z in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "68:             A[i * (n + 1) * (n + 1) + t * (n + 1), i * (n + 1) * (n + 1) + t * (n + 1)] = 1  # 61\n69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62\n70:     B = fillin3Dk(h)  # 63\n71:     for z in range(1, n):  # 64\n72:         for y in range(1, n):  # 65\n73:             for x in range(1, n):  # 66\n74:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x] = B.tocsr()[0, 0]  # 67"
+        },
+        {
+          "line": 132,
+          "target": 133,
+          "direction": "loop_enter",
+          "condition": "p in range(2, 11)",
+          "function": "Question2A",
+          "class": "",
+          "source_snippet": "129: \n130: \n131: def Question2A():#115\n132:     for p in range(2, 11):#116\n133:         h = 1. / (2 ** p)#117\n134:         lu = sla.splu(use(h))#118\n135:         b = rightside2(h)#119"
+        },
+        {
+          "line": 132,
+          "target": 140,
+          "direction": "loop_exit",
+          "condition": "p in range(2, 11)",
+          "function": "Question2A",
+          "class": "",
+          "source_snippet": "129: \n130: \n131: def Question2A():#115\n132:     for p in range(2, 11):#116\n133:         h = 1. / (2 ** p)#117\n134:         lu = sla.splu(use(h))#118\n135:         b = rightside2(h)#119"
+        },
+        {
+          "line": 141,
+          "target": 142,
+          "direction": "loop_enter",
+          "condition": "p in range(2, 9)",
+          "function": "Question3A",
+          "class": "",
+          "source_snippet": "138: \n139: \n140: def Question3A():#122\n141:     for p in range(2, 9):#123\n142:         h = 1. / (2 ** p)#124\n143:         lu = sla.splu(use2(h))#125\n144:         b = rightside3(h)#126"
+        },
+        {
+          "line": 141,
+          "target": 149,
+          "direction": "loop_exit",
+          "condition": "p in range(2, 9)",
+          "function": "Question3A",
+          "class": "",
+          "source_snippet": "138: \n139: \n140: def Question3A():#122\n141:     for p in range(2, 9):#123\n142:         h = 1. / (2 ** p)#124\n143:         lu = sla.splu(use2(h))#125\n144:         b = rightside3(h)#126"
+        },
+        {
+          "line": 153,
+          "target": 154,
+          "direction": "loop_enter",
+          "condition": "y in range(n + 1)",
+          "function": "exact2",
+          "class": "",
+          "source_snippet": "150:     n = int(1. / h)#130\n151:     ex = np.zeros(((n + 1) * (n + 1), 1))#131\n152:     d = 0#132\n153:     for y in range(n + 1):#133\n154:         for x in range(n + 1):#134\n155:             ex[d, 0] = math.sin(x * h * y * h)#135\n156:             d = d + 1#136"
+        },
+        {
+          "line": 153,
+          "target": 157,
+          "direction": "loop_exit",
+          "condition": "y in range(n + 1)",
+          "function": "exact2",
+          "class": "",
+          "source_snippet": "150:     n = int(1. / h)#130\n151:     ex = np.zeros(((n + 1) * (n + 1), 1))#131\n152:     d = 0#132\n153:     for y in range(n + 1):#133\n154:         for x in range(n + 1):#134\n155:             ex[d, 0] = math.sin(x * h * y * h)#135\n156:             d = d + 1#136"
+        },
+        {
+          "line": 164,
+          "target": 165,
+          "direction": "loop_enter",
+          "condition": "z in range(n + 1)",
+          "function": "exact3",
+          "class": "",
+          "source_snippet": "161:     n = int(1. / h)#139\n162:     ex = np.zeros(((n + 1) * (n + 1) * (n + 1), 1))#140\n163:     d = 0#141\n164:     for z in range(n + 1):#142\n165:         for y in range(n + 1):#143\n166:             for x in range(n + 1):#144\n167:                 ex[d, 0] = math.sin(x * h * y * h * z * h)#145"
+        },
+        {
+          "line": 164,
+          "target": 169,
+          "direction": "loop_exit",
+          "condition": "z in range(n + 1)",
+          "function": "exact3",
+          "class": "",
+          "source_snippet": "161:     n = int(1. / h)#139\n162:     ex = np.zeros(((n + 1) * (n + 1) * (n + 1), 1))#140\n163:     d = 0#141\n164:     for z in range(n + 1):#142\n165:         for y in range(n + 1):#143\n166:             for x in range(n + 1):#144\n167:                 ex[d, 0] = math.sin(x * h * y * h * z * h)#145"
+        },
+        {
+          "line": 43,
+          "target": 49,
+          "direction": "loop_exit",
+          "condition": "x in range(1, n)",
+          "function": "use",
+          "class": "",
+          "source_snippet": "40:         A[i * (n + 1) + n, i * (n + 1) + n] = 1  # 36\n41:     B = fillin2Dk(h)  # 37\n42:     for y in range(1, n):  # 38\n43:         for x in range(1, n):  # 39\n44:             A[y * (n + 1) + x, y * (n + 1) + x] = B.tocsr()[0, 0]  # 40\n45:             A[y * (n + 1) + x, y * (n + 1) + x + 1] = B.tocsr()[0, 0] / -4.  # 41\n46:             A[y * (n + 1) + x, y * (n + 1) + x - 1] = B.tocsr()[0, 0] / -4.  # 42"
+        },
+        {
+          "line": 63,
+          "target": 64,
+          "direction": "loop_enter",
+          "condition": "x in range(n + 1)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54\n62:     for i in range(1, n):  # 55\n63:         for x in range(n + 1):  # 56\n64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58\n66:     for i in range(1, n):  # 59"
+        },
+        {
+          "line": 63,
+          "target": 66,
+          "direction": "loop_exit",
+          "condition": "x in range(n + 1)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "60:     for i in range((n + 1) * (n + 1) * (n + 1) - (n + 1) * (n + 1), (n + 1) * (n + 1) * (n + 1)):  # 53\n61:         A[i, i] = 1  # 54\n62:     for i in range(1, n):  # 55\n63:         for x in range(n + 1):  # 56\n64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58\n66:     for i in range(1, n):  # 59"
+        },
+        {
+          "line": 67,
+          "target": 68,
+          "direction": "loop_enter",
+          "condition": "t in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58\n66:     for i in range(1, n):  # 59\n67:         for t in range(1, n):  # 60\n68:             A[i * (n + 1) * (n + 1) + t * (n + 1), i * (n + 1) * (n + 1) + t * (n + 1)] = 1  # 61\n69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62\n70:     B = fillin3Dk(h)  # 63"
+        },
+        {
+          "line": 67,
+          "target": 70,
+          "direction": "loop_exit",
+          "condition": "t in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "64:             A[i * ((n + 1) * (n + 1)) + x, i * ((n + 1) * (n + 1)) + x] = 1  # 57\n65:             A[i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x, i * ((n + 1) * (n + 1)) + (n + 1) * (n + 1) - (n + 1) + x] = 1  # 58\n66:     for i in range(1, n):  # 59\n67:         for t in range(1, n):  # 60\n68:             A[i * (n + 1) * (n + 1) + t * (n + 1), i * (n + 1) * (n + 1) + t * (n + 1)] = 1  # 61\n69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62\n70:     B = fillin3Dk(h)  # 63"
+        },
+        {
+          "line": 72,
+          "target": 73,
+          "direction": "loop_enter",
+          "condition": "y in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62\n70:     B = fillin3Dk(h)  # 63\n71:     for z in range(1, n):  # 64\n72:         for y in range(1, n):  # 65\n73:             for x in range(1, n):  # 66\n74:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x] = B.tocsr()[0, 0]  # 67\n75:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x - 1] = B.tocsr()[0, 0] / -6.  # 68"
+        },
+        {
+          "line": 72,
+          "target": 82,
+          "direction": "loop_exit",
+          "condition": "y in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "69:             A[i * (n + 1) * (n + 1) + t * (n + 1) + n, i * (n + 1) * (n + 1) + t * (n + 1) + n] = 1  # 62\n70:     B = fillin3Dk(h)  # 63\n71:     for z in range(1, n):  # 64\n72:         for y in range(1, n):  # 65\n73:             for x in range(1, n):  # 66\n74:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x] = B.tocsr()[0, 0]  # 67\n75:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x - 1] = B.tocsr()[0, 0] / -6.  # 68"
+        },
+        {
+          "line": 95,
+          "target": 97,
+          "direction": "loop_exit",
+          "condition": "x in range(1, n)",
+          "function": "rightside2",
+          "class": "",
+          "source_snippet": "92:         A[i * (n + 1), 0] = 0#84\n93:         A[i * (n + 1) + n, 0] = math.sin(i * h)#85\n94:     for y in range(1, n):#86\n95:         for x in range(1, n):#87\n96:             A[y * (n + 1) + x, 0] = ((x * h) ** 2 + (y * h) ** 2) * math.sin(x * h * y * h)#88\n97:     return A#89\n98: "
+        },
+        {
+          "line": 109,
+          "target": 112,
+          "direction": "loop_exit",
+          "condition": "i in range(1, n)",
+          "function": "rightside3",
+          "class": "",
+          "source_snippet": "106:     for i in range((n + 1) ** 2):#94\n107:         A[i, 0] = 0#95\n108:     for z in range(1, n):#96\n109:         for i in range(1, n):#97\n110:             A[z * (n + 1) ** 2 + (n + 1) * i, 0] = 0#98\n111:             A[z * (n + 1) ** 2 + (n + 1) * i + n, 0] = math.sin(z * h * i * h)#99\n112:     for z in range(1, n):#100"
+        },
+        {
+          "line": 113,
+          "target": 116,
+          "direction": "loop_exit",
+          "condition": "i in range(n)",
+          "function": "rightside3",
+          "class": "",
+          "source_snippet": "110:             A[z * (n + 1) ** 2 + (n + 1) * i, 0] = 0#98\n111:             A[z * (n + 1) ** 2 + (n + 1) * i + n, 0] = math.sin(z * h * i * h)#99\n112:     for z in range(1, n):#100\n113:         for i in range(n):#101\n114:             A[z * (n + 1) ** 2 + i, 0] = 0#102\n115:             A[z * (n + 1) ** 2 + i + n * (n + 1), 0] = math.sin(i * h + z * h)#103\n116:     d = (n + 1) ** 3 - (n + 1) ** 2#104"
+        },
+        {
+          "line": 118,
+          "target": 121,
+          "direction": "loop_exit",
+          "condition": "x in range(n + 1)",
+          "function": "rightside3",
+          "class": "",
+          "source_snippet": "115:             A[z * (n + 1) ** 2 + i + n * (n + 1), 0] = math.sin(i * h + z * h)#103\n116:     d = (n + 1) ** 3 - (n + 1) ** 2#104\n117:     for y in range(n + 1):#105\n118:         for x in range(n + 1):#106\n119:             A[d, 0] = math.sin(x * h * y * h)#107\n120:             d = d + 1#108\n121:     for z in range(1, n):#109"
+        },
+        {
+          "line": 122,
+          "target": 125,
+          "direction": "loop_exit",
+          "condition": "y in range(1, n)",
+          "function": "rightside3",
+          "class": "",
+          "source_snippet": "119:             A[d, 0] = math.sin(x * h * y * h)#107\n120:             d = d + 1#108\n121:     for z in range(1, n):#109\n122:         for y in range(1, n):#110\n123:             for x in range(1, n):#111\n124:                 A[z * (n + 1) ** 2 + (n + 1) * y + x, 0] = math.sin(x * h * y * h * z * h) * ((x * h) ** 2 + (y * h) ** 2 + (z * h) ** 2)#112\n125:     return A#113"
+        },
+        {
+          "line": 154,
+          "target": 155,
+          "direction": "loop_enter",
+          "condition": "x in range(n + 1)",
+          "function": "exact2",
+          "class": "",
+          "source_snippet": "151:     ex = np.zeros(((n + 1) * (n + 1), 1))#131\n152:     d = 0#132\n153:     for y in range(n + 1):#133\n154:         for x in range(n + 1):#134\n155:             ex[d, 0] = math.sin(x * h * y * h)#135\n156:             d = d + 1#136\n157:     return ex#137"
+        },
+        {
+          "line": 154,
+          "target": 157,
+          "direction": "loop_exit",
+          "condition": "x in range(n + 1)",
+          "function": "exact2",
+          "class": "",
+          "source_snippet": "151:     ex = np.zeros(((n + 1) * (n + 1), 1))#131\n152:     d = 0#132\n153:     for y in range(n + 1):#133\n154:         for x in range(n + 1):#134\n155:             ex[d, 0] = math.sin(x * h * y * h)#135\n156:             d = d + 1#136\n157:     return ex#137"
+        },
+        {
+          "line": 165,
+          "target": 166,
+          "direction": "loop_enter",
+          "condition": "y in range(n + 1)",
+          "function": "exact3",
+          "class": "",
+          "source_snippet": "162:     ex = np.zeros(((n + 1) * (n + 1) * (n + 1), 1))#140\n163:     d = 0#141\n164:     for z in range(n + 1):#142\n165:         for y in range(n + 1):#143\n166:             for x in range(n + 1):#144\n167:                 ex[d, 0] = math.sin(x * h * y * h * z * h)#145\n168:                 d = d + 1#146"
+        },
+        {
+          "line": 165,
+          "target": 169,
+          "direction": "loop_exit",
+          "condition": "y in range(n + 1)",
+          "function": "exact3",
+          "class": "",
+          "source_snippet": "162:     ex = np.zeros(((n + 1) * (n + 1) * (n + 1), 1))#140\n163:     d = 0#141\n164:     for z in range(n + 1):#142\n165:         for y in range(n + 1):#143\n166:             for x in range(n + 1):#144\n167:                 ex[d, 0] = math.sin(x * h * y * h * z * h)#145\n168:                 d = d + 1#146"
+        },
+        {
+          "line": 73,
+          "target": 74,
+          "direction": "loop_enter",
+          "condition": "x in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "70:     B = fillin3Dk(h)  # 63\n71:     for z in range(1, n):  # 64\n72:         for y in range(1, n):  # 65\n73:             for x in range(1, n):  # 66\n74:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x] = B.tocsr()[0, 0]  # 67\n75:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x - 1] = B.tocsr()[0, 0] / -6.  # 68\n76:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x + 1] = B.tocsr()[0, 0] / -6.  # 69"
+        },
+        {
+          "line": 73,
+          "target": 82,
+          "direction": "loop_exit",
+          "condition": "x in range(1, n)",
+          "function": "use2",
+          "class": "",
+          "source_snippet": "70:     B = fillin3Dk(h)  # 63\n71:     for z in range(1, n):  # 64\n72:         for y in range(1, n):  # 65\n73:             for x in range(1, n):  # 66\n74:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x] = B.tocsr()[0, 0]  # 67\n75:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x - 1] = B.tocsr()[0, 0] / -6.  # 68\n76:                 A[z * (n + 1) ** 2 + y * (n + 1) + x, z * (n + 1) ** 2 + y * (n + 1) + x + 1] = B.tocsr()[0, 0] / -6.  # 69"
+        },
+        {
+          "line": 123,
+          "target": 125,
+          "direction": "loop_exit",
+          "condition": "x in range(1, n)",
+          "function": "rightside3",
+          "class": "",
+          "source_snippet": "120:             d = d + 1#108\n121:     for z in range(1, n):#109\n122:         for y in range(1, n):#110\n123:             for x in range(1, n):#111\n124:                 A[z * (n + 1) ** 2 + (n + 1) * y + x, 0] = math.sin(x * h * y * h * z * h) * ((x * h) ** 2 + (y * h) ** 2 + (z * h) ** 2)#112\n125:     return A#113\n126: "
+        },
+        {
+          "line": 166,
+          "target": 167,
+          "direction": "loop_enter",
+          "condition": "x in range(n + 1)",
+          "function": "exact3",
+          "class": "",
+          "source_snippet": "163:     d = 0#141\n164:     for z in range(n + 1):#142\n165:         for y in range(n + 1):#143\n166:             for x in range(n + 1):#144\n167:                 ex[d, 0] = math.sin(x * h * y * h * z * h)#145\n168:                 d = d + 1#146\n169:     return ex#147"
+        },
+        {
+          "line": 166,
+          "target": 169,
+          "direction": "loop_exit",
+          "condition": "x in range(n + 1)",
+          "function": "exact3",
+          "class": "",
+          "source_snippet": "163:     d = 0#141\n164:     for z in range(n + 1):#142\n165:         for y in range(n + 1):#143\n166:             for x in range(n + 1):#144\n167:                 ex[d, 0] = math.sin(x * h * y * h * z * h)#145\n168:                 d = d + 1#146\n169:     return ex#147"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "Trapezoidal Rule",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Trapezoidal Rule\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\Trapezoidal Rule\\pynguin\\result",
+      "branches": [
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "loop_enter",
+          "condition": "i in range(1, nx)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "9:     hy = (d - c)/float(ny)\n10:     I = 0.25*(f(a, c) + f(a, d) + f(b, c) + f(b, d))\n11:     Ix = 0\n12:     for i in range(1, nx):\n13:         xi = a + i*hx\n14:         Ix += f(xi, c) + f(xi, d)\n15:     I += 0.5*Ix"
+        },
+        {
+          "line": 12,
+          "target": 15,
+          "direction": "loop_exit",
+          "condition": "i in range(1, nx)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "9:     hy = (d - c)/float(ny)\n10:     I = 0.25*(f(a, c) + f(a, d) + f(b, c) + f(b, d))\n11:     Ix = 0\n12:     for i in range(1, nx):\n13:         xi = a + i*hx\n14:         Ix += f(xi, c) + f(xi, d)\n15:     I += 0.5*Ix"
+        },
+        {
+          "line": 17,
+          "target": 18,
+          "direction": "loop_enter",
+          "condition": "j in range(1, ny)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "14:         Ix += f(xi, c) + f(xi, d)\n15:     I += 0.5*Ix\n16:     Iy = 0\n17:     for j in range(1, ny):\n18:         yj = c + j*hy\n19:         Iy += f(a, yj) + f(b, yj)\n20:     I += 0.5*Iy"
+        },
+        {
+          "line": 17,
+          "target": 20,
+          "direction": "loop_exit",
+          "condition": "j in range(1, ny)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "14:         Ix += f(xi, c) + f(xi, d)\n15:     I += 0.5*Ix\n16:     Iy = 0\n17:     for j in range(1, ny):\n18:         yj = c + j*hy\n19:         Iy += f(a, yj) + f(b, yj)\n20:     I += 0.5*Iy"
+        },
+        {
+          "line": 22,
+          "target": 23,
+          "direction": "loop_enter",
+          "condition": "i in range(1, nx)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "19:         Iy += f(a, yj) + f(b, yj)\n20:     I += 0.5*Iy\n21:     Ixy = 0\n22:     for i in range(1, nx):\n23:         for j in range(1, ny):\n24:             xi = a + i*hx\n25:             yj = c + j*hy"
+        },
+        {
+          "line": 22,
+          "target": 27,
+          "direction": "loop_exit",
+          "condition": "i in range(1, nx)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "19:         Iy += f(a, yj) + f(b, yj)\n20:     I += 0.5*Iy\n21:     Ixy = 0\n22:     for i in range(1, nx):\n23:         for j in range(1, ny):\n24:             xi = a + i*hx\n25:             yj = c + j*hy"
+        },
+        {
+          "line": 23,
+          "target": 24,
+          "direction": "loop_enter",
+          "condition": "j in range(1, ny)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "20:     I += 0.5*Iy\n21:     Ixy = 0\n22:     for i in range(1, nx):\n23:         for j in range(1, ny):\n24:             xi = a + i*hx\n25:             yj = c + j*hy\n26:             Ixy += f(xi, yj)"
+        },
+        {
+          "line": 23,
+          "target": 27,
+          "direction": "loop_exit",
+          "condition": "j in range(1, ny)",
+          "function": "trapezoidal_double",
+          "class": "",
+          "source_snippet": "20:     I += 0.5*Iy\n21:     Ixy = 0\n22:     for i in range(1, nx):\n23:         for j in range(1, ny):\n24:             xi = a + i*hx\n25:             yj = c + j*hy\n26:             Ixy += f(xi, yj)"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "VectorCalculator1",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator1\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator1\\pynguin\\result",
+      "branches": [
+        {
+          "line": 7,
+          "target": 9,
+          "direction": "loop_exit",
+          "condition": "p in range(n)",
+          "function": "Au",
+          "class": "",
+          "source_snippet": "4:     n = len(u)  # 24\n5:     tmp = np.zeros(n)  # 25\n6:     for q in range(n):  # 26\n7:         for p in range(n):  # 27\n8:             tmp[q] = tmp[q] + A[p, q] * u[p]  # 28\n9:     return tmp  # 29"
+        }
+      ],
+      "status": "ok"
+    },
+    {
+      "program": "VectorCalculator2",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator2\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator2\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "VectorCalculator3",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator3\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator3\\pynguin\\result",
+      "branches": [],
+      "status": "ok"
+    },
+    {
+      "program": "VectorCalculator4",
+      "source": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator4\\example.py",
+      "pynguin_result_dir": "D:\\ANONYMOUS_USER\\pycharm\\BCBT\\scientific_calculation\\VectorCalculator4\\pynguin\\result",
+      "branches": [
+        {
+          "line": 4,
+          "target": 5,
+          "direction": "if_true",
+          "condition": "n == 0",
+          "function": "legendre",
+          "class": "",
+          "source_snippet": "1: import numpy as np  # 1\n2: \n3: def legendre(a,b,x,y,n):  # 29\n4:     if n == 0:  # 30\n5:         return np.ones(len(x))  # 31\n6:     if n == 1:  # 32\n7:         return x  # 33"
+        },
+        {
+          "line": 12,
+          "target": 13,
+          "direction": "loop_enter",
+          "condition": "i in range(N)",
+          "function": "legendre",
+          "class": "",
+          "source_snippet": "9:     tmp = np.zeros(N)  # 35\n10:     P_1 = legendre(a,b,x,y,n-1)  # 36\n11:     P_2 = legendre(a,b,x,y,n-2)  # 37\n12:     for i in range(N):  # 38\n13:         tmp[i] = (2.*n-1)*x[i]*P_1[i] - (n-1)*P_2[i]  # 39\n14:         tmp[i] = tmp[i] / n  # 40\n15:     return tmp  # 41"
+        },
+        {
+          "line": 12,
+          "target": 15,
+          "direction": "loop_exit",
+          "condition": "i in range(N)",
+          "function": "legendre",
+          "class": "",
+          "source_snippet": "9:     tmp = np.zeros(N)  # 35\n10:     P_1 = legendre(a,b,x,y,n-1)  # 36\n11:     P_2 = legendre(a,b,x,y,n-2)  # 37\n12:     for i in range(N):  # 38\n13:         tmp[i] = (2.*n-1)*x[i]*P_1[i] - (n-1)*P_2[i]  # 39\n14:         tmp[i] = tmp[i] / n  # 40\n15:     return tmp  # 41"
+        }
+      ],
+      "status": "ok"
+    }
+  ]
+}
